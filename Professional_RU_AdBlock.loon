@@ -1,0 +1,231 @@
+#!name=Professional RU AdBlock
+#!desc=Профессиональная система блокировки рекламы для русскоязычных сайтов v3.2
+#!author=Professional AdBlock Team
+#!homepage=https://github.com/Lexanewmsk/loon-configuration-file
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlocking.png
+#!date=2025-01-01
+#!select=Режим блокировки, Сбалансированный, Агрессивный, Максимальный
+#!select=HTTPS редиректы, Включить, Отключить  
+#!select=Очистка HTML, Включить, Отключить
+#!select=Антитрекинг, Включить, Отключить
+#!select=Блокировка соцсетей, Отключить, Включить
+#!select=Дебаг логи, Отключить, Включить
+
+[General]
+# Принудительное использование HTTP движка для MITM
+force-http-engine-hosts = %APPEND% *.ru, *.рф, *.com.ru, *.net.ru, *.org.ru, *.yandex.*, *.vk.com, *.mail.ru, *.ok.ru, *.dzen.ru, *.dzeninfra.ru, *.avito.ru, *.ozon.ru, *.wildberries.ru
+
+[Rule]
+# =====================================
+# РЕЖИМ-НЕЗАВИСИМАЯ БЛОКИРОВКА (DNS)
+# =====================================
+
+# Критические рекламные домены - блокируем всегда
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN-SUFFIX,googlesyndication.com,REJECT  
+DOMAIN-SUFFIX,googleadservices.com,REJECT
+DOMAIN-SUFFIX,yandexadexchange.net,REJECT
+DOMAIN-SUFFIX,adfox.ru,REJECT
+DOMAIN-SUFFIX,adfox.yandex.ru,REJECT
+
+# Яндекс реклама - основные домены
+DOMAIN,bs.yandex.ru,REJECT
+DOMAIN,an.yandex.ru,REJECT
+DOMAIN,yabs.yandex.ru,REJECT
+DOMAIN,awaps.yandex.ru,REJECT
+
+# Яндекс.Дзен реклама
+DOMAIN,clck.dzen.ru,REJECT  
+DOMAIN,an.dzen.ru,REJECT
+DOMAIN,ads.dzen.ru,REJECT
+
+# VK/Mail.ru реклама
+DOMAIN,go.mail.ru,REJECT
+DOMAIN,rs.mail.ru,REJECT
+DOMAIN,top.mail.ru,REJECT
+DOMAIN,ads.vk.com,REJECT
+
+# RTB и программатик платформы
+DOMAIN-SUFFIX,relap.io,REJECT
+DOMAIN-SUFFIX,buzzoola.com,REJECT
+DOMAIN-SUFFIX,marketgid.com,REJECT
+DOMAIN-SUFFIX,mgid.com,REJECT
+DOMAIN-SUFFIX,smi2.net,REJECT
+DOMAIN-SUFFIX,smi2.ru,REJECT
+DOMAIN-SUFFIX,outbrain.com,REJECT
+DOMAIN-SUFFIX,taboola.com,REJECT
+
+# Трекинг и аналитика (базовый уровень)
+DOMAIN,mc.yandex.ru,REJECT
+DOMAIN,metrika.yandex.ru,REJECT
+DOMAIN-SUFFIX,google-analytics.com,REJECT
+DOMAIN-SUFFIX,googleanalytics.com,REJECT
+
+# Специализированные рекламные сети
+DOMAIN-SUFFIX,betweendigital.com,REJECT
+DOMAIN-SUFFIX,videonow.ru,REJECT
+DOMAIN-SUFFIX,advmaker.net,REJECT
+DOMAIN-SUFFIX,adriver.ru,REJECT
+DOMAIN-SUFFIX,begun.ru,REJECT
+
+# Блокировка по ключевым словам в домене
+DOMAIN-KEYWORD,doubleclick,REJECT
+DOMAIN-KEYWORD,googleads,REJECT
+DOMAIN-KEYWORD,googlesyndication,REJECT
+DOMAIN-KEYWORD,yandexadexchange,REJECT
+DOMAIN-KEYWORD,adfox,REJECT
+
+# URL паттерны - основные
+URL-REGEX,^https?://[^/]+/ads/,REJECT
+URL-REGEX,^https?://[^/]+/banner,REJECT
+URL-REGEX,^https?://[^/]+/reklama,REJECT
+URL-REGEX,^https?://ads\.,REJECT
+
+# Яндекс специфичные паттерны
+URL-REGEX,^https?://yandex\.[^/]+/an/,REJECT
+URL-REGEX,^https?://[^/]+\.yandex\.[^/]+/(bs|yabs|awaps)/,REJECT
+URL-REGEX,^https?://mc\.yandex\.,REJECT
+
+# Дзен специфичные паттерны
+URL-REGEX,^https?://dzen\.ru/.*\?(adb-bits|test-tag|ctime),REJECT
+URL-REGEX,^https?://[^/]*dzeninfra\.ru/.*/zen-lib/,REJECT
+URL-REGEX,^https?://clck\.dzen\.ru/,REJECT
+
+# Трекинг параметры
+URL-REGEX,[?&](utm_source|utm_medium|utm_campaign|utm_content|utm_term)=,REJECT
+URL-REGEX,[?&](fbclid|gclid|yclid|_openstat)=,REJECT
+
+[Script]
+# =====================================
+# ОСНОВНАЯ ОБРАБОТКА ЗАПРОСОВ
+# =====================================
+
+# Главный обработчик запросов - использует main скрипт
+http-request ^https?://.*\.(ru|рф|com\.ru|net\.ru|org\.ru)($|/.*) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=false, timeout=10, tag=🚫 RU AdBlock Request
+
+# Обработка ответов для очистки HTML
+http-response ^https?://.*\.(ru|рф|com\.ru|net\.ru|org\.ru)($|/.*) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=true, timeout=15, tag=🧹 RU AdBlock Response
+
+# =====================================
+# СПЕЦИАЛИЗИРОВАННЫЕ ОБРАБОТЧИКИ
+# =====================================
+
+# Яндекс сервисы - усиленная обработка
+http-request ^https?://[^/]*\.?(yandex|ya)\.(ru|com|net|by|kz|ua)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=false, timeout=10, tag=🟨 Yandex AdBlock
+
+http-response ^https?://[^/]*\.?(yandex|ya)\.(ru|com|net|by|kz|ua)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=true, timeout=15, tag=🟨 Yandex Clean
+
+# VK.com - социальная сеть
+http-request ^https?://[^/]*\.?vk\.com/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=false, timeout=10, tag=🟦 VK AdBlock
+
+http-response ^https?://[^/]*\.?vk\.com/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=true, timeout=15, tag=🟦 VK Clean
+
+# Mail.ru экосистема
+http-request ^https?://[^/]*\.?mail\.ru/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=false, timeout=10, tag=📧 Mail.ru AdBlock
+
+http-response ^https?://[^/]*\.?mail\.ru/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=true, timeout=15, tag=📧 Mail.ru Clean
+
+# Яндекс.Дзен
+http-request ^https?://[^/]*\.?(dzen|dzeninfra)\.ru/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=false, timeout=10, tag=📰 Dzen AdBlock
+
+http-response ^https?://[^/]*\.?(dzen|dzeninfra)\.ru/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=true, timeout=15, tag=📰 Dzen Clean
+
+# Новостные сайты
+http-request ^https?://[^/]*\.?(lenta|rbc|kommersant|vedomosti|forbes|ria|tass|interfax|gazeta|kp|mk)\.(ru|com)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=false, timeout=10, tag=📰 News AdBlock
+
+http-response ^https?://[^/]*\.?(lenta|rbc|kommersant|vedomosti|forbes|ria|tass|interfax|gazeta|kp|mk)\.(ru|com)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=true, timeout=15, tag=📰 News Clean
+
+# Маркетплейсы и интернет-магазины
+http-request ^https?://[^/]*\.?(avito|youla|ozon|wildberries|lamoda|citilink|dns-shop|mvideo|eldorado)\.(ru|com)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=false, timeout=10, tag=🛒 Shop AdBlock
+
+http-response ^https?://[^/]*\.?(avito|youla|ozon|wildberries|lamoda|citilink|dns-shop|mvideo|eldorado)\.(ru|com)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=true, timeout=15, tag=🛒 Shop Clean
+
+# Развлекательные и IT ресурсы
+http-request ^https?://[^/]*\.?(pikabu|habr|vc|dtf|tjournal|kinopoisk|ivi|okko|start|more\.tv)\.(ru|com|tv)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=false, timeout=10, tag=🎮 Entertainment AdBlock
+
+http-response ^https?://[^/]*\.?(pikabu|habr|vc|dtf|tjournal|kinopoisk|ivi|okko|start|more\.tv)\.(ru|com|tv)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=true, timeout=15, tag=🎮 Entertainment Clean
+
+# HTTP->HTTPS редиректы
+http-request ^http://[^/]*\.(ru|рф|com\.ru|net\.ru|org\.ru)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=false, timeout=5, tag=🔒 HTTPS Redirect
+
+# =====================================
+# МЕЖДУНАРОДНЫЕ РЕКЛАМНЫЕ СЕТИ
+# =====================================
+
+# Google реклама на русских сайтах
+http-request ^https?://[^/]*\.(doubleclick|googlesyndication|googleadservices|googletagmanager)\..*/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=false, timeout=5, tag=🌍 Google Ads Block
+
+# Facebook/Meta трекинг
+http-request ^https?://[^/]*\.(facebook|fbcdn|fb)\..*/(tr|pixel)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/adblock-main.js, requires-body=false, timeout=5, tag=🌍 FB Track Block
+
+[MITM]
+# =====================================
+# MITM ХОСТЫ ДЛЯ ПЕРЕХВАТА
+# =====================================
+
+hostname = %APPEND% *.ru, *.рф, *.com.ru, *.net.ru, *.org.ru,
+
+# Яндекс экосистема
+*.yandex.ru, *.yandex.net, *.yandex.com, *.yandex.by, *.yandex.kz, *.yandex.ua,
+*.ya.ru, yandex.ru, ya.ru,
+*.yastatic.net, yastatic.net,
+*.yandexadexchange.net,
+*.adfox.ru, *.adfox.yandex.ru,
+
+# Яндекс.Дзен
+*.dzen.ru, dzen.ru,
+*.dzeninfra.ru, dzeninfra.ru,
+clck.dzen.ru, an.dzen.ru, ads.dzen.ru,
+
+# VK экосистема  
+*.vk.com, vk.com, *.vkontakte.ru, vkontakte.ru,
+*.userapi.com, *.vkuseraudio.net, *.vkuser.net,
+*.vk.me, *.vk.link,
+
+# Mail.ru группа
+*.mail.ru, mail.ru,
+*.my.mail.ru, *.e.mail.ru, *.touch.mail.ru,
+*.mradx.net, *.imgsmail.ru,
+*.ok.ru, ok.ru, *.odnoklassniki.ru,
+
+# Новостные порталы
+*.lenta.ru, *.rbc.ru, *.kommersant.ru, *.vedomosti.ru,
+*.ria.ru, *.tass.ru, *.interfax.ru, *.rt.com,
+*.gazeta.ru, *.kp.ru, *.mk.ru, *.forbes.ru,
+*.meduza.io, *.tvrain.ru, *.echo.msk.ru,
+
+# Маркетплейсы
+*.avito.ru, *.youla.ru, *.drom.ru, *.auto.ru,
+*.ozon.ru, *.wildberries.ru, *.lamoda.ru,
+*.citilink.ru, *.dns-shop.ru, *.mvideo.ru, *.eldorado.ru,
+*.aliexpress.ru, *.joom.ru,
+
+# Развлечения и медиа
+*.pikabu.ru, *.habr.com, *.vc.ru, *.dtf.ru, *.tjournal.ru,
+*.kinopoisk.ru, *.ivi.ru, *.okko.tv, *.start.ru, *.more.tv,
+*.megogo.ru, *.tvzavr.ru, *.rutube.ru,
+*.music.yandex.ru, *.boom.ru, *.zvuk.com,
+
+# Банки и финансы
+*.sberbank.ru, *.vtb.ru, *.tinkoff.ru, *.alfabank.ru,
+*.raiffeisen.ru, *.unicreditbank.ru, *.rosbank.ru,
+*.qiwi.com, *.webmoney.ru, *.yoomoney.ru,
+
+# Сервисы и утилиты
+*.2gis.ru, *.yandex.ru/maps, *.gosuslugi.ru,
+*.nalog.ru, *.pfr.ru, *.fss.ru,
+*.hh.ru, *.superjob.ru, *.rabota.ru,
+
+# Рекламные и трекинг домены
+*.doubleclick.net, *.googlesyndication.com, *.googleadservices.com,
+*.googletagmanager.com, *.google-analytics.com,
+*.facebook.com, *.fbcdn.net,
+*.relap.io, *.buzzoola.com, *.marketgid.com, *.mgid.com,
+*.smi2.net, *.smi2.ru, *.outbrain.com, *.taboola.com,
+*.betweendigital.com, *.videonow.ru, *.advmaker.net,
+*.adriver.ru, *.begun.ru,
+
+# Трекинг и аналитика
+*.mc.yandex.ru, *.metrika.yandex.ru,
+*.top100.rambler.ru, *.counter.rambler.ru,
+*.hotlog.ru, *.liveinternet.ru, *.rating.mail.ru
