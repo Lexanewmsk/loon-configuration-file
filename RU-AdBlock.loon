@@ -123,52 +123,51 @@ URL-REGEX,[?&](fbclid|gclid|yclid|_openstat)=,REJECT
 # ОСНОВНАЯ ОБРАБОТКА
 # =====================================
 
-# Обработка запросов для .ru доменов
-http-request ^https?://.*\.(ru|рф|com\.ru|net\.ru|org\.ru)($|/.*) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=🚫 RU AdBlock Request
+# Универсальный паттерн для ВСЕХ .ru доменов (включая основные)
+http-request ^https?://[^/]+\.(ru|рф|com\.ru|net\.ru|org\.ru) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=🚫 RU AdBlock Request
 
-# Очистка HTML контента
-http-response ^https?://.*\.(ru|рф|com\.ru|net\.ru|org\.ru)($|/.*) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=🧹 RU AdBlock Response
+http-response ^https?://[^/]+\.(ru|рф|com\.ru|net\.ru|org\.ru) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=🧹 RU AdBlock Response
 
-# Яндекс сервисы
-http-request ^https?://[^/]*\.?(yandex|ya)\.(ru|com|net|by|kz|ua)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=🟨 Yandex Block
+# Яндекс сервисы (упрощенный паттерн)
+http-request ^https?://[^/]*(yandex|ya)\.(ru|com|net|by|kz|ua) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=🟨 Yandex Block
 
-http-response ^https?://[^/]*\.?(yandex|ya)\.(ru|com|net|by|kz|ua)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=🟨 Yandex Clean
+http-response ^https?://[^/]*(yandex|ya)\.(ru|com|net|by|kz|ua) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=🟨 Yandex Clean
 
-# VK.com
-http-request ^https?://[^/]*\.?vk\.com/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=🟦 VK Block
+# VK.com (упрощенный)
+http-request ^https?://[^/]*vk\.com script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=🟦 VK Block
 
-http-response ^https?://[^/]*\.?vk\.com/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=🟦 VK Clean
+http-response ^https?://[^/]*vk\.com script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=🟦 VK Clean
 
-# Mail.ru
-http-request ^https?://[^/]*\.?mail\.ru/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=📧 Mail.ru Block
+# Mail.ru (упрощенный)
+http-request ^https?://[^/]*mail\.ru script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=📧 Mail.ru Block
 
-http-response ^https?://[^/]*\.?mail\.ru/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=📧 Mail.ru Clean
+http-response ^https?://[^/]*mail\.ru script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=📧 Mail.ru Clean
 
-# Яндекс.Дзен
-http-request ^https?://[^/]*\.?(dzen|dzeninfra)\.ru/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=📰 Dzen Block
+# Яндекс.Дзен (упрощенный)
+http-request ^https?://[^/]*(dzen|dzeninfra)\.ru script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=📰 Dzen Block
 
-http-response ^https?://[^/]*\.?(dzen|dzeninfra)\.ru/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=📰 Dzen Clean
+http-response ^https?://[^/]*(dzen|dzeninfra)\.ru script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=📰 Dzen Clean
 
-# Новостные сайты
-http-request ^https?://[^/]*\.?(lenta|rbc|kommersant|vedomosti|forbes|ria|tass|interfax|gazeta|kp|mk)\.(ru|com)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=📰 News Block
+# Новостные сайты (упрощенный)
+http-request ^https?://[^/]*(lenta|rbc|kommersant|vedomosti|forbes|ria|tass|interfax|gazeta|kp|mk)\.(ru|com) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=📰 News Block
 
-http-response ^https?://[^/]*\.?(lenta|rbc|kommersant|vedomosti|forbes|ria|tass|interfax|gazeta|kp|mk)\.(ru|com)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=📰 News Clean
+http-response ^https?://[^/]*(lenta|rbc|kommersant|vedomosti|forbes|ria|tass|interfax|gazeta|kp|mk)\.(ru|com) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=📰 News Clean
 
-# Маркетплейсы
-http-request ^https?://[^/]*\.?(avito|youla|ozon|wildberries|lamoda|citilink|dns-shop|mvideo|eldorado|goldapple)\.(ru|com)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=🛒 Shop Block
+# Маркетплейсы (упрощенный)
+http-request ^https?://[^/]*(avito|youla|ozon|wildberries|lamoda|citilink|dns-shop|mvideo|eldorado|goldapple)\.(ru|com) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=🛒 Shop Block
 
-http-response ^https?://[^/]*\.?(avito|youla|ozon|wildberries|lamoda|citilink|dns-shop|mvideo|eldorado|goldapple)\.(ru|com)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=🛒 Shop Clean
+http-response ^https?://[^/]*(avito|youla|ozon|wildberries|lamoda|citilink|dns-shop|mvideo|eldorado|goldapple)\.(ru|com) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=🛒 Shop Clean
 
-# Развлечения
-http-request ^https?://[^/]*\.?(pikabu|habr|vc|dtf|tjournal|kinopoisk|ivi|okko|start|more\.tv)\.(ru|com|tv)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=🎮 Entertainment Block
+# Развлечения (упрощенный)
+http-request ^https?://[^/]*(pikabu|habr|vc|dtf|tjournal|kinopoisk|ivi|okko|start|more)\.(ru|com|tv) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=10, tag=🎮 Entertainment Block
 
-http-response ^https?://[^/]*\.?(pikabu|habr|vc|dtf|tjournal|kinopoisk|ivi|okko|start|more\.tv)\.(ru|com|tv)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=🎮 Entertainment Clean
+http-response ^https?://[^/]*(pikabu|habr|vc|dtf|tjournal|kinopoisk|ivi|okko|start|more)\.(ru|com|tv) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=true, timeout=15, tag=🎮 Entertainment Clean
 
-# HTTP->HTTPS редиректы
-http-request ^http://[^/]*\.(ru|рф|com\.ru|net\.ru|org\.ru)/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=5, tag=🔒 HTTPS Redirect
+# HTTP->HTTPS редиректы (упрощенный)
+http-request ^http://[^/]+\.(ru|рф|com\.ru|net\.ru|org\.ru) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=5, tag=🔒 HTTPS Redirect
 
-# Международная реклама на русских сайтах
-http-request ^https?://[^/]*\.(doubleclick|googlesyndication|googleadservices|googletagmanager)\..*/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=5, tag=🌍 Global Ads
+# Международная реклама (упрощенный)
+http-request ^https?://[^/]+(doubleclick|googlesyndication|googleadservices|googletagmanager) script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock.js, requires-body=false, timeout=5, tag=🌍 Global Ads
 
 [MITM]
 # =====================================
