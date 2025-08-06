@@ -1,48 +1,50 @@
 /**
- * Professional Russian AdBlock Script for Loon
- * Версия: 3.2
+ * RU AdBlock Script for Loon
+ * Версия: 4.0
  * Автор: Professional AdBlock Team
- * Описание: Оптимизированная система блокировки рекламы для русскоязычных сайтов
+ * Описание: Система блокировки рекламы для русскоязычных сайтов
  */
-
-// Безопасное получение настроек
-function getEnvironmentValue(key, defaultValue) {
-    try {
-        if (typeof $environment !== 'undefined' && $environment && $environment[key]) {
-            return $environment[key];
-        }
-    } catch (e) {}
-    return defaultValue;
-}
 
 const CONFIG = {
     scriptName: "RU-AdBlock",
-    version: "3.2",
-    debug: getEnvironmentValue('Дебаг логи', 'Отключить') === 'Включить',
+    version: "4.0",
+    debug: false, // Изменится динамически из настроек плагина
     
-    // Настройки блокировки с дефолтными значениями
+    // Настройки блокировки (изменяются из настроек плагина)
     blockingModes: {
-        cleanHTML: getEnvironmentValue('Очистка HTML', 'Включить') !== 'Отключить',
-        httpsRedirect: getEnvironmentValue('HTTPS редиректы', 'Включить') !== 'Отключить',
-        antiTracker: getEnvironmentValue('Антитрекинг', 'Включить') !== 'Отключить',
-        socialBlock: getEnvironmentValue('Блокировка соцсетей', 'Отключить') === 'Включить'
+        cleanHTML: true,       // Очистка HTML контента
+        httpsRedirect: true,   // Принудительный HTTPS
+        antiTracker: true      // Антитрекинг
+    },
+    
+    // Таймауты
+    timeouts: {
+        request: 5000,
+        response: 10000
     }
 };
 
+// Получаем настройки из плагина
+if (typeof $plugin !== 'undefined' && $plugin.config) {
+    CONFIG.blockingModes.httpsRedirect = $plugin.config['HTTPS редиректы'] === 'Включить';
+    CONFIG.blockingModes.cleanHTML = $plugin.config['Очистка HTML'] === 'Включить';
+    CONFIG.blockingModes.antiTracker = $plugin.config['Антитрекинг'] === 'Включить';
+    CONFIG.debug = $plugin.config['Дебаг логи'] === 'Включить';
+}
+
 // ===============================================
-// ОПТИМИЗИРОВАННЫЕ СПИСКИ БЛОКИРОВКИ
+// СПИСКИ ДОМЕНОВ И ПАТТЕРНОВ ДЛЯ БЛОКИРОВКИ
 // ===============================================
 
 const BLOCK_LISTS = {
-    // Основные рекламные домены
-    adDomains: new Set([
+    // Рекламные домены
+    adDomains: [
         // Яндекс реклама
         "bs.yandex.ru", "an.yandex.ru", "yabs.yandex.ru", 
         "awaps.yandex.ru", "yastatic.net/awaps",
         "yandexadexchange.net", "adfox.ru", "adfox.yandex.ru",
         
-        // Яндекс.Дзен реклама
-        "dzeninfra.ru", "static.dzeninfra.ru", 
+        // Яндекс.Дзен реклама и трекинг (только рекламные части)
         "clck.dzen.ru", "an.dzen.ru", "ads.dzen.ru",
         
         // Google реклама
@@ -50,46 +52,114 @@ const BLOCK_LISTS = {
         "googletagmanager.com", "googletagservices.com", "adsystem.google.com",
         "pagead2.googlesyndication.com", "tpc.googlesyndication.com",
         
-        // VK/Mail.ru реклама
-        "go.mail.ru", "rs.mail.ru", "top.mail.ru", "love.mail.ru/ads",
-        "vk.com/ads", "ads.vk.com",
+        // Mail.ru реклама (расширенный список)
+        "go.mail.ru", "rs.mail.ru", "top.mail.ru", 
+        "xray.mail.ru", "r0.mail.ru", "r.mail.ru",
+        "ad.mail.ru", "adman.mail.ru", "splash.mail.ru",
+        
+        // VK реклама
+        "ads.vk.com", "adsint.vk.com",
         
         // Рамблер
         "top100.rambler.ru", "counter.rambler.ru", "ssp.rambler.ru",
-        "nova.rambler.ru", "rbc.ru/ads",
+        "nova.rambler.ru",
         
         // RTB платформы
         "relap.io", "buzzoola.com", "marketgid.com", "mgid.com",
-        "outbrain.com", "taboola.com", "smi2.net", "smi2.ru",
+        "outbrain.com", "taboola.com", "smi2.net", "recreativ.ru",
+        "gnezdo.ru", "teasernet.com",
+        
+        // Аналитика и трекинг (если включен антитрекинг)
+        "mc.yandex.ru", "informer.yandex.ru", "metrika.yandex.ru",
+        "google-analytics.com", "googleanalytics.com",
+        "facebook.com/tr", "connect.facebook.net/signals",
         
         // Криптомайнинг
         "coinhive.com", "coin-hive.com", "jsecoin.com", "crypto-loot.com"
-    ]),
+    ],
     
-    // Аналитика (если включен антитрекинг)
-    analyticsDomains: new Set([
-        "mc.yandex.ru", "informer.yandex.ru", "metrika.yandex.ru",
-        "google-analytics.com", "googleanalytics.com", "gtm.js",
-        "facebook.com/tr", "connect.facebook.net/signals"
-    ]),
+    // Ключевые слова в URL для блокировки
+    adKeywords: [
+        // Реклама
+        "реклама", "баннер", "объявления", "промо", "рекламный",
+        "advertisement", "advertising", "advert", "promo", "banner",
+        "ads", "ad_", "_ad", "adnxs", "adsystem", "adserver",
+        
+        // Mail.ru специфичные
+        "xray", "r0", "splash",
+        
+        // RTB и программатик
+        "rtb", "ssp", "dsp", "prebid", "header_bidding", "programmatic",
+        "ad_exchange", "adx", "bidder", "auction",
+        
+        // Трекинг (если включен антитрекинг)
+        "counter", "metric", "analytics", "tracking", "tracker",
+        "pixel", "beacon", "collect", "stats", "statistic", "telemetry",
+        "fingerprint", "visitor", "session", "heatmap", "click",
+        
+        // Партнерские программы
+        "affiliate", "partner", "referral", "commission", "cashback",
+        
+        // Видеореклама
+        "videoads", "preroll", "midroll", "postroll", "overlay",
+        
+        // Дзен специфичные рекламные элементы
+        "zen-lib/ads", "zen-lib/rtb"
+    ],
     
-    // Быстрые проверки по ключевым словам
-    adKeywordsRegex: /\/(ads?|banner|reklama|advertising|advert|promo|rtb|ssp|dsp|counter|metric|analytics|tracking|pixel|beacon|affiliate|partner|videoads|preroll|adfox|yabs|awaps|dzeninfra.*zen-lib|clck)\//i,
-    
-    // Проверка поддоменов
-    adSubdomainRegex: /^https?:\/\/(ads?|ad|banner|promo|reklama|commercial|rtb|ssp|tracking|metric|counter)\./i,
-    
-    // Трекинг параметры
-    trackingParamsRegex: /[?&](utm_|fbclid|gclid|yclid|adb-bits|test-tag|ctime|actual-format)=/i
+    // Паттерны в URL
+    adPatterns: [
+        // Директории с рекламой
+        /\/ads?\//i, /\/ad\//i, /\/banner/i, /\/banners/i,
+        /\/reklama/i, /\/advertising/i, /\/advert/i,
+        /\/promo/i, /\/commercial/i, /\/sponsored/i,
+        
+        // Mail.ru паттерны
+        /\/xray\//i, /\/r0\//i, /\/splash\//i,
+        /mail\.ru\/(xray|r0|r|ad|adman)\//i,
+        
+        // Поддомены
+        /^https?:\/\/ads?\./i, /^https?:\/\/ad\./i,
+        /^https?:\/\/banner/i, /^https?:\/\/promo/i,
+        /^https?:\/\/reklama/i, /^https?:\/\/commercial/i,
+        /^https?:\/\/(xray|r0|r)\./i,
+        
+        // Файлы
+        /\.ads\./i, /ads\d+\./i, /banner\d+\./i,
+        /\/ads\.js/i, /\/ad\.js/i, /\/banner\.js/i,
+        /\/adsense/i, /\/adnxs/i, /\/prebid/i,
+        
+        // Трекинг пиксели
+        /\/pixel\./i, /\/beacon\./i, /\/collect\?/i,
+        /\/counter\./i, /\/metric\./i, /\/track\./i,
+        /\/click/i, /\/clck\./i,
+        
+        // Яндекс специфичные
+        /\/an\/count/i, /yandex.*\/an\//i, /\/bs\/yandex/i,
+        /\/yabs\//i, /awaps/i,
+        
+        // Дзен специфичные рекламные паттерны
+        /clck\.dzen\.ru/i,
+        /dzen.*\/(click|track|pixel)/i,
+        /zen-lib\/(ads|rtb)/i,
+        
+        // Трекинг параметры
+        /[?&](adb-bits|test-tag|ctime|actual-format)=/i,
+        /[?&](utm_|fbclid|gclid|yclid)/i
+    ]
 };
 
 // ===============================================
-// БЕЛЫЙ СПИСОК
+// БЕЛЫЙ СПИСОК И ИСКЛЮЧЕНИЯ
 // ===============================================
 
 const WHITELIST = {
-    // Домены с путями для точного совпадения
-    domains: new Set([
+    domains: [
+        // Критически важные домены - НЕ БЛОКИРОВАТЬ
+        "gosuslugi.ru", "esia.gosuslugi.ru", "www.gosuslugi.ru",
+        "passport.yandex.ru", "auth.yandex.ru", "oauth.yandex.ru", "login.yandex.ru",
+        "api.lamoda.ru", "api.avito.ru", "m.avito.ru",
+        
         // Поисковики
         "yandex.ru/search", "google.com/search", "google.ru/search",
         "duckduckgo.com", "bing.com/search",
@@ -98,300 +168,396 @@ const WHITELIST = {
         "vk.com/im", "vk.com/feed", "vk.com/friends",
         "ok.ru/messages", "ok.ru/feed",
         
-        // Дзен контент (не реклама)
+        // Дзен контент (не реклама) - аккуратная обработка
         "dzen.ru/news", "dzen.ru/media", "dzen.ru/video",
         
         // Почта
         "mail.ru/inbox", "yandex.ru/mail", "gmail.com",
+        "e.mail.ru", "my.mail.ru",
         
         // Важные сервисы
-        "gosuslugi.ru", "nalog.ru", "pfr.ru", "fss.ru",
-        "sberbank.ru", "vtb.ru", "alfabank.ru", "tinkoff.ru",
+        "nalog.ru", "pfr.ru", "fss.ru",
+        "sberbank.ru", "vtb.ru", "alfabank.ru",
         "yandex.ru/maps", "2gis.ru",
         
-        // Работа
+        // Образование и работа
         "hh.ru", "superjob.ru", "rabota.ru",
+        "coursera.org", "stepik.org", "skillbox.ru",
         
-        // Золотое яблоко - ДОБАВЛЕНО
-        "goldapple.ru", "app.goldapple.ru", "api.goldapple.ru"
-    ]),
+        // Новости (редакционный контент)
+        "lenta.ru/news", "rbc.ru/politics", "kommersant.ru/doc",
+        "ria.ru", "tass.ru", "interfax.ru"
+    ],
     
-    // Пути API и системные
-    pathsRegex: /\/(api|ajax|json|xml|graphql|login|auth|oauth|register|checkout|payment|cart|order)\//i,
+    paths: [
+        "/api/", "/ajax/", "/json/", "/xml/",
+        "/login", "/auth", "/oauth", "/register",
+        "/checkout", "/payment", "/cart", "/order",
+        "/passport", "/signin", "/signup"
+    ],
     
-    // Полные домены в белом списке
-    fullDomains: new Set([
-        "goldapple.ru", // Золотое яблоко
-        "app.goldapple.ru",
-        "api.goldapple.ru",
-        "gosuslugi.ru",
-        "nalog.ru",
-        "pfr.ru"
-    ])
+    // Домены для особой обработки (не блокировать полностью)
+    specialHandling: [
+        "dzen.ru", "dzeninfra.ru", // Аккуратная очистка HTML
+        "avito.ru", "lamoda.ru"    // Минимальная обработка
+    ]
 };
 
 // ===============================================
-// HTTPS РЕДИРЕКТ 
+// HTTPS РЕДИРЕКТ КОНФИГУРАЦИЯ  
 // ===============================================
 
-const HTTPS_DOMAINS = new Set([
-    "yandex.ru", "ya.ru", "vk.com", "mail.ru", "ok.ru",
-    "avito.ru", "pikabu.ru", "habr.com", "lenta.ru", "rbc.ru",
-    "kinopoisk.ru", "ozon.ru", "wildberries.ru",
-    "sberbank.ru", "vtb.ru", "tinkoff.ru", "dzen.ru",
-    "goldapple.ru" // Золотое яблоко
-]);
-
-// ===============================================
-// ЛОГИРОВАНИЕ
-// ===============================================
-
-function log(level, message, data = null) {
-    if (!CONFIG.debug && level === 'debug') return;
+const HTTPS_REDIRECT = {
+    domains: [
+        "yandex.ru", "ya.ru", "yandex.com",
+        "vk.com", "vkontakte.ru", 
+        "mail.ru", "my.mail.ru", "e.mail.ru",
+        "ok.ru", "odnoklassniki.ru",
+        "pikabu.ru", "habr.com", "vc.ru",
+        "lenta.ru", "rbc.ru", "kommersant.ru",
+        "kinopoisk.ru", "ivi.ru", "start.ru",
+        "ozon.ru", "wildberries.ru",
+        "sberbank.ru", "vtb.ru", "tinkoff.ru",
+        "dzen.ru"
+    ],
     
-    const timestamp = new Date().toLocaleTimeString();
-    const prefix = `[${CONFIG.scriptName}][${level.toUpperCase()}]`;
-    
-    if (data) {
-        console.log(`${prefix} ${message}`, JSON.stringify(data));
-    } else {
-        console.log(`${prefix} ${message}`);
-    }
-}
+    // Исключения для HTTPS редиректа
+    exclude: [
+        "gosuslugi.ru", "esia.gosuslugi.ru",
+        "avito.ru", "lamoda.ru"
+    ]
+};
 
 // ===============================================
-// ОПТИМИЗИРОВАННЫЕ ФУНКЦИИ ПРОВЕРКИ
+// УТИЛИТЫ И ХЕЛПЕРЫ
 // ===============================================
 
-function isWhitelisted(url) {
-    const urlLower = url.toLowerCase();
-    
-    // Быстрая проверка системных путей
-    if (WHITELIST.pathsRegex.test(urlLower)) {
-        log('debug', 'Whitelisted by path', { url });
-        return true;
-    }
-    
-    // Проверка полных доменов
-    try {
-        const urlObj = new URL(url);
-        const hostname = urlObj.hostname.toLowerCase();
+class Logger {
+    static log(level, message, data = null) {
+        if (!CONFIG.debug && level === 'debug') return;
         
-        if (WHITELIST.fullDomains.has(hostname)) {
-            log('debug', 'Whitelisted full domain', { url });
-            return true;
-        }
-    } catch (e) {}
-    
-    // Проверка доменов с путями
-    for (const domain of WHITELIST.domains) {
-        if (urlLower.includes(domain)) {
-            log('debug', `Whitelisted by domain: ${domain}`, { url });
-            return true;
+        const timestamp = new Date().toISOString();
+        const prefix = `[${CONFIG.scriptName}][${level.toUpperCase()}][${timestamp}]`;
+        
+        if (data) {
+            console.log(`${prefix} ${message}`, JSON.stringify(data));
+        } else {
+            console.log(`${prefix} ${message}`);
         }
     }
     
-    return false;
+    static debug(message, data) { this.log('debug', message, data); }
+    static info(message, data) { this.log('info', message, data); }
+    static warn(message, data) { this.log('warn', message, data); }
+    static error(message, data) { this.log('error', message, data); }
 }
 
-function shouldBlock(url) {
-    if (isWhitelisted(url)) {
+class URLAnalyzer {
+    static isWhitelisted(url) {
+        const urlLower = url.toLowerCase();
+        
+        // Проверяем критические домены
+        for (const domain of WHITELIST.domains) {
+            if (urlLower.includes(domain.toLowerCase())) {
+                Logger.debug(`Whitelisted by domain: ${domain}`, { url });
+                return true;
+            }
+        }
+        
+        // Проверяем пути
+        for (const path of WHITELIST.paths) {
+            if (urlLower.includes(path.toLowerCase())) {
+                Logger.debug(`Whitelisted by path: ${path}`, { url });
+                return true;
+            }
+        }
+        
         return false;
     }
     
-    const urlLower = url.toLowerCase();
-    
-    // Быстрые regex проверки
-    if (BLOCK_LISTS.adKeywordsRegex.test(urlLower)) {
-        log('info', 'Blocked by keyword pattern', { url });
-        return { blocked: true, reason: 'keyword-pattern' };
-    }
-    
-    if (BLOCK_LISTS.adSubdomainRegex.test(urlLower)) {
-        log('info', 'Blocked by subdomain pattern', { url });
-        return { blocked: true, reason: 'subdomain-pattern' };
-    }
-    
-    if (BLOCK_LISTS.trackingParamsRegex.test(urlLower)) {
-        log('info', 'Blocked by tracking params', { url });
-        return { blocked: true, reason: 'tracking-params' };
-    }
-    
-    // Проверка доменов
-    for (const domain of BLOCK_LISTS.adDomains) {
-        if (urlLower.includes(domain)) {
-            log('info', `Blocked by domain: ${domain}`, { url });
-            return { blocked: true, reason: `domain: ${domain}` };
-        }
-    }
-    
-    // Проверка аналитики если включен антитрекинг
-    if (CONFIG.blockingModes.antiTracker) {
-        for (const domain of BLOCK_LISTS.analyticsDomains) {
-            if (urlLower.includes(domain)) {
-                log('info', `Blocked by analytics: ${domain}`, { url });
-                return { blocked: true, reason: `analytics: ${domain}` };
+    static needsSpecialHandling(url) {
+        const urlLower = url.toLowerCase();
+        
+        for (const domain of WHITELIST.specialHandling) {
+            if (urlLower.includes(domain.toLowerCase())) {
+                return domain;
             }
         }
+        
+        return null;
     }
     
-    return { blocked: false };
-}
-
-// ===============================================
-// ОПТИМИЗИРОВАННАЯ ОЧИСТКА HTML
-// ===============================================
-
-const HTML_CLEAN_PATTERNS = [
-    // Яндекс
-    /<script[^>]*(?:yandex|ya).*?(?:direct|partner|metrika)[^>]*>.*?<\/script>/gis,
-    /<div[^>]*(?:ya-partner|yap-|direct)[^>]*>.*?<\/div>/gis,
-    
-    // Google
-    /<script[^>]*googlesyndication[^>]*>.*?<\/script>/gis,
-    /<ins[^>]*adsbygoogle[^>]*>.*?<\/ins>/gis,
-    
-    // Adfox
-    /<script[^>]*adfox[^>]*>.*?<\/script>/gis,
-    /<div[^>]*adfox[^>]*>.*?<\/div>/gis,
-    
-    // Дзен
-    /<div[^>]*(?:zen-lib|dzeninfra)[^>]*>.*?<\/div>/gis,
-    /<script[^>]*dzeninfra[^>]*>.*?<\/script>/gis,
-    
-    // Общие рекламные блоки
-    /<div[^>]*class="[^"]*(?:ad|ads|banner|reklama|advert)[^"]*"[^>]*>.*?<\/div>/gis,
-    /<section[^>]*class="[^"]*(?:ad|ads|banner)[^"]*"[^>]*>.*?<\/section>/gis,
-    
-    // Трекинг
-    /<img[^>]*(?:pixel|beacon|counter|metric|clck)[^>]*>/gi,
-    /<noscript[^>]*>.*?<img[^>]*(?:counter|metric|pixel)[^>]*>.*?<\/noscript>/gis
-];
-
-function cleanHTML(html) {
-    if (!CONFIG.blockingModes.cleanHTML) return html;
-    
-    const originalLength = html.length;
-    let cleanedHTML = html;
-    
-    // Применяем паттерны очистки
-    for (const pattern of HTML_CLEAN_PATTERNS) {
-        cleanedHTML = cleanedHTML.replace(pattern, '');
-    }
-    
-    // Внедряем CSS для блокировки
-    const css = `
-<style id="ru-adblock-css">
-[class*="ad-"], [class*="ads-"], [class*="banner"],
-[id*="ad-"], [id*="ads-"], [id*="banner"],
-.ya-partner, .yap-adunit, .adsbygoogle,
-[class*="reklama"], [class*="promo"],
-iframe[src*="doubleclick"], iframe[src*="googlesyndication"] {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    overflow: hidden !important;
-}
-</style>`;
-    
-    if (cleanedHTML.includes('</head>')) {
-        cleanedHTML = cleanedHTML.replace('</head>', css + '</head>');
-    } else if (cleanedHTML.includes('<body')) {
-        cleanedHTML = cleanedHTML.replace(/(<body[^>]*>)/, '$1' + css);
-    }
-    
-    const bytesRemoved = originalLength - cleanedHTML.length;
-    if (bytesRemoved > 0) {
-        log('info', `HTML cleaned: ${bytesRemoved} bytes removed`);
-    }
-    
-    return cleanedHTML;
-}
-
-// ===============================================
-// ОБРАБОТЧИКИ
-// ===============================================
-
-function handleRequest(request) {
-    const url = request.url;
-    const method = request.method || 'GET';
-    
-    log('debug', `Processing ${method} request`, { url });
-    
-    // HTTPS редирект
-    if (CONFIG.blockingModes.httpsRedirect && url.startsWith('http://')) {
-        try {
-            const urlObj = new URL(url);
-            const hostname = urlObj.hostname.toLowerCase();
+    static shouldBlock(url) {
+        if (this.isWhitelisted(url)) {
+            return { blocked: false };
+        }
+        
+        const urlLower = url.toLowerCase();
+        
+        // Проверяем рекламные домены
+        for (const domain of BLOCK_LISTS.adDomains) {
+            // Пропускаем трекинг домены если антитрекинг выключен
+            if (!CONFIG.blockingModes.antiTracker && 
+                (domain.includes('metric') || domain.includes('analytics') || 
+                 domain.includes('counter') || domain.includes('mc.yandex'))) {
+                continue;
+            }
             
-            for (const domain of HTTPS_DOMAINS) {
-                if (hostname.includes(domain)) {
-                    const httpsUrl = url.replace('http://', 'https://');
-                    log('info', `HTTPS redirect: ${url} -> ${httpsUrl}`);
-                    return {
-                        response: {
-                            status: 302,
-                            headers: {
-                                'Location': httpsUrl,
-                                'Cache-Control': 'no-cache'
-                            }
-                        }
-                    };
-                }
+            if (urlLower.includes(domain.toLowerCase())) {
+                Logger.info(`Blocked by domain: ${domain}`, { url });
+                return { blocked: true, reason: `domain: ${domain}` };
             }
-        } catch (e) {}
+        }
+        
+        // Проверяем ключевые слова
+        for (const keyword of BLOCK_LISTS.adKeywords) {
+            // Пропускаем трекинг ключевые слова если антитрекинг выключен
+            if (!CONFIG.blockingModes.antiTracker && 
+                ['counter', 'metric', 'analytics', 'tracking', 'tracker', 
+                 'pixel', 'beacon', 'collect', 'stats', 'statistic'].includes(keyword)) {
+                continue;
+            }
+            
+            if (urlLower.includes(keyword.toLowerCase())) {
+                Logger.info(`Blocked by keyword: ${keyword}`, { url });
+                return { blocked: true, reason: `keyword: ${keyword}` };
+            }
+        }
+        
+        // Проверяем паттерны
+        for (const pattern of BLOCK_LISTS.adPatterns) {
+            if (pattern.test(url)) {
+                Logger.info(`Blocked by pattern: ${pattern}`, { url });
+                return { blocked: true, reason: `pattern: ${pattern}` };
+            }
+        }
+        
+        return { blocked: false };
     }
     
-    // Проверка блокировки
-    const blockResult = shouldBlock(url);
-    if (blockResult.blocked) {
-        return {
-            response: {
-                status: 204,
-                headers: {
-                    'Content-Type': 'text/plain',
-                    'X-Blocked-By': 'RU-AdBlock',
-                    'Cache-Control': 'max-age=86400'
-                },
-                body: ''
+    static shouldRedirectToHTTPS(url) {
+        if (!CONFIG.blockingModes.httpsRedirect) return null;
+        if (!url.startsWith('http://')) return null;
+        
+        const urlLower = url.toLowerCase();
+        
+        // Проверяем исключения
+        for (const excludeDomain of HTTPS_REDIRECT.exclude) {
+            if (urlLower.includes(excludeDomain.toLowerCase())) {
+                return null;
             }
-        };
+        }
+        
+        // Проверяем домены для редиректа
+        for (const domain of HTTPS_REDIRECT.domains) {
+            if (urlLower.includes(domain.toLowerCase())) {
+                const httpsUrl = url.replace('http://', 'https://');
+                Logger.info(`HTTPS redirect: ${url} -> ${httpsUrl}`);
+                return httpsUrl;
+            }
+        }
+        
+        return null;
     }
-    
-    log('debug', 'Request allowed', { url });
-    return null;
 }
 
-function handleResponse(response) {
-    const url = response.url || 'unknown';
-    const contentType = response.headers && 
-        (response.headers['Content-Type'] || response.headers['content-type']) || '';
+class ContentCleaner {
+    static cleanHTML(html, url = '') {
+        if (!CONFIG.blockingModes.cleanHTML) return html;
+        
+        const originalLength = html.length;
+        let cleanedHTML = html;
+        
+        // Определяем особый режим обработки
+        const specialDomain = URLAnalyzer.needsSpecialHandling(url);
+        
+        // Для Дзена используем более аккуратную очистку
+        if (specialDomain === 'dzen.ru' || specialDomain === 'dzeninfra.ru') {
+            return this.cleanDzenHTML(html);
+        }
+        
+        // Для Авито и Ламоды минимальная очистка
+        if (specialDomain === 'avito.ru' || specialDomain === 'lamoda.ru') {
+            return this.minimalClean(html);
+        }
+        
+        // Стандартная очистка для остальных сайтов
+        const cleanupPatterns = [
+            // Яндекс.Директ
+            /<script[^>]*(?:yandex|ya).*?(?:direct|partner|metrika)[^>]*>.*?<\/script>/gis,
+            /<div[^>]*ya-partner[^>]*>.*?<\/div>/gis,
+            /<div[^>]*yap-adunit[^>]*>.*?<\/div>/gis,
+            
+            // Google AdSense
+            /<script[^>]*googlesyndication[^>]*>.*?<\/script>/gis,
+            /<ins[^>]*adsbygoogle[^>]*>.*?<\/ins>/gis,
+            
+            // Adfox
+            /<script[^>]*adfox[^>]*>.*?<\/script>/gis,
+            /<div[^>]*adfox[^>]*>.*?<\/div>/gis,
+            
+            // Mail.ru реклама
+            /<div[^>]*(?:id|class)="[^"]*(?:xray|r0|splash)[^"]*"[^>]*>.*?<\/div>/gis,
+            
+            // RTB контейнеры
+            /<div[^>]*(?:id|class)="[^"]*(?:rtb|ssp|dsp|prebid)[^"]*"[^>]*>.*?<\/div>/gis,
+            
+            // Общие рекламные блоки
+            /<div[^>]*(?:id|class)="[^"]*(?:ad|ads|banner|reklama|advert)[^"]*"[^>]*>.*?<\/div>/gis,
+            /<section[^>]*(?:id|class)="[^"]*(?:ad|ads|banner|advertising)[^"]*"[^>]*>.*?<\/section>/gis,
+            
+            // Трекинг пиксели
+            /<img[^>]*(?:pixel|beacon|counter|metric|clck)[^>]*>/gi,
+            /<noscript[^>]*>.*?<img[^>]*(?:counter|metric|pixel)[^>]*>.*?<\/noscript>/gis,
+            
+            // Видеореклама
+            /<div[^>]*(?:videoads|ima-|vast-)[^>]*>.*?<\/div>/gis
+        ];
+        
+        // Применяем паттерны очистки
+        for (const pattern of cleanupPatterns) {
+            cleanedHTML = cleanedHTML.replace(pattern, '');
+        }
+        
+        const bytesRemoved = originalLength - cleanedHTML.length;
+        if (bytesRemoved > 0) {
+            Logger.info(`HTML cleaned: ${bytesRemoved} bytes removed`);
+        }
+        
+        return cleanedHTML;
+    }
     
-    log('debug', 'Processing response', { url, contentType });
+    static cleanDzenHTML(html) {
+        // Аккуратная очистка для Дзена - удаляем только явную рекламу
+        let cleanedHTML = html;
+        
+        const dzenAdPatterns = [
+            // Только рекламные скрипты Дзена
+            /<script[^>]*zen-lib\/ads[^>]*>.*?<\/script>/gis,
+            /<script[^>]*zen-lib\/rtb[^>]*>.*?<\/script>/gis,
+            /<div[^>]*class="[^"]*zen-ad[^"]*"[^>]*>.*?<\/div>/gis,
+            
+            // Яндекс.Директ в Дзене
+            /<div[^>]*class="[^"]*ya-partner[^"]*"[^>]*>.*?<\/div>/gis,
+            
+            // Трекинг Дзена
+            /<img[^>]*clck\.dzen\.ru[^>]*>/gi
+        ];
+        
+        for (const pattern of dzenAdPatterns) {
+            cleanedHTML = cleanedHTML.replace(pattern, '');
+        }
+        
+        Logger.debug('Dzen HTML cleaned (gentle mode)');
+        return cleanedHTML;
+    }
     
-    // Обрабатываем только HTML
-    if (!contentType.includes('text/html') && !contentType.includes('application/xhtml')) {
+    static minimalClean(html) {
+        // Минимальная очистка для проблемных сайтов
+        let cleanedHTML = html;
+        
+        const minimalPatterns = [
+            // Только самые явные рекламные блоки
+            /<script[^>]*googlesyndication[^>]*>.*?<\/script>/gis,
+            /<script[^>]*doubleclick[^>]*>.*?<\/script>/gis,
+            /<div[^>]*class="[^"]*google-ad[^"]*"[^>]*>.*?<\/div>/gis
+        ];
+        
+        for (const pattern of minimalPatterns) {
+            cleanedHTML = cleanedHTML.replace(pattern, '');
+        }
+        
+        Logger.debug('Minimal HTML cleaning applied');
+        return cleanedHTML;
+    }
+}
+
+// ===============================================
+// ОСНОВНАЯ ЛОГИКА ОБРАБОТКИ
+// ===============================================
+
+class RequestHandler {
+    static handle(request) {
+        const url = request.url;
+        const method = request.method || 'GET';
+        
+        Logger.debug(`Processing ${method} request`, { url, headers: request.headers });
+        
+        // Проверяем HTTPS редирект
+        const httpsUrl = URLAnalyzer.shouldRedirectToHTTPS(url);
+        if (httpsUrl) {
+            return {
+                response: {
+                    status: 302,
+                    headers: {
+                        'Location': httpsUrl,
+                        'Cache-Control': 'no-cache'
+                    }
+                }
+            };
+        }
+        
+        // Проверяем блокировку
+        const blockResult = URLAnalyzer.shouldBlock(url);
+        if (blockResult.blocked) {
+            Logger.info(`REQUEST BLOCKED: ${blockResult.reason}`, { url });
+            
+            return {
+                response: {
+                    status: 204,
+                    headers: {
+                        'Content-Type': 'text/plain',
+                        'Cache-Control': 'max-age=86400'
+                    },
+                    body: ''
+                }
+            };
+        }
+        
+        Logger.debug('Request allowed', { url });
+        return null; // Пропускаем запрос
+    }
+}
+
+class ResponseHandler {
+    static handle(response) {
+        const url = response.url || 'unknown';
+        const status = response.status;
+        const contentType = response.headers && response.headers['Content-Type'] || 
+                          response.headers && response.headers['content-type'] || '';
+        
+        Logger.debug(`Processing response`, { url, status, contentType });
+        
+        // Обрабатываем только HTML контент
+        if (!contentType.includes('text/html') && !contentType.includes('text/plain')) {
+            return null;
+        }
+        
+        if (!response.body) {
+            return null;
+        }
+        
+        // Проверяем, нужна ли особая обработка
+        if (URLAnalyzer.isWhitelisted(url)) {
+            Logger.debug('Response from whitelisted domain, minimal processing', { url });
+            return null;
+        }
+        
+        const cleanedBody = ContentCleaner.cleanHTML(response.body, url);
+        
+        if (cleanedBody !== response.body) {
+            Logger.info('Response body cleaned', { url });
+            return {
+                response: {
+                    status: response.status,
+                    headers: response.headers,
+                    body: cleanedBody
+                }
+            };
+        }
+        
         return null;
     }
-    
-    if (!response.body) {
-        return null;
-    }
-    
-    const cleanedBody = cleanHTML(response.body);
-    
-    if (cleanedBody !== response.body) {
-        log('info', 'Response body cleaned', { url });
-        return {
-            response: {
-                status: response.status,
-                headers: response.headers,
-                body: cleanedBody
-            }
-        };
-    }
-    
-    return null;
 }
 
 // ===============================================
@@ -399,21 +565,31 @@ function handleResponse(response) {
 // ===============================================
 
 (function main() {
-    log('info', `Script started v${CONFIG.version}`, CONFIG.blockingModes);
+    Logger.info(`Script started v${CONFIG.version}`, CONFIG.blockingModes);
     
     try {
         if (typeof $request !== 'undefined' && $request) {
-            const result = handleRequest($request);
-            $done(result || {});
+            // Обработка запроса
+            const result = RequestHandler.handle($request);
+            if (result) {
+                $done(result);
+            } else {
+                $done({});
+            }
         } else if (typeof $response !== 'undefined' && $response) {
-            const result = handleResponse($response);
-            $done(result || {});
+            // Обработка ответа
+            const result = ResponseHandler.handle($response);
+            if (result) {
+                $done(result);
+            } else {
+                $done({});
+            }
         } else {
-            log('warn', 'No request or response object');
+            Logger.warn('No request or response object available');
             $done({});
         }
     } catch (error) {
-        log('error', 'Script error', {
+        Logger.error('Script execution error', {
             message: error.message,
             stack: error.stack
         });
