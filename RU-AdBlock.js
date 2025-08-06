@@ -158,7 +158,13 @@ const WHITELIST = {
         // Критически важные домены - НЕ БЛОКИРОВАТЬ
         "gosuslugi.ru", "esia.gosuslugi.ru", "www.gosuslugi.ru",
         "passport.yandex.ru", "auth.yandex.ru", "oauth.yandex.ru", "login.yandex.ru",
-        "api.lamoda.ru", "api.avito.ru", "m.avito.ru",
+        "api.lamoda.ru", "lamoda.ru", 
+        "api.avito.ru", "m.avito.ru", "avito.ru",
+        "goldapple.ru", "api.goldapple.ru", "m.goldapple.ru",
+        
+        // CDN соцсетей
+        "okcdn.ru", "vkcdn.net", "userapi.com",
+        "vkvd443.okcdn.ru",
         
         // Поисковики
         "yandex.ru/search", "google.com/search", "google.ru/search",
@@ -199,7 +205,8 @@ const WHITELIST = {
     // Домены для особой обработки (не блокировать полностью)
     specialHandling: [
         "dzen.ru", "dzeninfra.ru", // Аккуратная очистка HTML
-        "avito.ru", "lamoda.ru"    // Минимальная обработка
+        "avito.ru", "lamoda.ru",    // Минимальная обработка
+        "goldapple.ru"              // Минимальная обработка
     ]
 };
 
@@ -217,14 +224,14 @@ const HTTPS_REDIRECT = {
         "lenta.ru", "rbc.ru", "kommersant.ru",
         "kinopoisk.ru", "ivi.ru", "start.ru",
         "ozon.ru", "wildberries.ru",
-        "sberbank.ru", "vtb.ru", "tinkoff.ru",
-        "dzen.ru"
+        "sberbank.ru", "vtb.ru", "tinkoff.ru"
     ],
     
     // Исключения для HTTPS редиректа
     exclude: [
         "gosuslugi.ru", "esia.gosuslugi.ru",
-        "avito.ru", "lamoda.ru"
+        "avito.ru", "lamoda.ru",
+        "goldapple.ru", "dzen.ru"
     ]
 };
 
@@ -377,7 +384,7 @@ class ContentCleaner {
         }
         
         // Для Авито и Ламоды минимальная очистка
-        if (specialDomain === 'avito.ru' || specialDomain === 'lamoda.ru') {
+        if (specialDomain === 'avito.ru' || specialDomain === 'lamoda.ru' || specialDomain === 'goldapple.ru') {
             return this.minimalClean(html);
         }
         
@@ -428,6 +435,11 @@ class ContentCleaner {
     }
     
     static cleanDzenHTML(html) {
+        // Для Дзена пока вообще не чистим HTML, чтобы не ломать
+        Logger.debug('Dzen HTML - skipping cleaning to prevent errors');
+        return html;
+        
+        /* Закомментировано для тестирования
         // Аккуратная очистка для Дзена - удаляем только явную рекламу
         let cleanedHTML = html;
         
@@ -450,6 +462,7 @@ class ContentCleaner {
         
         Logger.debug('Dzen HTML cleaned (gentle mode)');
         return cleanedHTML;
+        */
     }
     
     static minimalClean(html) {
