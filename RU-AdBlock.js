@@ -5,17 +5,27 @@
  * Описание: Оптимизированная система блокировки рекламы для русскоязычных сайтов
  */
 
+// Безопасное получение настроек
+function getEnvironmentValue(key, defaultValue) {
+    try {
+        if (typeof $environment !== 'undefined' && $environment && $environment[key]) {
+            return $environment[key];
+        }
+    } catch (e) {}
+    return defaultValue;
+}
+
 const CONFIG = {
     scriptName: "RU-AdBlock",
     version: "3.2",
-    debug: $environment && $environment['Дебаг логи'] === 'Включить' || false,
+    debug: getEnvironmentValue('Дебаг логи', 'Отключить') === 'Включить',
     
-    // Настройки блокировки из плагина
+    // Настройки блокировки с дефолтными значениями
     blockingModes: {
-        cleanHTML: $environment && $environment['Очистка HTML'] !== 'Отключить',
-        httpsRedirect: $environment && $environment['HTTPS редиректы'] !== 'Отключить',
-        antiTracker: $environment && $environment['Антитрекинг'] !== 'Отключить',
-        socialBlock: $environment && $environment['Блокировка соцсетей'] === 'Включить'
+        cleanHTML: getEnvironmentValue('Очистка HTML', 'Включить') !== 'Отключить',
+        httpsRedirect: getEnvironmentValue('HTTPS редиректы', 'Включить') !== 'Отключить',
+        antiTracker: getEnvironmentValue('Антитрекинг', 'Включить') !== 'Отключить',
+        socialBlock: getEnvironmentValue('Блокировка соцсетей', 'Отключить') === 'Включить'
     }
 };
 
