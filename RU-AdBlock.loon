@@ -14,6 +14,28 @@ force-http-engine-hosts = %APPEND% *.ru, *.рф, *.yandex.ru, *.vk.com, *.mail.r
 
 [Rule]
 # =====================================
+# ИСКЛЮЧЕНИЯ - НЕ БЛОКИРОВАТЬ
+# =====================================
+
+# Госуслуги - полное исключение
+DOMAIN-SUFFIX,gosuslugi.ru,DIRECT
+DOMAIN-SUFFIX,esia.gosuslugi.ru,DIRECT
+
+# Ламода - полное исключение  
+DOMAIN-SUFFIX,lamoda.ru,DIRECT
+
+# Золотое яблоко - полное исключение
+DOMAIN-SUFFIX,goldapple.ru,DIRECT
+
+# Авито - исключение
+DOMAIN-SUFFIX,avito.ru,DIRECT
+
+# CDN соцсетей
+DOMAIN-SUFFIX,okcdn.ru,DIRECT
+DOMAIN-SUFFIX,vkcdn.net,DIRECT
+DOMAIN-SUFFIX,userapi.com,DIRECT
+
+# =====================================
 # DNS БЛОКИРОВКА (БЫСТРАЯ)
 # =====================================
 
@@ -180,7 +202,10 @@ xray.mail.ru, r0.mail.ru, r.mail.ru,
 
 # ИСКЛЮЧЕНИЯ - НЕ добавляем в MITM:
 # *.gosuslugi.ru - государственные услуги
-# *.esia.gosuslugi.ru - авторизация госуслуг
+# *.esia.gosuslugi.ru - авторизация госуслуг  
 # *.avito.ru - проблемы с работой
 # *.lamoda.ru - проблемы с API
+# *.goldapple.ru - полное исключение
+# *.okcdn.ru - CDN соцсетей
+# *.vkcdn.net - CDN соцсетей
 # passport.yandex.ru - авторизация Яндекс
