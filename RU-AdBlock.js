@@ -83,7 +83,7 @@ const BLOCK_LISTS = {
         // Реклама
         "реклама", "баннер", "объявления", "промо", "рекламный",
         "advertisement", "advertising", "advert", "promo", "banner",
-        "ads", "ad_", "_ad", "adnxs", "adsystem", "adserver",
+        "adnxs", "adsystem", "adserver",
         
         // Mail.ru специфичные
         "xray", "r0", "splash",
@@ -109,6 +109,10 @@ const BLOCK_LISTS = {
     
     // Паттерны в URL
     adPatterns: [
+        // 4PDA рекламные редиректы
+        /^https?:\/\/4pda\.to\/\d{4}\/\d{2}\/\d{2}\/\d+\//i,
+        /^https?:\/\/4pda\.ru\/\d{4}\/\d{2}\/\d{2}\/\d+\//i,
+        
         // Директории с рекламой
         /\/ads?\//i, /\/ad\//i, /\/banner/i, /\/banners/i,
         /\/reklama/i, /\/advertising/i, /\/advert/i,
@@ -383,9 +387,14 @@ class ContentCleaner {
             return this.cleanDzenHTML(html);
         }
         
-        // Для Авито и Ламоды минимальная очистка
+        // Для Авито, Ламоды и Золотого яблока минимальная очистка
         if (specialDomain === 'avito.ru' || specialDomain === 'lamoda.ru' || specialDomain === 'goldapple.ru') {
             return this.minimalClean(html);
+        }
+        
+        // Проверяем, не 4PDA ли это
+        if (url.includes('4pda.to') || url.includes('4pda.ru')) {
+            return this.clean4PDAHtml(html);
         }
         
         // Стандартная очистка для остальных сайтов
@@ -431,6 +440,33 @@ class ContentCleaner {
             Logger.info(`HTML cleaned: ${bytesRemoved} bytes removed`);
         }
         
+        return cleanedHTML;
+    }
+    
+    static clean4PDAHtml(html) {
+        // Специальная очистка для 4PDA
+        let cleanedHTML = html;
+        
+        const fourPDAPatterns = [
+            // Баннеры 4PDA
+            /<div[^>]*class="[^"]*(?:banner|adblock|reklama)[^"]*"[^>]*>.*?<\/div>/gis,
+            /<div[^>]*id="[^"]*(?:banner|ad)[^"]*"[^>]*>.*?<\/div>/gis,
+            
+            // Рекламные скрипты
+            /<script[^>]*(?:adfox|adsense|doubleclick)[^>]*>.*?<\/script>/gis,
+            
+            // Рекламные фреймы
+            /<iframe[^>]*(?:banner|ad|reklama)[^>]*>.*?<\/iframe>/gis,
+            
+            // Ссылки на редиректы 4PDA
+            /<a[^>]*href="[^"]*4pda\.to\/\d{4}\/\d{2}\/\d{2}\/\d+\/[^"]*"[^>]*>.*?<\/a>/gis
+        ];
+        
+        for (const pattern of fourPDAPatterns) {
+            cleanedHTML = cleanedHTML.replace(pattern, '');
+        }
+        
+        Logger.debug('4PDA HTML cleaned');
         return cleanedHTML;
     }
     
