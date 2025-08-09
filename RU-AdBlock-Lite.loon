@@ -1,0 +1,32 @@
+#!name=RU AdBlock Lite
+#!desc=Точечная блокировка рекламы на русских сайтах v1.0
+#!author=Professional AdBlock Team
+#!homepage=https://github.com/Lexanewmsk/loon-configuration-file
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlocking.png
+#!select=Дебаг логи, Отключить, Включить
+
+[General]
+# Принудительное использование HTTP движка только для конкретных рекламных доменов
+force-http-engine-hosts = %APPEND% 4pda.to
+
+[Script]
+# =====================================
+# ТОЧЕЧНАЯ БЛОКИРОВКА РЕКЛАМЫ
+# =====================================
+
+# Блокировка рекламных редиректов 4PDA
+http-request ^https?://4pda\.to/\d{4}/\d{2}/\d{2}/\d+/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=false, timeout=5, tag=🚫 4PDA Ads Block, enable=true
+
+# Базовая обработка для будущих правил (пока неактивна)
+# http-request ^https?://example\.ru/ads/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=false, timeout=5, tag=🚫 Example Ads, enable=false
+
+[MITM]
+# =====================================
+# MITM ТОЛЬКО ДЛЯ РЕКЛАМЫ
+# =====================================
+
+# Только конкретные рекламные домены/пути
+hostname = 4pda.to
+
+# Будущие дополнения (примеры):
+# hostname = 4pda.to, ads.example.ru, banner.site.ru
