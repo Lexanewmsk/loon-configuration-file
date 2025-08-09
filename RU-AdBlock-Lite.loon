@@ -26,7 +26,7 @@ http-request ^https?://4pda\.to/\d{4}/\d{2}/\d{2}/\d+/.* script-path=https://raw
 # =====================================
 
 # Только конкретные рекламные домены/пути
-hostname = 4pda.to
+hostname = 4pda.to, yandex.ru, dzen.ru
 
 # Будущие дополнения (примеры):
 # hostname = 4pda.to, ads.example.ru, banner.site.ru
