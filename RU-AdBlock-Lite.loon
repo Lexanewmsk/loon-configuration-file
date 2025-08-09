@@ -1,5 +1,5 @@
 #!name=RU AdBlock Lite
-#!desc=Точечная блокировка рекламы на русских сайтах v1.0
+#!desc=Точечная блокировка рекламы на русских сайтах v1.2
 #!author=Professional AdBlock Team
 #!homepage=https://github.com/Lexanewmsk/loon-configuration-file
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlocking.png
@@ -7,26 +7,55 @@
 
 [General]
 # Принудительное использование HTTP движка только для конкретных рекламных доменов
-force-http-engine-hosts = %APPEND% 4pda.to
+force-http-engine-hosts = %APPEND% 4pda.to, dzen.ru, yandex.ru
 
 [Script]
 # =====================================
-# ТОЧЕЧНАЯ БЛОКИРОВКА РЕКЛАМЫ
+# БЛОКИРОВКА РЕКЛАМНЫХ ЗАПРОСОВ
 # =====================================
 
 # Блокировка рекламных редиректов 4PDA
 http-request ^https?://4pda\.to/\d{4}/\d{2}/\d{2}/\d+/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=false, timeout=5, tag=🚫 4PDA Ads Block, enable=true
 
-# Базовая обработка для будущих правил (пока неактивна)
-# http-request ^https?://example\.ru/ads/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=false, timeout=5, tag=🚫 Example Ads, enable=false
+# Блокировка Яндекс рекламы
+http-request ^https?://.*yandex\.ru/an/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=false, timeout=5, tag=🚫 Yandex Ads Block, enable=true
+
+http-request ^https?://yabs\.yandex\.ru/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=false, timeout=5, tag=🚫 YABS Block, enable=true
+
+# Блокировка Mail.ru рекламы
+http-request ^https?://(xray|r0|r)\.mail\.ru/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=false, timeout=5, tag=🚫 Mail.ru Ads Block, enable=true
+
+# Блокировка Google рекламы
+http-request ^https?://.*googlesyndication\.com/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=false, timeout=5, tag=🚫 Google Ads Block, enable=true
+
+http-request ^https?://.*doubleclick\.net/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=false, timeout=5, tag=🚫 DoubleClick Block, enable=true
+
+# Блокировка AdFox
+http-request ^https?://.*adfox\.ru/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=false, timeout=5, tag=🚫 AdFox Block, enable=true
+
+# Блокировка Cookie баннеров
+http-request ^https?://.*(cookiebot|cookieconsent)\.com/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=false, timeout=5, tag=🚫 Cookie Banners Block, enable=true
+
+# =====================================
+# ОЧИСТКА HTML ОТ РЕКЛАМЫ
+# =====================================
+
+# Очистка HTML на Дзене
+http-response ^https?://.*dzen\.ru/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=true, timeout=10, tag=🧹 Dzen HTML Clean, enable=true
+
+# Очистка HTML на 4PDA
+http-response ^https?://.*4pda\.to/.* script-path=https://raw.githubusercontent.com/Lexanewmsk/loon-configuration-file/refs/heads/loon/RU-AdBlock-Lite.js, requires-body=true, timeout=10, tag=🧹 4PDA HTML Clean, enable=true
 
 [MITM]
 # =====================================
-# MITM ТОЛЬКО ДЛЯ РЕКЛАМЫ
+# MITM ТОЛЬКО ДЛЯ КОНКРЕТНЫХ САЙТОВ
 # =====================================
 
-# Только конкретные рекламные домены/пути
-hostname = 4pda.to, yandex.ru, dzen.ru
+# Только сайты где нужна обработка
+hostname = 4pda.to, dzen.ru, yandex.ru, yabs.yandex.ru, xray.mail.ru, r0.mail.ru, r.mail.ru, *.googlesyndication.com, *.doubleclick.net, *.adfox.ru, *.cookiebot.com, *.cookieconsent.com
 
-# Будущие дополнения (примеры):
-# hostname = 4pda.to, ads.example.ru, banner.site.ru
+# НЕ добавляем:
+# - gosuslugi.ru (государственные услуги)
+# - банковские домены
+# - lamoda.ru, avito.ru (проблемы с API)
+# - goldapple.ru (по запросу пользователя)
