@@ -1,13 +1,13 @@
 /**
  * RU AdBlock Lite Script for Loon
- * Версия: 1.0
+ * Версия: 1.1
  * Автор: Professional AdBlock Team
  * Описание: Точечная блокировка известной рекламы на русских сайтах
  */
 
 const CONFIG = {
     scriptName: "RU-AdBlock-Lite",
-    version: "1.0",
+    version: "1.1",
     debug: false // Изменится из настроек плагина
 };
 
@@ -30,16 +30,105 @@ const BLOCK_RULES = {
         }
     ],
     
-    // Будущие правила (примеры):
-    /*
-    'example.ru': [
+    // Яндекс реклама
+    'yandex.ru': [
         {
-            pattern: /^https?:\/\/example\.ru\/banner\//,
-            description: 'Баннеры example.ru',
+            pattern: /yandex\.ru\/an\/count\//,
+            description: 'Яндекс.Директ счётчики',
+            action: 'block'
+        },
+        {
+            pattern: /yandex\.ru\/an\/rtb\//,
+            description: 'Яндекс RTB реклама',
+            action: 'block'
+        },
+        {
+            pattern: /yabs\.yandex\.ru/,
+            description: 'Яндекс рекламная система',
+            action: 'block'
+        },
+        {
+            pattern: /awaps\.yandex\.ru/,
+            description: 'Яндекс AWAPS реклама',
+            action: 'block'
+        }
+    ],
+    
+    // Дзен реклама
+    'dzen.ru': [
+        {
+            pattern: /[?&](test-tag|adb-bits|yredirect)=/,
+            description: 'Дзен рекламные параметры',
+            action: 'block'
+        },
+        {
+            pattern: /dzen\.ru\/.*\/an\/count\//,
+            description: 'Дзен счётчики рекламы',
+            action: 'block'
+        }
+    ],
+    
+    // Mail.ru реклама
+    'mail.ru': [
+        {
+            pattern: /r\.mail\.ru\/\w+\/\d+\/\d+/,
+            description: 'Mail.ru рекламные редиректы',
+            action: 'block'
+        },
+        {
+            pattern: /xray\.mail\.ru/,
+            description: 'Mail.ru Xray реклама',
+            action: 'block'
+        },
+        {
+            pattern: /r0\.mail\.ru/,
+            description: 'Mail.ru R0 реклама',
+            action: 'block'
+        }
+    ],
+    
+    // Google реклама (на русских сайтах)
+    'googlesyndication.com': [
+        {
+            pattern: /googlesyndication\.com/,
+            description: 'Google AdSense',
+            action: 'block'
+        }
+    ],
+    
+    'doubleclick.net': [
+        {
+            pattern: /doubleclick\.net/,
+            description: 'Google DoubleClick',
+            action: 'block'
+        }
+    ],
+    
+    // Adfox (Яндекс)
+    'adfox.ru': [
+        {
+            pattern: /adfox\.ru/,
+            description: 'AdFox реклама',
+            action: 'block'
+        }
+    ],
+    
+    // Cookie consent (по запросу)
+    'cookiebot.com': [
+        {
+            pattern: /cookiebot\.com/,
+            description: 'Cookie consent баннеры',
+            action: 'block'
+        }
+    ],
+    
+    'cookieconsent.com': [
+        {
+            pattern: /cookieconsent\.com/,
+            description: 'Cookie consent баннеры',
             action: 'block'
         }
     ]
-    */
 };
 
 // ===============================================
