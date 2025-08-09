@@ -1,163 +1,147 @@
 /**
  * RU AdBlock Lite Script for Loon
- * Версия: 1.2
+ * Версия: 2.0
  * Автор: Professional AdBlock Team
- * Описание: Точечная блокировка известной рекламы на русских сайтах
+ * Описание: Универсальная блокировка рекламы
  */
 
 const CONFIG = {
     scriptName: "RU-AdBlock-Lite",
-    version: "1.2",
-    debug: false // Изменится из настроек плагина
+    version: "2.0",
+    debug: false,
+    cleanHTML: true
 };
 
 // Получаем настройки из плагина
 if (typeof $plugin !== 'undefined' && $plugin.config) {
     CONFIG.debug = $plugin.config['Дебаг логи'] === 'Включить';
+    CONFIG.cleanHTML = $plugin.config['Очистка HTML'] === 'Включить';
 }
 
 // ===============================================
-// ПРАВИЛА БЛОКИРОВКИ
+// УНИВЕРСАЛЬНЫЕ ПРАВИЛА
 // ===============================================
 
-const BLOCK_RULES = {
-    // 4PDA рекламные редиректы
-    '4pda.to': [
-        {
-            pattern: /^https?:\/\/4pda\.to\/\d{4}\/\d{2}\/\d{2}\/\d+\//,
-            description: '4PDA рекламные редиректы',
-            action: 'block'
-        }
+const UNIVERSAL_RULES = {
+    // URL паттерны для блокировки
+    blockPatterns: [
+        // Рекламные директории
+        /\/(ads?|advertisement|reklama|banner|promo)\//i,
+        /\/(popunder|popup|sponsor)\//i,
+        
+        // Трекинг и аналитика
+        /\/(metrika|analytics|counter|metric|pixel|beacon|track)\//i,
+        /\/(collect|telemetry|stats|statistic)\//i,
+        
+        // Рекламные файлы
+        /\/(ads?|banner|reklama)\.(js|json|php)/i,
+        /\/(prebid|bidder|rtb|ssp)\.js/i,
+        
+        // Рекламные параметры
+        /[?&](utm_|fbclid|gclid|yclid)/i,
+        /[?&](test-tag|adb-bits)=/i
     ],
     
-    // Яндекс реклама
-    'yandex.ru': [
-        {
-            pattern: /yandex\.ru\/an\/count\//,
-            description: 'Яндекс.Директ счётчики',
-            action: 'block'
-        },
-        {
-            pattern: /yandex\.ru\/an\/rtb\//,
-            description: 'Яндекс RTB реклама',
-            action: 'block'
-        },
-        {
-            pattern: /yabs\.yandex\.ru/,
-            description: 'Яндекс рекламная система',
-            action: 'block'
-        },
-        {
-            pattern: /awaps\.yandex\.ru/,
-            description: 'Яндекс AWAPS реклама',
-            action: 'block'
-        }
+    // Рекламные домены
+    adDomains: [
+        'googlesyndication.com',
+        'doubleclick.net',
+        'googleadservices.com',
+        'google-analytics.com',
+        'googletagmanager.com',
+        'facebook.com/tr',
+        'yabs.yandex',
+        'an.yandex',
+        'adfox.ru',
+        'adfox.yandex',
+        'mc.yandex',
+        'metrika.yandex',
+        'awaps.yandex'
     ],
     
-    // Дзен реклама
-    'dzen.ru': [
-        {
-            pattern: /[?&](test-tag|adb-bits|yredirect)=/,
-            description: 'Дзен рекламные параметры',
-            action: 'block'
-        },
-        {
-            pattern: /dzen\.ru\/.*\/an\/count\//,
-            description: 'Дзен счётчики рекламы',
-            action: 'block'
-        }
-    ],
-    
-    // Mail.ru реклама
-    'mail.ru': [
-        {
-            pattern: /r\.mail\.ru\/\w+\/\d+\/\d+/,
-            description: 'Mail.ru рекламные редиректы',
-            action: 'block'
-        },
-        {
-            pattern: /xray\.mail\.ru/,
-            description: 'Mail.ru Xray реклама',
-            action: 'block'
-        },
-        {
-            pattern: /r0\.mail\.ru/,
-            description: 'Mail.ru R0 реклама',
-            action: 'block'
-        }
-    ],
-    
-    // Google реклама (на русских сайтах)
-    'googlesyndication.com': [
-        {
-            pattern: /googlesyndication\.com/,
-            description: 'Google AdSense',
-            action: 'block'
-        }
-    ],
-    
-    'doubleclick.net': [
-        {
-            pattern: /doubleclick\.net/,
-            description: 'Google DoubleClick',
-            action: 'block'
-        }
-    ],
-    
-    // Adfox (Яндекс)
-    'adfox.ru': [
-        {
-            pattern: /adfox\.ru/,
-            description: 'AdFox реклама',
-            action: 'block'
-        }
-    ],
-    
-    // Cookie consent (по запросу)
-    'cookiebot.com': [
-        {
-            pattern: /cookiebot\.com/,
-            description: 'Cookie consent баннеры',
-            action: 'block'
-        }
-    ],
-    
-    'cookieconsent.com': [
-        {
-            pattern: /cookieconsent\.com/,
-            description: 'Cookie consent баннеры',
-            action: 'block'
-        }
+    // HTML паттерны для очистки
+    htmlPatterns: [
+        // Универсальные рекламные блоки
+        /<div[^>]*class="[^"]*\b(banner|ads?|reklama|promo|sponsor)\b[^"]*"[^>]*>.*?<\/div>/gis,
+        /<section[^>]*class="[^"]*\b(advertisement|commercial)\b[^"]*"[^>]*>.*?<\/section>/gis,
+        
+        // Рекламные скрипты
+        /<script[^>]*(googlesyndication|doubleclick|adfox|yandex.*direct)[^>]*>.*?<\/script>/gis,
+        
+        // Рекламные фреймы
+        /<iframe[^>]*(ads?|banner|reklama)[^>]*>.*?<\/iframe>/gis,
+        
+        // Трекинг пиксели
+        /<img[^>]*(pixel|beacon|counter|metric)[^>]*>/gi,
+        
+        // Cookie баннеры
+        /<div[^>]*class="[^"]*\b(cookie|gdpr|consent)\b[^"]*"[^>]*>.*?<\/div>/gis
     ]
 };
 
 // ===============================================
-// ПРАВИЛА ОЧИСТКИ HTML
+// ИСКЛЮЧЕНИЯ
 // ===============================================
 
-const HTML_CLEAN_RULES = {
-    'dzen.ru': [
-        {
-            // Яндекс.Плюс баннер
-            patterns: [
-                /<div[^>]*class="[^"]*plus-banner[^"]*"[^>]*>.*?<\/div>/gis,
-                /<div[^>]*>.*?Яндекс\s*Плюс.*?ПРОМОКОД.*?<\/div>/gis,
-                /<div[^>]*>.*?plus\.yandex.*?реклама.*?<\/div>/gis,
-                /<div[^>]*>.*?Активируйте промокод на 30 дней.*?<\/div>/gis
-            ],
-            description: 'Яндекс.Плюс баннеры'
-        }
-    ],
+const EXCLUDE_SITES = [
+    // Государственные сайты
+    'gosuslugi.ru',
+    'esia.gosuslugi.ru',
+    'nalog.ru',
+    'pfr.ru',
     
-    '4pda.to': [
-        {
-            patterns: [
-                /<div[^>]*class="[^"]*(?:banner|promo-box|adblock)[^"]*"[^>]*>.*?<\/div>/gis,
-                /<iframe[^>]*(?:banner|ad|reklama)[^>]*>.*?<\/iframe>/gis
-            ],
-            description: '4PDA баннеры'
-        }
-    ]
+    // Банки
+    'sberbank.ru',
+    'vtb.ru',
+    'tinkoff.ru',
+    'alfabank.ru',
+    'raiffeisen.ru',
+    
+    // Проблемные сайты
+    'avito.ru',
+    'lamoda.ru',
+    'goldapple.ru',
+    
+    // Яндекс сервисы (особая обработка)
+    'passport.yandex',
+    'auth.yandex',
+    'oauth.yandex',
+    'login.yandex'
+];
+
+// ===============================================
+// СПЕЦИАЛЬНЫЕ ПРАВИЛА ДЛЯ САЙТОВ
+// ===============================================
+
+const SPECIAL_RULES = {
+    // Яндекс и Дзен - не чистим HTML, только блокируем запросы
+    'yandex.ru': {
+        cleanHTML: false,
+        blockPatterns: [
+            /\/an\/count\//,
+            /\/watch\//,
+            /\/metrika\//
+        ]
+    },
+    
+    'dzen.ru': {
+        cleanHTML: false,
+        blockPatterns: [
+            /\/clck\//,
+            /\/an\/count\//
+        ]
+    },
+    
+    // 4PDA - агрессивная очистка
+    '4pda.to': {
+        cleanHTML: true,
+        blockPatterns: [
+            /\/\d{4}\/\d{2}\/\d{2}\/\d+\//  // Рекламные редиректы
+        ],
+        htmlPatterns: [
+            /<div[^>]*class="[^"]*promo-box[^"]*"[^>]*>.*?<\/div>/gis
+        ]
+    }
 };
 
 // ===============================================
@@ -185,29 +169,75 @@ class Logger {
 }
 
 // ===============================================
-// АНАЛИЗАТОР URL
+// ПРОВЕРКА ИСКЛЮЧЕНИЙ
+// ===============================================
+
+class SiteChecker {
+    static isExcluded(url) {
+        const urlLower = url.toLowerCase();
+        
+        for (const site of EXCLUDE_SITES) {
+            if (urlLower.includes(site)) {
+                Logger.debug(`Site excluded: ${site}`, { url });
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    static getSpecialRules(url) {
+        const urlLower = url.toLowerCase();
+        
+        for (const [site, rules] of Object.entries(SPECIAL_RULES)) {
+            if (urlLower.includes(site)) {
+                Logger.debug(`Special rules applied: ${site}`, { url });
+                return rules;
+            }
+        }
+        
+        return null;
+    }
+}
+
+// ===============================================
+// БЛОКИРОВЩИК
 // ===============================================
 
 class AdBlocker {
     static shouldBlock(url) {
-        try {
-            const urlObj = new URL(url);
-            const hostname = urlObj.hostname;
-            
-            // Проверяем есть ли правила для этого хоста
-            for (const [domain, rules] of Object.entries(BLOCK_RULES)) {
-                if (hostname.includes(domain)) {
-                    // Проверяем каждое правило
-                    for (const rule of rules) {
-                        if (rule.pattern.test(url)) {
-                            Logger.info(`Blocked by rule: ${rule.description}`, { url });
-                            return true;
-                        }
-                    }
+        // Проверяем исключения
+        if (SiteChecker.isExcluded(url)) {
+            return false;
+        }
+        
+        const urlLower = url.toLowerCase();
+        
+        // Проверяем специальные правила
+        const specialRules = SiteChecker.getSpecialRules(url);
+        if (specialRules && specialRules.blockPatterns) {
+            for (const pattern of specialRules.blockPatterns) {
+                if (pattern.test(url)) {
+                    Logger.info(`Blocked by special rule`, { url });
+                    return true;
                 }
             }
-        } catch (e) {
-            Logger.error('Error parsing URL', { url, error: e.message });
+        }
+        
+        // Проверяем рекламные домены
+        for (const domain of UNIVERSAL_RULES.adDomains) {
+            if (urlLower.includes(domain)) {
+                Logger.info(`Blocked by ad domain: ${domain}`, { url });
+                return true;
+            }
+        }
+        
+        // Проверяем универсальные паттерны
+        for (const pattern of UNIVERSAL_RULES.blockPatterns) {
+            if (pattern.test(url)) {
+                Logger.info(`Blocked by universal pattern`, { url });
+                return true;
+            }
         }
         
         return false;
@@ -220,47 +250,59 @@ class AdBlocker {
 
 class HTMLCleaner {
     static clean(html, url) {
-        try {
-            const urlObj = new URL(url);
-            const hostname = urlObj.hostname;
-            let cleanedHTML = html;
-            let totalRemoved = 0;
-            
-            // Проверяем есть ли правила очистки для этого хоста
-            for (const [domain, rules] of Object.entries(HTML_CLEAN_RULES)) {
-                if (hostname.includes(domain)) {
-                    for (const rule of rules) {
-                        for (const pattern of rule.patterns) {
-                            const beforeLength = cleanedHTML.length;
-                            cleanedHTML = cleanedHTML.replace(pattern, '');
-                            const removed = beforeLength - cleanedHTML.length;
-                            
-                            if (removed > 0) {
-                                totalRemoved += removed;
-                                Logger.info(`HTML cleaned: ${rule.description}`, { 
-                                    url, 
-                                    bytesRemoved: removed 
-                                });
-                            }
-                        }
-                    }
-                }
-            }
-            
-            if (totalRemoved > 0) {
-                Logger.info(`Total HTML cleaned`, { url, totalBytesRemoved: totalRemoved });
-            }
-            
-            return cleanedHTML;
-        } catch (e) {
-            Logger.error('Error cleaning HTML', { url, error: e.message });
-            return html; // Возвращаем оригинал при ошибке
+        if (!CONFIG.cleanHTML) {
+            return html;
         }
+        
+        // Проверяем исключения
+        if (SiteChecker.isExcluded(url)) {
+            return html;
+        }
+        
+        // Проверяем специальные правила
+        const specialRules = SiteChecker.getSpecialRules(url);
+        if (specialRules) {
+            if (specialRules.cleanHTML === false) {
+                Logger.debug('HTML cleaning disabled by special rules', { url });
+                return html;
+            }
+            
+            // Применяем специальные паттерны если есть
+            if (specialRules.htmlPatterns) {
+                html = this.applyPatterns(html, specialRules.htmlPatterns, url);
+            }
+        }
+        
+        // Применяем универсальные паттерны
+        html = this.applyPatterns(html, UNIVERSAL_RULES.htmlPatterns, url);
+        
+        return html;
+    }
+    
+    static applyPatterns(html, patterns, url) {
+        let totalRemoved = 0;
+        let cleanedHTML = html;
+        
+        for (const pattern of patterns) {
+            const beforeLength = cleanedHTML.length;
+            cleanedHTML = cleanedHTML.replace(pattern, '');
+            const removed = beforeLength - cleanedHTML.length;
+            
+            if (removed > 0) {
+                totalRemoved += removed;
+            }
+        }
+        
+        if (totalRemoved > 0) {
+            Logger.info(`HTML cleaned: ${totalRemoved} bytes removed`, { url });
+        }
+        
+        return cleanedHTML;
     }
 }
 
 // ===============================================
-// ОБРАБОТЧИК ЗАПРОСОВ
+// ОБРАБОТЧИКИ
 // ===============================================
 
 class RequestHandler {
@@ -270,11 +312,9 @@ class RequestHandler {
         
         Logger.debug(`Processing ${method} request`, { url });
         
-        // Проверяем нужно ли блокировать
         if (AdBlocker.shouldBlock(url)) {
             Logger.info(`REQUEST BLOCKED`, { url });
             
-            // Возвращаем пустой ответ
             return {
                 response: {
                     status: 204,
@@ -287,14 +327,9 @@ class RequestHandler {
             };
         }
         
-        Logger.debug('Request allowed', { url });
-        return null; // Пропускаем запрос
+        return null;
     }
 }
-
-// ===============================================
-// ОБРАБОТЧИК ОТВЕТОВ
-// ===============================================
 
 class ResponseHandler {
     static handle(response) {
@@ -304,7 +339,7 @@ class ResponseHandler {
         
         Logger.debug(`Processing response`, { url, contentType });
         
-        // Обрабатываем только HTML контент
+        // Обрабатываем только HTML
         if (!contentType.includes('text/html') && !contentType.includes('application/xhtml')) {
             return null;
         }
@@ -313,7 +348,6 @@ class ResponseHandler {
             return null;
         }
         
-        // Чистим HTML от рекламы
         const cleanedBody = HTMLCleaner.clean(response.body, url);
         
         if (cleanedBody !== response.body) {
@@ -339,7 +373,6 @@ class ResponseHandler {
     
     try {
         if (typeof $request !== 'undefined' && $request) {
-            // Обработка запроса
             const result = RequestHandler.handle($request);
             if (result) {
                 $done(result);
@@ -347,7 +380,6 @@ class ResponseHandler {
                 $done({});
             }
         } else if (typeof $response !== 'undefined' && $response) {
-            // Обработка ответа (очистка HTML)
             const result = ResponseHandler.handle($response);
             if (result) {
                 $done(result);
