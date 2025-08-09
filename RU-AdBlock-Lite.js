@@ -1,13 +1,13 @@
 /**
  * RU AdBlock Lite Script for Loon
- * Версия: 1.1
+ * Версия: 1.2
  * Автор: Professional AdBlock Team
  * Описание: Точечная блокировка известной рекламы на русских сайтах
  */
 
 const CONFIG = {
     scriptName: "RU-AdBlock-Lite",
-    version: "1.1",
+    version: "1.2",
     debug: false // Изменится из настроек плагина
 };
 
@@ -132,6 +132,35 @@ const BLOCK_RULES = {
 };
 
 // ===============================================
+// ПРАВИЛА ОЧИСТКИ HTML
+// ===============================================
+
+const HTML_CLEAN_RULES = {
+    'dzen.ru': [
+        {
+            // Яндекс.Плюс баннер
+            patterns: [
+                /<div[^>]*class="[^"]*plus-banner[^"]*"[^>]*>.*?<\/div>/gis,
+                /<div[^>]*>.*?Яндекс\s*Плюс.*?ПРОМОКОД.*?<\/div>/gis,
+                /<div[^>]*>.*?plus\.yandex.*?реклама.*?<\/div>/gis,
+                /<div[^>]*>.*?Активируйте промокод на 30 дней.*?<\/div>/gis
+            ],
+            description: 'Яндекс.Плюс баннеры'
+        }
+    ],
+    
+    '4pda.to': [
+        {
+            patterns: [
+                /<div[^>]*class="[^"]*(?:banner|promo-box|adblock)[^"]*"[^>]*>.*?<\/div>/gis,
+                /<iframe[^>]*(?:banner|ad|reklama)[^>]*>.*?<\/iframe>/gis
+            ],
+            description: '4PDA баннеры'
+        }
+    ]
+};
+
+// ===============================================
 // УТИЛИТЫ
 // ===============================================
 
@@ -186,6 +215,51 @@ class AdBlocker {
 }
 
 // ===============================================
+// ОЧИСТИТЕЛЬ HTML
+// ===============================================
+
+class HTMLCleaner {
+    static clean(html, url) {
+        try {
+            const urlObj = new URL(url);
+            const hostname = urlObj.hostname;
+            let cleanedHTML = html;
+            let totalRemoved = 0;
+            
+            // Проверяем есть ли правила очистки для этого хоста
+            for (const [domain, rules] of Object.entries(HTML_CLEAN_RULES)) {
+                if (hostname.includes(domain)) {
+                    for (const rule of rules) {
+                        for (const pattern of rule.patterns) {
+                            const beforeLength = cleanedHTML.length;
+                            cleanedHTML = cleanedHTML.replace(pattern, '');
+                            const removed = beforeLength - cleanedHTML.length;
+                            
+                            if (removed > 0) {
+                                totalRemoved += removed;
+                                Logger.info(`HTML cleaned: ${rule.description}`, { 
+                                    url, 
+                                    bytesRemoved: removed 
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            
+            if (totalRemoved > 0) {
+                Logger.info(`Total HTML cleaned`, { url, totalBytesRemoved: totalRemoved });
+            }
+            
+            return cleanedHTML;
+        } catch (e) {
+            Logger.error('Error cleaning HTML', { url, error: e.message });
+            return html; // Возвращаем оригинал при ошибке
+        }
+    }
+}
+
+// ===============================================
 // ОБРАБОТЧИК ЗАПРОСОВ
 // ===============================================
 
@@ -219,6 +293,44 @@ class RequestHandler {
 }
 
 // ===============================================
+// ОБРАБОТЧИК ОТВЕТОВ
+// ===============================================
+
+class ResponseHandler {
+    static handle(response) {
+        const url = response.url || '';
+        const contentType = response.headers && response.headers['Content-Type'] || 
+                          response.headers && response.headers['content-type'] || '';
+        
+        Logger.debug(`Processing response`, { url, contentType });
+        
+        // Обрабатываем только HTML контент
+        if (!contentType.includes('text/html') && !contentType.includes('application/xhtml')) {
+            return null;
+        }
+        
+        if (!response.body) {
+            return null;
+        }
+        
+        // Чистим HTML от рекламы
+        const cleanedBody = HTMLCleaner.clean(response.body, url);
+        
+        if (cleanedBody !== response.body) {
+            return {
+                response: {
+                    status: response.status,
+                    headers: response.headers,
+                    body: cleanedBody
+                }
+            };
+        }
+        
+        return null;
+    }
+}
+
+// ===============================================
 // ТОЧКА ВХОДА
 // ===============================================
 
@@ -234,8 +346,16 @@ class RequestHandler {
             } else {
                 $done({});
             }
+        } else if (typeof $response !== 'undefined' && $response) {
+            // Обработка ответа (очистка HTML)
+            const result = ResponseHandler.handle($response);
+            if (result) {
+                $done(result);
+            } else {
+                $done({});
+            }
         } else {
-            Logger.warn('No request object available');
+            Logger.warn('No request or response object available');
             $done({});
         }
     } catch (error) {
