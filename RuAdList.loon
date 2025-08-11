@@ -4,9 +4,6 @@
 #!homepage= https://github.com/Lexanewmsk/loon-configuration-file/blob/loon/RuAdList.loon
 #!icon= https://github.com/Lexanewmsk/loon-configuration-file/blob/loon/RuAdList.loon
 
-[Rule]
-# Пока нет безопасных доменов для блокировки из этого блока
-
 [Rewrite]
 # === Common banner names - Generic blocking rules ===
 
