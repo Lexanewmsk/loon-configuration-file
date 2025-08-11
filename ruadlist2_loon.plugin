@@ -2,7 +2,7 @@
 #!desc= Конвертированные правила RuAdList с правильными типами блокировки
 #!author= (конвертация для Loon - исправленная)
 #!homepage= https://github.com/Lexanewmsk/loon-configuration-file/blob/loon/RuAdList.loon
-#!icon= https://github.com/Lexanewmsk/loon-configuration-file/blob/loon/RuAdList.loon
+#!icon= https://github.com/Lexanewmsk/loon-configuration-file/blob/loon/ruadlist2_loon.plugin
 
 [Rewrite]
 # === HTTP сайты (полная блокировка) ===
