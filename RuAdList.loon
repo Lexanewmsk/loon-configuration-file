@@ -1,0 +1,116 @@
+#!name= RuAdList для Loon
+#!desc= Конвертированные правила из AdGuard RuAdList - Common banner names
+#!author= AdguardTeam (конвертация для Loon)
+#!homepage= https://github.com/AdguardTeam/AdguardFilters
+#!icon= https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/metadata.json
+
+[Rule]
+# Пока нет безопасных доменов для блокировки из этого блока
+
+[Rewrite]
+# === Common banner names - Generic blocking rules ===
+
+# Video streaming ads
+^https?:\/\/.*\/code\/video-steam\/\?id=.*&vast= - reject
+
+# Nadavi ads
+^https?:\/\/.*\/nadavi-api\/\?p4g3=js\/api\/widget\.js - reject
+
+# AJ bid ads
+^https?:\/\/aj.*\.bid\/.*\?vpaid= - reject
+
+# Email spam shop/tb
+^https?:\/\/.*\.shop\/tb\/ - reject
+
+# HDVB player 1xbet
+^https?:\/\/.*\/content\/stream\/1xbet\/ - reject
+
+# RTB Kodik instream
+^https?:\/\/.*\/rtb\/kodik_instream\? - reject
+
+# Load XML ads
+^https?:\/\/.*\/load-xml\/\?id=.*&roll= - reject
+
+# AdFactor services
+^https?:\/\/.*\.com\/services\/\?id= - reject
+
+# Mobiads.pro sticker
+^https?:\/\/.*\/resources\/js\/sticker\.js\? - reject
+
+# External subid ads
+^https?:\/\/.*\.xml\?v=3\.0&external_subid= - reject
+
+# Rutor mirrors
+^https?:\/\/.*\/esh-kichum\.js - reject
+
+# Lucky ads feed
+^https?:\/\/.*\/\.feed\/v5\/ad\?stream_uuid= - reject
+^https?:\/\/.*\?surfer_uuid=.*&block_uuid= - reject
+^https?:\/\/.*\/confirm\/ad\?uuid - reject
+^https?:\/\/.*\/confirm\/block\?uuid= - reject
+
+# AdProfex / ads2.bid
+^https?:\/\/.*\/json\/\?.*=.*%2C690% - reject
+^https?:\/\/.*\/json\/\?user_id=.*&site_id=.*&blocks= - reject
+
+# Rezka.ag video ads
+^https?:\/\/.*\/point\/\?method=video_link&xl= - reject
+
+# AdsWell vendor libs
+^https?:\/\/.*\.xyz\/vendor\/lib\/ - reject
+
+# Generic L tag ads
+^https?:\/\/.*\/L\?tag=.*&ad= - reject
+^https?:\/\/.*\/L\?tag=.*_clickunder& - reject
+
+# V3 PHP ads
+^https?:\/\/.*\/j\/v3\.php\?id= - reject
+
+# MBP pre ads
+^https?:\/\/.*\/mbp\/pre\/ - reject
+
+# WCM ads
+^https?:\/\/.*\/wcm\/\?sh= - reject
+
+# Goto sitereg ads
+^https?:\/\/.*\/\?goto=sitereg&atp=.*&plid=.*&bnid= - reject
+
+# jQuery min fake
+^https?:\/\/.*\/jquerymin18\.js - reject
+
+# NeverBlock
+^https?:\/\/.*\/nb\/fl\.js - reject
+
+# Universal scripts ads
+^https?:\/\/.*\/api\/scripts\/universal\?id= - reject
+
+# uBar.pro
+^https?:\/\/.*\/appUbarButton\.js - reject
+
+# Offergate.pro
+^https?:\/\/.*\/api\/content\/js\?blockid=.*&sourceid= - reject
+
+# DIV DA ads
+^https?:\/\/.*&div=DIV_DA_ - reject
+
+# Luntic ads
+^https?:\/\/.*\/luntic\.php\?q= - reject
+
+# Utarget JS
+^https?:\/\/.*\/js\/utarget\.js - reject
+
+# 404 ASCII art ads
+^https?:\/\/.*\?uid=.*&p=.*&fmt=.*&box_border=.*&fghover= - reject
+
+# Context PHP ads
+^https?:\/\/.*\.ru\/js\/context\.php\?id=.*&c= - reject
+^https?:\/\/.*\.com\/rq\.jsp\? - reject
+
+# Armi.media bbqcode
+^https?:\/\/.*\/bbqcode\?saitDomain=.*&referrer=.*&clientWidth= - reject
+
+# X-TDS ads
+^https?:\/\/.*-tds\.com\/\?id=.*&h=.*&l=.*&r= - reject
+
+# Webmasterskyi draw ad script
+^https?:\/\/.*\/resources\/draw_ad_script\.js - reject
