@@ -2189,6 +2189,23 @@ DOMAIN-SUFFIX,o.60sk.ru,REJECT
 DOMAIN-SUFFIX,partner.pladform.ru,REJECT
 DOMAIN-SUFFIX,partners.a24.biz,REJECT
 DOMAIN-SUFFIX,partners.parimatch.net,REJECT
+DOMAIN-SUFFIX,pipki.r.worldssl.net,REJECT
+DOMAIN-SUFFIX,pr.ikovrov.ru,REJECT
+DOMAIN-SUFFIX,pr.rusmed.ru,REJECT
+DOMAIN-SUFFIX,promo.adult-torrent.com,REJECT
+DOMAIN-SUFFIX,r.dimkriju.bget.ru,REJECT
+DOMAIN-SUFFIX,r.topdent.ru,REJECT
+DOMAIN-SUFFIX,r6.galya.ru,REJECT
+DOMAIN-SUFFIX,rek.serial24.com,REJECT
+DOMAIN-SUFFIX,sc.livetvcdn.net,REJECT
+DOMAIN-SUFFIX,server.zombie-tv.org,REJECT
+DOMAIN-SUFFIX,showbiz.mail.ru,REJECT
+DOMAIN-SUFFIX,t.xtubetv.net,REJECT
+DOMAIN-SUFFIX,tan.pridnestrovie.com,REJECT
+DOMAIN-SUFFIX,tizer.ssl-services.com,REJECT
+DOMAIN-SUFFIX,ts2.hockey-talks.com,REJECT
+DOMAIN-SUFFIX,ukrsvit.ukrmir.info,REJECT
+DOMAIN-SUFFIX,vozer.voffka.com,REJECT
 
 # === IP блокировка рекламных серверов ===
 IP-CIDR,62.76.25.27/32,REJECT
