@@ -641,3 +641,435 @@
 ^https?:\/\/.*\/ad\/view - reject
 ^https?:\/\/.*\/ad1\.html - reject
 
+# === Generic ad patterns and banners continuation ===
+
+# Ad HTML and ASP pages
+^https?:\/\/.*\/ad2\.aspx - reject
+^https?:\/\/.*\/ad2\.html - reject
+^https?:\/\/.*\/ad300\.htm - reject
+
+# Ad size patterns
+^https?:\/\/.*\/ad_250x - reject
+^https?:\/\/.*\/ad_300x - reject
+
+# Ad PHP scripts
+^https?:\/\/.*\/ad_js\.php - reject
+^https?:\/\/.*\/ad_os\.php\? - reject
+
+# Ad factory and farm
+^https?:\/\/.*\/adfactory\. - reject
+^https?:\/\/.*\/adfarm\. - reject
+
+# AdFox async code
+^https?:\/\/.*\/adfox\.asyn\.code\.ver3\.js - reject
+
+# Ad handlers and scripts
+^https?:\/\/.*\/adhandler\/ - reject
+^https?:\/\/.*\/adjs\.php\? - reject
+^https?:\/\/.*\/adland\.php - reject
+^https?:\/\/.*\/adman\.js - reject
+^https?:\/\/.*\/adman\/image\/ - reject
+^https?:\/\/.*\/adman\/www\/ - reject
+
+# Ad network and driver
+^https?:\/\/.*\/adnetwork\. - reject
+^https?:\/\/.*\/adriver\. - reject
+^https?:\/\/.*\/adriver_ - reject
+
+# Ads scripts and pages
+^https?:\/\/.*\/ads-1\.js - reject
+^https?:\/\/.*\/ads\.php\? - reject
+^https?:\/\/.*\/ads\.pl - reject
+^https?:\/\/.*\/ads\/frame - reject
+^https?:\/\/.*\/ads\/freewheel\/ - reject
+^https?:\/\/.*\/ads\/hp\/ - reject
+^https?:\/\/.*\/ads\/html - reject
+^https?:\/\/.*\/ads\/pa\/ - reject
+^https?:\/\/.*\/ads\/paid - reject
+^https?:\/\/.*\/ads\/right - reject
+^https?:\/\/.*\/ads\/text - reject
+^https?:\/\/.*\/ads\/top - reject
+^https?:\/\/.*\/ads\/www - reject
+^https?:\/\/.*\/ads2\.html - reject
+^https?:\/\/.*\/ads2\.php - reject
+^https?:\/\/.*\/ads_banner\/ - reject
+
+# Ad spaces and top
+^https?:\/\/.*\/adspaces\. - reject
+^https?:\/\/.*\/adtop\.js - reject
+
+# ADV scripts
+^https?:\/\/.*\/adv\.aspx - reject
+^https?:\/\/.*\/adv\/adv\.js - reject
+^https?:\/\/.*\/adv\/JSblock\.php - reject
+^https?:\/\/.*\/adv_out\. - reject
+
+# Advertisers and works
+^https?:\/\/.*\/advertisers\/ - reject
+^https?:\/\/.*\/adworks\. - reject
+^https?:\/\/.*\/adx\.js - reject
+
+# Affiliate links and banners
+^https?:\/\/.*\/affiliatelinks\. - reject
+^https?:\/\/.*\/affiliates\/banner - reject
+^https?:\/\/.*\/afimages\. - reject
+^https?:\/\/.*\/afisha_banner\/ - reject
+
+# App ads
+^https?:\/\/.*\/app\/ads\.js - reject
+
+# AS3 ad player
+^https?:\/\/.*\/as3adplayer\. - reject
+
+# Banner files
+^https?:\/\/.*\/baner1\.gif - reject
+^https?:\/\/.*\/baner_final\.gif - reject
+^https?:\/\/.*\/baneru\/ - reject
+^https?:\/\/.*\/bannar\.jpg - reject
+
+# Banner scripts and gets
+^https?:\/\/.*\/banner\/functions\.js - reject
+^https?:\/\/.*\/banner\/get\/ - reject
+
+# Specific banner sizes
+^https?:\/\/.*\/banner10\.gif - reject
+^https?:\/\/.*\/banner100\.gif - reject
+^https?:\/\/.*\/banner3\.gif - reject
+^https?:\/\/.*\/Banner468-60\.gif - reject
+^https?:\/\/.*\/Banner_200x400 - reject
+
+# Banner positions
+^https?:\/\/.*\/bannerbottom - reject
+^https?:\/\/.*\/BANNERI\/ - reject
+^https?:\/\/.*\/bannermedia\/ - reject
+^https?:\/\/.*\/bannerREK\.gif - reject
+
+# Banner patterns
+^https?:\/\/.*\/banners.*\.swf - reject
+^https?:\/\/.*\/banneru\/ - reject
+^https?:\/\/.*\/bannery- - reject
+
+# Begun and Bitrix
+^https?:\/\/.*\/begun\.js - reject
+^https?:\/\/.*\/bitrix\/spread\.php\? - reject
+
+# Banner server and body click
+^https?:\/\/.*\/bnrsrv\..*\? - reject
+^https?:\/\/.*\/bodyclick\. - reject
+
+# MyBB and BWAdSys
+^https?:\/\/.*\/bs\.mybb\.ru\/ - reject
+^https?:\/\/.*\/bw_adsys\. - reject
+
+# CGI ads
+^https?:\/\/.*\/cgi-bin\/adv\.fcgi\? - reject
+^https?:\/\/.*\/cgi-bin\/iframe\/ - reject
+
+# Click tracking
+^https?:\/\/.*\/clickheat\. - reject
+^https?:\/\/.*\/clickunder\.js - reject
+^https?:\/\/.*\/clk2\.js - reject
+
+# CNWK ads
+^https?:\/\/.*\/cnwk\.1d\/ads\/ - reject
+
+# Code and commercials
+^https?:\/\/.*\/code\/brand_show\.php - reject
+^https?:\/\/.*\/code\/pops\.js - reject
+^https?:\/\/.*\/codes\/.*\.js - reject
+^https?:\/\/.*\/com_artbannersplus\/ - reject
+^https?:\/\/.*\/commercials\/ - reject
+
+# CS ads and branding
+^https?:\/\/.*\/cs\/ads\/ - reject
+^https?:\/\/.*\/css\/branding_.*\.css - reject
+
+# Context links
+^https?:\/\/.*\/ctxtlink\/ - reject
+
+# CU2 and DC ads
+^https?:\/\/.*\/cu2\.php\?block_data - reject
+^https?:\/\/.*\/dc_ads\. - reject
+
+# Delivery ads
+^https?:\/\/.*\/delivery\/ag\.php - reject
+^https?:\/\/.*\/delivery\/avw\.php - reject
+
+# DIN new
+^https?:\/\/.*\/din_new6\.php\?code=.*&bid=.*&linkdest= - reject
+
+# Display ads
+^https?:\/\/.*\/display_ads\. - reject
+
+# Don't block this
+^https?:\/\/.*\/dontblockthis\/ - reject
+
+# Event NG
+^https?:\/\/.*\/event\.ng - reject
+
+# Files banners
+^https?:\/\/.*\/files\/baner.*\.jpg - reject
+^https?:\/\/.*\/files\/baner_ - reject
+^https?:\/\/.*\/files\/bannerfile - reject
+
+# Fotostrana partners
+^https?:\/\/.*\/fotostrana_partners_ - reject
+
+# Fullgames object
+^https?:\/\/.*\/fullgames\.ru\/ - reject
+
+# Get banner and ads
+^https?:\/\/.*\/get_top_banner\.php - reject
+^https?:\/\/.*\/getad\.aspx - reject
+^https?:\/\/.*\/getad\.js - reject
+^https?:\/\/.*\/getad\.php\? - reject
+^https?:\/\/.*\/getad\.php - reject
+^https?:\/\/.*\/getad\?n= - reject
+
+# Getrank
+^https?:\/\/.*\/getrank\.net\/pr.*\.php - reject
+
+# Google AdSense
+^https?:\/\/.*\/google_adsense\. - reject
+^https?:\/\/.*\/google_adsense_ - reject
+
+# Homepage ads
+^https?:\/\/.*\/homepage_ads\/ - reject
+
+# Li.ru script
+^https?:\/\/.*\/i\.li\.ru\/_sl_\/ - reject
+
+# iDev affiliate
+^https?:\/\/.*\/idevaffiliate\/ - reject
+
+# Iframe ads
+^https?:\/\/.*\/iframe_ads\? - reject
+^https?:\/\/.*\/iframer\.php\? - reject
+
+# Images ads
+^https?:\/\/.*\/images\/ad\. - reject
+^https?:\/\/.*\/images\/ad1\. - reject
+^https?:\/\/.*\/images\/ad125\. - reject
+^https?:\/\/.*\/images\/ad2\. - reject
+^https?:\/\/.*\/images\/ad4\. - reject
+^https?:\/\/.*\/images\/ad5\. - reject
+^https?:\/\/.*\/images\/ad_ - reject
+^https?:\/\/.*\/images\/amigo\. - reject
+^https?:\/\/.*\/images\/ban\/ - reject
+^https?:\/\/.*\/images\/baner\.gif - reject
+^https?:\/\/.*\/images\/bn\/ - reject
+^https?:\/\/.*\/images\/promo_b\/ - reject
+^https?:\/\/.*\/images\/rek\/ - reject
+^https?:\/\/.*\/images_jtads\/ - reject
+
+# IMG folders
+^https?:\/\/.*\/img\/b468_60 - reject
+^https?:\/\/.*\/img\/bn\/ - reject
+^https?:\/\/.*\/img\/partnerka\/ - reject
+^https?:\/\/.*\/img\/recl\/ - reject
+^https?:\/\/.*\/img\/sponsor\/ - reject
+^https?:\/\/.*\/img\/topad_ - reject
+
+# In PHP
+^https?:\/\/.*\/in\.php\?id= - reject
+
+# Informer and interstitial
+^https?:\/\/.*\/informer11\.js - reject
+^https?:\/\/.*\/interstitial\.wind\.js - reject
+
+# Jabox
+^https?:\/\/.*\/jabox\/jabox - reject
+^https?:\/\/.*\/jabox_js\/ - reject
+
+# JS ads
+^https?:\/\/.*\/js-ad\.php - reject
+^https?:\/\/.*\/js\.ng\/c - reject
+^https?:\/\/.*\/js\.ng\/s - reject
+^https?:\/\/.*\/js\.php\?sid= - reject
+^https?:\/\/.*\/js\/ad_eo_ - reject
+^https?:\/\/.*\/js\/advertising\/ - reject
+^https?:\/\/.*\/js\/branding-rotator\.js - reject
+^https?:\/\/.*\/js\/clickunder\/ - reject
+^https?:\/\/.*\/js\/clk\.js - reject
+^https?:\/\/.*\/js\/code\.php\?id= - reject
+^https?:\/\/.*\/js\/pop-up\.js - reject
+^https?:\/\/.*\/js\/rek\.js - reject
+^https?:\/\/.*\/js\/vk\.php - reject
+
+# Label advertisement
+^https?:\/\/.*\/label-advertisement\. - reject
+
+# Link exchange
+^https?:\/\/.*\/linkexchange\/ - reject
+
+# LP2 go
+^https?:\/\/.*\/lp2\/go\.php\?file= - reject
+
+# Main banner
+^https?:\/\/.*\/mainbanner\.gif - reject
+
+# Mirmaek GIF
+^https?:\/\/.*\/mirmaek\/.*\.gif - reject
+
+# MnetOrfAd
+^https?:\/\/.*\/mnetorfad\.js - reject
+
+# Mod adman
+^https?:\/\/.*\/mod\/adman\/ - reject
+
+# Netcat banner
+^https?:\/\/.*\/netcat\/modules\/banner\/ - reject
+
+# New click
+^https?:\/\/.*\/newclk\.js - reject
+
+# News ref
+^https?:\/\/.*\/news\/\?ref=.*&mobtop= - reject
+
+# Oasisi
+^https?:\/\/.*\/oasisi-.*\.php\? - reject
+
+# OpenX
+^https?:\/\/.*\/openx\/www\/ - reject
+
+# Our banners
+^https?:\/\/.*\/OurBanners\/ - reject
+
+# Page rank
+^https?:\/\/.*\/pagerank\. - reject
+^https?:\/\/.*\/pagerank\/ - reject
+
+# Partner banners
+^https?:\/\/.*\/partner_banners\/ - reject
+
+# Pictures
+^https?:\/\/.*\/pict\/baner\.gif - reject
+^https?:\/\/.*\/pix\/ad\/ - reject
+
+# Pop under
+^https?:\/\/.*\/Pop-under\.js - reject
+^https?:\/\/.*\/popuptraf - reject
+
+# Position
+^https?:\/\/.*\/position=.*\/aamsz= - reject
+
+# Promo patterns
+^https?:\/\/.*\/promo\/banner2\.jpg - reject
+^https?:\/\/.*\/promo\/vulkan\/ - reject
+^https?:\/\/.*\/promos\/banner\.php - reject
+
+# PRRE
+^https?:\/\/.*\/prre\.ru\/bout\.php\? - reject
+^https?:\/\/.*\/prre\.ru\/wout\.php\? - reject
+
+# Pseudo counter
+^https?:\/\/.*\/pseudocounter\.js - reject
+
+# QCash
+^https?:\/\/.*\/Qcash\.Simple14\.Extended4\.LCU\.js - reject
+
+# Rankem
+^https?:\/\/.*\/rankem\.cgi\?action= - reject
+
+# Rax
+^https?:\/\/.*\/rax\.ru\/ - reject
+
+# Rectangle ads
+^https?:\/\/.*\/rec_ad1\. - reject
+
+# Reclama
+^https?:\/\/.*\/reclama_.*\.jpg - reject
+
+# Redtram
+^https?:\/\/.*\/redtram\. - reject
+
+# REK scripts
+^https?:\/\/.*\/rek1\.js - reject
+^https?:\/\/.*\/reklama1\.js - reject
+^https?:\/\/.*\/reklama2\/ - reject
+
+# Rich media
+^https?:\/\/.*\/richarbuz\. - reject
+^https?:\/\/.*\/richmedia\.adv\? - reject
+
+# Right ad click
+^https?:\/\/.*\/rightadclick\.php - reject
+
+# RNB informer
+^https?:\/\/.*\/rnb\.php\?id=informer - reject
+
+# Rotator patterns
+^https?:\/\/.*\/rotator\/.*\.js - reject
+^https?:\/\/.*\/Rotator\/ads\/ - reject
+^https?:\/\/.*\/rotator\/banner\/ - reject
+^https?:\/\/.*\/rotator\/rotator\.js - reject
+^https?:\/\/.*\/rotban\/img\/ - reject
+^https?:\/\/.*\/rotban\/rotator\.js - reject
+
+# RU and UA n4p
+^https?:\/\/.*\/ru-n4p\/.*\.js - reject
+^https?:\/\/.*\/ua-n4p\/.*\.js - reject
+
+# Scripts click
+^https?:\/\/.*\/scripts\/clickjs\.php - reject
+
+# Shared promos
+^https?:\/\/.*\/shared\/promos\/ - reject
+
+# Show out
+^https?:\/\/.*\/show\/out\.php\?t=.*&async=1&v= - reject
+
+# Show layer
+^https?:\/\/.*\/showlayer\. - reject
+
+# Smart links
+^https?:\/\/.*\/smartlinks\. - reject
+
+# Soft banner
+^https?:\/\/.*\/soft\/baner_ - reject
+
+# SPC scripts
+^https?:\/\/.*\/spc\.php\? - reject
+^https?:\/\/.*\/spcjs\.php\? - reject
+
+# Specials
+^https?:\/\/.*\/specials\/htads\/ - reject
+
+# Splash
+^https?:\/\/.*\/splash\/page_header\/ - reject
+
+# Sponsor patterns
+^https?:\/\/.*\/sponsor-right\. - reject
+^https?:\/\/.*\/sponsor-top\. - reject
+^https?:\/\/.*\/sponsor_images\/ - reject
+^https?:\/\/.*\/sponsoring\/ - reject
+^https?:\/\/.*\/sponsorship_ - reject
+
+# Style branding
+^https?:\/\/.*\/style\/branding\.css - reject
+
+# Sun ajax
+^https?:\/\/.*\/sun.*_ajax\.js - reject
+
+# SWF banners
+^https?:\/\/.*\/swf_banners\/ - reject
+
+# Teaser block
+^https?:\/\/.*\/TeaserBlock\.site\.js - reject
+
+# Templates ads
+^https?:\/\/.*\/templates\/_ads\/ - reject
+
+# Tizer scripts
+^https?:\/\/.*\/tizermoya\.php - reject
+^https?:\/\/.*\/tizermoyad\.php - reject
+^https?:\/\/.*\/tizers\. - reject
+^https?:\/\/.*\/tizers\/ - reject
+
+# Traforet
+^https?:\/\/.*\/traforet-.*\.js - reject
+^https?:\/\/.*\/traforet\.js - reject
+
+# TX2
+^https?:\/\/.*\/tx2\.ru\/ - reject
+
