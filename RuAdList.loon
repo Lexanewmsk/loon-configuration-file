@@ -274,3 +274,370 @@
 ^https?:\/\/.*\.ru\/static\/sticker_pc\.min\.js - reject
 ^https?:\/\/.*\.ru\/static\/sticker\.min\.js\? - reject
 ^https?:\/\/.*\.ru\/static\/sticker\.js\? - reject
+
+# === Additional advertising scripts and platforms ===
+
+# tnAdditionalParams and core scripts
+^https?:\/\/.*\/cu3\.php - reject
+^https?:\/\/.*\/0core\.js\?.*= - reject
+^https?:\/\/.*\/0jquery\.js\?.*= - reject
+^https?:\/\/.*\/1script\.js\?.*= - reject
+^https?:\/\/.*\/6code\.js\?.*= - reject
+^https?:\/\/.*\/6core\.js\?.*= - reject
+^https?:\/\/.*\/6init\.js\?.*= - reject
+^https?:\/\/.*\/6script\.js\?.*= - reject
+
+# AnyADs SSP banner
+^https?:\/\/.*\/ssp-bn\.min\.js - reject
+
+# TDS.ru script referrer
+^https?:\/\/.*\?frm=script&se_referrer= - reject
+
+# AdPlus smart rotator
+^https?:\/\/.*\/smartrotator\.js\?referrer= - reject
+
+# Amigo browser ads
+^https?:\/\/.*\/img\/amigo\. - reject
+
+# Tizer Divizion myout
+^https?:\/\/.*\.com\/myout\.php\?g= - reject
+^https?:\/\/.*\.net\/myout\.php\?g= - reject
+^https?:\/\/.*\.ru\/myout\.php\?g= - reject
+
+# AD_DOMAIN_URL_SYS scripts (multiple domains)
+^https?:\/\/.*\.club\/\?.*=.*&.*=.*&.*=.*&.*= - reject
+^https?:\/\/.*\.com\/\?.*=.*&ids=.*&r= - reject
+^https?:\/\/.*\.com\/\?.*=:&ids=.*&r= - reject
+^https?:\/\/.*\.com\/js\/v1\.2\/script\.min\.js - reject
+^https?:\/\/.*\.info\/\?.*=.*&ids=.*&r= - reject
+^https?:\/\/.*\.info\/\?.*=:&ids=.*&r= - reject
+^https?:\/\/.*\.info\/js\/v1\.2\/script\.min\.js - reject
+^https?:\/\/.*\.org\/\?.*=.*&ids=.*&r= - reject
+^https?:\/\/.*\.org\/\?.*=:&ids=.*&r= - reject
+^https?:\/\/.*\.org\/js\/v1\.2\/script\.min\.js - reject
+^https?:\/\/.*\.pro\/\?.*=.*&ids=.*&r= - reject
+^https?:\/\/.*\.pro\/\?.*=:&ids=.*&r= - reject
+^https?:\/\/.*\.pro\/js\/v1\.2\/script\.min\.js - reject
+^https?:\/\/.*\.ru\/\?.*=.*&ids=.*&r= - reject
+^https?:\/\/.*\.ru\/\?.*=:&ids=.*&r= - reject
+^https?:\/\/.*\.ru\/js\/v1\.2\/script\.min\.js - reject
+^https?:\/\/.*\.top\/\?.*=.*&ids=.*&r= - reject
+^https?:\/\/.*\.top\/\?.*=:&ids=.*&r= - reject
+^https?:\/\/.*\.top\/js\/v1\.2\/script\.min\.js - reject
+
+# Various domain next.html and news.js patterns
+^https?:\/\/.*\.biz\/next\.html\? - reject
+^https?:\/\/.*\.com\/next\.html\? - reject
+^https?:\/\/.*\.gold\/next\.html\? - reject
+^https?:\/\/.*\.info\/news\.js - reject
+^https?:\/\/.*\.pro\/news\.js - reject
+^https?:\/\/.*\.pw\/next\.html\? - reject
+^https?:\/\/.*\.ru\/news\.js - reject
+^https?:\/\/.*\.ru\/next\.html\? - reject
+^https?:\/\/.*\.ru\/output\/index\/ - reject
+^https?:\/\/.*\.ru\/output2\/index\/ - reject
+
+# Rekl images
+^https?:\/\/.*\/img\/rekl\/ - reject
+
+# Show.html scripts
+^https?:\/\/.*\.com\/show\.html\? - reject
+
+# UID and format parameters
+^https?:\/\/.*\.com\/.*\?uid=.*&p=.*&fmt=htm&lng=.*&tid=1 - reject
+^https?:\/\/.*\.net\/show\/\?id=.*&r= - reject
+^https?:\/\/.*\.pro\/up\/\?id=.*&r= - reject
+^https?:\/\/.*\.site\/show\/\?id=.*&r= - reject
+^https?:\/\/.*\.space\/show\/\?id=.*&r= - reject
+
+# Cloudflare CDN bag2 tracking
+^https?:\/\/.*\/cdn-cgi\/pe\/bag2\?r\[\]=.*interfax\.info - reject
+^https?:\/\/.*\/cdn-cgi\/pe\/bag2\?r\[\]=.*interfax\.pw - reject
+^https?:\/\/.*\/cdn-cgi\/pe\/bag2\?r\[\]=.*umekana\.ru - reject
+^https?:\/\/.*\/cdn-cgi\/pe\/bag2\?r\[\]=.*xvhvm\.top - reject
+^https?:\/\/.*\/cdn-cgi\/pe\/bag2\?r\[\]=.*yjuqi\.top - reject
+
+# MxAdNews dynamic app
+^https?:\/\/.*\/w.*\/dyn_data\/app\.js\? - reject
+
+# VAST video ads handler
+^https?:\/\/.*\/handler_static\/js\/vast\.js - reject
+
+# News with tracking parameters
+^https?:\/\/.*\/news\/\?mobtop=.*&ref= - reject
+^https?:\/\/.*\/news\/\?ref=.*&bn=.*&sid=.*&mobtop= - reject
+^https?:\/\/.*\/view\/\?sid=.*&bn=.*&ad=.*&ref= - reject
+
+# Goblin/FreeRutor ads
+^https?:\/\/.*\/asddsa\/lc\.php\?pubId= - reject
+^https?:\/\/.*\/banner_lc\.php\?pubId= - reject
+^https?:\/\/.*\/banner_lp\.php\?pubId= - reject
+^https?:\/\/.*\/lc\.php\?pubId= - reject
+^https?:\/\/.*\/lp\.php\?.*pubId= - reject
+
+# Yandex Market advisor
+^https?:\/\/.*\/sovetnik\.webpartner\. - reject
+
+# TeaserNet various domains
+^https?:\/\/.*\.com\/.*\.js\?p=.*&amp;b= - reject
+^https?:\/\/.*\.com\/inc\/angular\.js - reject
+^https?:\/\/.*\.pw\/inc\/angular\.js - reject
+^https?:\/\/.*\.space\/inc\/angular\.js - reject
+^https?:\/\/.*\.top\/inc\/angular\.js - reject
+^https?:\/\/.*\.ua\/inc\/angular\.js - reject
+^https?:\/\/.*\/static\/foobar\.js\?p=.*&amp;b= - reject
+^https?:\/\/.*\/static\/foobar\.js\?p=.*&b= - reject
+
+# Popular popup with key
+^https?:\/\/www\..*\.xyz\/.*\?.*&key= - reject
+
+# Tizer24 block
+^https?:\/\/.*\/show\/\?block_id= - reject
+
+# TeaserLady RTL init
+^https?:\/\/.*rtl\..*\/init\.js\? - reject
+
+# SlickJump plugin
+^https?:\/\/.*\/js\/sjplugin\.js - reject
+
+# Viboom video ads
+^https?:\/\/.*\/video\/get\/\?platformId=.*&sig=.*&vbmuid=.*&data= - reject
+^https?:\/\/.*\/video\/get\/\?userId=.*&sig=.*&vbmuid=.*&data= - reject
+^https?:\/\/.*\.com\/player\/ - reject
+^https?:\/\/.*\.ru\/player\/ - reject
+^https?:\/\/rotator\..*\/video\/\?platformId=.*&.*&height=.*&sig= - reject
+
+# Bens vinos ads
+^https?:\/\/.*\/bens\/vinos - reject
+^https?:\/\/.*\/bens\/.*\/vinos\.js\? - reject
+^https?:\/\/.*\/bens\/vinos\.js\? - reject
+^https?:\/\/.*\/bens\/somejscode\.js - reject
+
+# Various tracking and banner scripts
+^https?:\/\/.*\/a\.php\?id=.*&loc=.*&ref= - reject
+^https?:\/\/.*\/b\?size=.*&catgry= - reject
+^https?:\/\/.*\/code\/partners\.php\?id= - reject
+^https?:\/\/.*\/code\/bshow\.php\?id=.*&dimension= - reject
+^https?:\/\/.*\/news\/\?bn=.*&ref= - reject
+^https?:\/\/.*\/output\/index\/ - reject
+
+# Cloudflare CDN Yandex and c8.net.ua tracking
+^https?:\/\/.*\/cdn-cgi\/pe\/bag2\?r\[\]=.*%2Fan\.yandex\.ru - reject
+^https?:\/\/.*\/cdn-cgi\/pe\/bag2\?r\[\]=.*c8\.net\.ua - reject
+
+# TeaserNet/VisitWeb TDS and HTML ads
+^https?:\/\/.*\.space\/tds\.php\? - reject
+^https?:\/\/.*\.top\/.*\.html\?b=.*&ref=.*&prot=.*&mkey= - reject
+
+# === TeaserNet and VisitWeb continuation ===
+
+# Top ajax ads
+^https?:\/\/.*\.top\/ajax\/\?b=.*&f=.*&p= - reject
+
+# Flickr photo script
+^https?:\/\/.*\/flickr\/photo\?url= - reject
+
+# Multiple domain patterns with various paths
+^https?:\/\/.*\..*\.org\/xx\?.*&clu=.*&mb= - reject
+^https?:\/\/vw\..*\.org\/v\/.*_.* - reject
+^https?:\/\/.*\..*\.biz\/x2\/ - reject
+^https?:\/\/.*\..*\.biz\/xa\/ - reject
+^https?:\/\/.*\..*\.biz\/xj\/ - reject
+^https?:\/\/.*\..*\.biz\/xx\? - reject
+^https?:\/\/.*\..*\.biz\/xy\/ - reject
+^https?:\/\/.*\..*\.com\/xj\/ - reject
+^https?:\/\/.*\..*\.info\/v\/ - reject
+^https?:\/\/.*\..*\.xyz\/v\/ - reject
+^https?:\/\/.*\..*\.xyz\/vv\/ - reject
+^https?:\/\/v\..*\.com\/vv\/ - reject
+^https?:\/\/v\..*\.info\/v\/ - reject
+^https?:\/\/v\..*\.tv - reject
+^https?:\/\/vv\..*\.online\/v\/ - reject
+
+# VisitWeb specific patterns
+^https?:\/\/.*\.space\/xx\?.*&bid= - reject
+^https?:\/\/.*\..*\.pw\/v\/ - reject
+^https?:\/\/.*\..*\.space\/v\/ - reject
+^https?:\/\/.*\..*\.space\/v\? - reject
+^https?:\/\/.*\..*\.space\/vv - reject
+^https?:\/\/.*\..*\.space\/x\? - reject
+^https?:\/\/.*\.space\/.*&bid= - reject
+^https?:\/\/v\..*\.com\/.*&bid= - reject
+^https?:\/\/v\..*\.com\/v\/ - reject
+^https?:\/\/v\..*\.com\/v\? - reject
+^https?:\/\/v\..*\.com\/vv\? - reject
+^https?:\/\/v\..*\.com\/x\? - reject
+
+# Static BC script
+^https?:\/\/.*\/static\/bc\.js\? - reject
+
+# Megatrack banner
+^https?:\/\/.*\/bn\.php\?s= - reject
+^https?:\/\/.*sb\.php\?s= - reject
+
+# JSONP and embed code ads
+^https?:\/\/.*\.com\/jsonp\.php\?b=.*&ref= - reject
+^https?:\/\/.*\.info\/embed_code\/.*\/goclick\?ref= - reject
+^https?:\/\/.*\.pw\/embed_code\/.*\/goclick\?ref= - reject
+
+# TeaserNet JSONP patterns
+^https?:\/\/.*\.com\/jsonp\.php\?[A-Za-z0-9]{300,} - reject
+^https?:\/\/.*\.club\/jsonp\.php\?b= - reject
+^https?:\/\/.*\.com\/native\.php\?b= - reject
+^https?:\/\/.*\.net\/jsonp\.php\?b=.*&ref= - reject
+^https?:\/\/.*\.pro\/native\.php\?b= - reject
+^https?:\/\/.*\.pw\/jsonp\.php\?b= - reject
+^https?:\/\/.*\.space\/jsonp\.php\?b= - reject
+^https?:\/\/.*\.top\/jsonp\.php\?b=.*&ref= - reject
+^https?:\/\/.*\.us\/jsonp\.php\?b= - reject
+^https?:\/\/.*\.xyz\/jsonp\.php\?b= - reject
+^https?:\/\/.*\/\?bn=.*&ad= - reject
+
+# Leftunit script
+^https?:\/\/.*\.ru\/leftunit\.pl\? - reject
+
+# Kadam base script
+^https?:\/\/.*\/kadam\.base\.min\.js\? - reject
+
+# VAST video ads patterns
+^https?:\/\/vst\..*\/.*\?subid= - reject
+^https?:\/\/.*\/vast\.php\?partner_id= - reject
+^https?:\/\/.*\.php\?vast= - reject
+^https?:\/\/.*\?sid=.*&t=.*&jsD= - reject
+^https?:\/\/.*\.ru\/vast\/ - reject
+^https?:\/\/.*\/\?bid=&sid= - reject
+^https?:\/\/.*\.bid\/pjs\/ - reject
+
+# Generic ad parameters and patterns
+^https?:\/\/.*&afftraf= - reject
+^https?:\/\/.*&clientype=.*&adid= - reject
+^https?:\/\/.*&foiffs= - reject
+^https?:\/\/.*&lc_format=map_inset_ad& - reject
+
+# Ad size patterns
+^https?:\/\/.*-120x600 - reject
+^https?:\/\/.*-160x600 - reject
+^https?:\/\/.*-234x60\.gif - reject
+^https?:\/\/.*-336x280 - reject
+^https?:\/\/.*-360x110\. - reject
+^https?:\/\/.*\.120x600 - reject
+^https?:\/\/.*\.160x600 - reject
+^https?:\/\/.*\.300x250 - reject
+^https?:\/\/.*\.336x280 - reject
+
+# Various ad domains and paths
+^https?:\/\/.*-ad-manager\/ - reject
+^https?:\/\/.*-bin\/ivw\/cp - reject
+^https?:\/\/.*-blog\.org\/layer\/layer\.js - reject
+^https?:\/\/.*-click\.ru\/adv_out - reject
+^https?:\/\/.*-content\/adsys\/ - reject
+^https?:\/\/.*-defonce\.com\/th\. - reject
+^https?:\/\/.*-dosug-nu\.com\/v\? - reject
+^https?:\/\/.*-down\.ru\/pd\. - reject
+^https?:\/\/.*-media\.net\/adj\/ - reject
+^https?:\/\/.*-na-dosuge - reject
+^https?:\/\/.*-rebels-ads\/ - reject
+^https?:\/\/.*-stats\.video\. - reject
+^https?:\/\/.*-stdlauncher\.js - reject
+
+# Ad tracking and click scripts
+^https?:\/\/.*\.cf\/get-image\?image= - reject
+^https?:\/\/.*\.com\/160_ - reject
+^https?:\/\/.*\.com\/728_ - reject
+^https?:\/\/.*\.com\/clk\.js - reject
+^https?:\/\/.*\.com\/in\.htm\?wm= - reject
+^https?:\/\/.*\.com\/pt\/t\?&d= - reject
+^https?:\/\/.*\.com\/pv\.js - reject
+^https?:\/\/.*\.com\/px\/\?bc= - reject
+
+# RTR (rotator) patterns 1-9
+^https?:\/\/.*\.com\/rtr\/[1-9] - reject
+^https?:\/\/.*\.net\/rtr\/[1-9] - reject
+^https?:\/\/.*\.kz\/rtr\/[1-9] - reject
+^https?:\/\/.*\.ru\/rtr\/[1-9] - reject
+^https?:\/\/.*\.tv\/rtr\/[1-9] - reject
+^https?:\/\/.*\.org\/rtr\/ - reject
+^https?:\/\/.*\.ua\/rtr\/[59] - reject
+
+# Banner and ad scripts
+^https?:\/\/.*\.info\/baner\/ - reject
+^https?:\/\/.*\.info\/clk\.js - reject
+^https?:\/\/.*\.info\/init\.js\? - reject
+^https?:\/\/.*\.ippi\?g= - reject
+^https?:\/\/.*\.kz\/clk\.js - reject
+^https?:\/\/.*\.net\/activity; - reject
+^https?:\/\/.*\.net\/clk\.js - reject
+^https?:\/\/.*\.net\/layer-.*\.js - reject
+^https?:\/\/.*\.net\/pop\.js - reject
+^https?:\/\/.*\.netmng\. - reject
+
+# Various ad scripts
+^https?:\/\/.*\.nuffnang\..*\.js - reject
+^https?:\/\/.*\.nuggad\..*\.js - reject
+^https?:\/\/.*\.org\/clk\.js - reject
+^https?:\/\/.*\.php\?zoneid=.*&loc= - reject
+^https?:\/\/.*\.ru\/baner\/ - reject
+^https?:\/\/.*\.ru\/clk\.js - reject
+^https?:\/\/.*\.ru\/code\.php\?id= - reject
+^https?:\/\/.*\.ru\/icq\.js - reject
+^https?:\/\/.*\.ru\/images\/re\/.*\.jpg\? - reject
+^https?:\/\/.*\.ru\/pop\.js - reject
+^https?:\/\/.*\.su\/clk\.js - reject
+^https?:\/\/.*\.tizers\. - reject
+^https?:\/\/.*\.trafmonster\. - reject
+^https?:\/\/.*\.tuvideogratis\..*\.js - reject
+^https?:\/\/.*\.tv\/baner\/ - reject
+^https?:\/\/.*\.tv\/clk\.js - reject
+^https?:\/\/.*\.txtfull\.com\/script\. - reject
+^https?:\/\/.*\.ua\/banners - reject
+^https?:\/\/.*\.ua\/clk\.js - reject
+^https?:\/\/.*\.ua\/pop\.js - reject
+^https?:\/\/.*\.untang\..*\? - reject
+^https?:\/\/.*\.wrating\..*\.js - reject
+^https?:\/\/.*\.xyz\/get\.php\? - reject
+
+# Ad serve patterns
+^https?:\/\/.*\/\.adserv\/ - reject
+^https?:\/\/.*\/120x600 - reject
+^https?:\/\/.*\/240x200_ - reject
+^https?:\/\/.*\/240x350_ - reject
+^https?:\/\/.*\/240x400\.gif - reject
+^https?:\/\/.*\/240x400\.jpg - reject
+^https?:\/\/.*\/468_60_2\.gif - reject
+^https?:\/\/.*\/468_80_6\.gif - reject
+^https?:\/\/.*\/468by60 - reject
+^https?:\/\/.*\/468vpn\.gif - reject
+^https?:\/\/.*\/468x60i\.gif - reject
+^https?:\/\/.*\/468x60r - reject
+^https?:\/\/.*\/728x90ru\.jpg - reject
+^https?:\/\/.*\/970x60\.jpg - reject
+
+# Ad-specific URLs
+^https?:\/\/.*\/__ads_left\.php - reject
+^https?:\/\/.*\/_banner_\.gif - reject
+^https?:\/\/.*\/_ui\/ad\/ - reject
+^https?:\/\/.*\/aamsz=.*\/acc_random= - reject
+^https?:\/\/.*\/abmw\.asp\?z= - reject
+^https?:\/\/.*\/abmw\.aspx - reject
+^https?:\/\/.*\/acc_random=.*\/aamsz= - reject
+^https?:\/\/.*\/ad.*\.js\?link - reject
+^https?:\/\/.*\/ad-local\. - reject
+^https?:\/\/.*\/ad\.aspx - reject
+^https?:\/\/.*\/ad\.html - reject
+^https?:\/\/.*\/ad\.pl\?z - reject
+^https?:\/\/.*\/ad\/\?id= - reject
+^https?:\/\/.*\/ad\/frame - reject
+^https?:\/\/.*\/ad\/google - reject
+^https?:\/\/.*\/ad\/header - reject
+^https?:\/\/.*\/ad\/inad - reject
+^https?:\/\/.*\/ad\/init - reject
+^https?:\/\/.*\/ad\/lrec - reject
+^https?:\/\/.*\/ad\/mercury - reject
+^https?:\/\/.*\/ad\/rectangle - reject
+^https?:\/\/.*\/ad\/serve - reject
+^https?:\/\/.*\/ad\/skyscraper - reject
+^https?:\/\/.*\/ad\/sponsor - reject
+^https?:\/\/.*\/ad\/text - reject
+^https?:\/\/.*\/ad\/view - reject
+^https?:\/\/.*\/ad1\.html - reject
+
