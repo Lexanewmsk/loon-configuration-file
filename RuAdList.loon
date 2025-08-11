@@ -1,8 +1,8 @@
 #!name= RuAdList для Loon
 #!desc= Конвертированные правила RuAdList - Common banner names
 #!author= (конвертация для Loon)
-#!homepage= 
-#!icon= 
+#!homepage= https://github.com/Lexanewmsk/loon-configuration-file/blob/loon/RuAdList.loon
+#!icon= https://github.com/Lexanewmsk/loon-configuration-file/blob/loon/RuAdList.loon
 
 [Rule]
 # Пока нет безопасных доменов для блокировки из этого блока
