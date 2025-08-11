@@ -733,8 +733,6 @@
 
 ^https?:\/\/ssp\.rambler\.ru\/ - reject-dict
 
-# === Блокировка скриптов определения адблока ===
-^https?:\/\/.*\/script\.js$ - reject-200
 
 [Rule]
 
