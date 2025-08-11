@@ -227,6 +227,268 @@
 ^https:\/\/.*-stats\.video\. - reject
 ^https:\/\/.*-stdlauncher\.js - reject
 
+# === Поддомены крупных сайтов (точная блокировка) ===
+^https?:\/\/24open\.ru\/.*\?from= - reject
+^https?:\/\/468\.vologdainfo\.ru\/ - reject
+^https?:\/\/66\.ru\/show\/ - reject
+^https?:\/\/87\.242\.91\..*\/adfox\/ - reject
+^https?:\/\/87\.242\.91\..*\/prepareCode\? - reject
+^https?:\/\/a\.fobos\.tv\/ - reject
+^https?:\/\/a\.jurnalu\.ru\/ - reject
+^https?:\/\/a\.kubik3\.ru\/ - reject
+^https?:\/\/a\.sdska\.ru\/ - reject
+^https?:\/\/a24help\.ru\/ - reject
+^https?:\/\/abs\.firstvds\.ru\/ - reject
+^https?:\/\/active\.interzet\.ru\/log\.php\? - reject
+^https?:\/\/ad-emea\.doubleclick\.net\/ - reject
+^https?:\/\/ad-words\.ru\/contextad\/ - reject
+^https?:\/\/ad\.dumedia\.ru\/ - reject
+^https?:\/\/ad\.edugram\.com\/ - reject
+^https?:\/\/ad\.hutor\.ru\/ - reject
+^https?:\/\/ad\.outstream\.today\/ - reject
+^https?:\/\/ad\.oyy\.ru\/ - reject
+^https?:\/\/ad\.vo-media\.ru\/ - reject
+^https?:\/\/ad\.yadro\.ru\/ - reject
+^https?:\/\/ad1game\.ru\/ - reject
+^https?:\/\/ad2\.rambler\.ru\/ - reject
+^https?:\/\/ad3\.rambler\.ru\/ - reject
+^https?:\/\/adbn\.ru\/ - reject
+^https?:\/\/adriverm\.narod2\.ru\/ - reject
+^https?:\/\/adshop\.ru\/adshop\/\? - reject
+^https?:\/\/adv\.vz\.ru\/ - reject
+^https?:\/\/advert\.polonsil\.ru\/ - reject
+^https?:\/\/advjump\.com\/jpromo\/ - reject
+^https?:\/\/affiliate\.astraweb\.com\/ - reject
+^https?:\/\/affiliates\.a2hosting\.com\/ - reject
+^https?:\/\/agro\.net\.ru\/ - reject
+^https?:\/\/aif\.ru\/iframes\/ - reject
+^https?:\/\/allnewspoint\.com\/static\/js\/informer\.js - reject
+^https?:\/\/alpari\.ru\/ - reject
+^https?:\/\/an\.webvisor\.org\/ - reject
+^https?:\/\/analyzethis\.ru\/informer\.cgi\? - reject
+^https?:\/\/animesector\.ru\/picz\/ - reject
+^https?:\/\/apitech\.ru\/.*\/rotator\.js - reject
+^https?:\/\/apitech\.ru\/Rotator\/ - reject
+^https?:\/\/appgrade\.ru\/server\/ - reject
+^https?:\/\/autodealer\.ru\/includes\/button\.php\? - reject
+^https?:\/\/autonet\.ru\/extra\/autoclub_informer\.aspx - reject
+^https?:\/\/autoreg\.ru\/images\/ - reject
+^https?:\/\/avia\.ru\/.*\.shtml - reject
+^https?:\/\/avifilm\.ru\/new\/ - reject
+^https?:\/\/awempire\.com\/ban\/ - reject
+^https?:\/\/b\.ddestiny\.ru\/ - reject
+^https?:\/\/b\.dotbrataev\.ru\/ - reject
+^https?:\/\/b\.nude-moon\.xyz\/ - reject
+^https?:\/\/b2bcontext\.ru\/ - reject
+^https?:\/\/ban\.mirorgazma\.ru\/ - reject
+^https?:\/\/banki\.ru\/_export\/informers\/ - reject
+^https?:\/\/banner\.lbs\.km\.ru\/ - reject
+^https?:\/\/banners\.getiton\.com\/ - reject
+^https?:\/\/bannet\.fryazino\.net\/ - reject
+^https?:\/\/beboss\.ru\/informer\/ - reject
+^https?:\/\/berdent\.com\/sys\/ - reject
+^https?:\/\/bestclick\.ru\/sokz\.php\? - reject
+^https?:\/\/bestreferat\.ru\/images\/b\/ - reject
+^https?:\/\/beta\.mediafort\.ru\/ - reject
+^https?:\/\/biglion\.ru\/general\/js\/partnership\.js\.php - reject
+^https?:\/\/binpartner\.com\/branding\/ - reject
+^https?:\/\/bizweb\.ru\/button\.php\? - reject
+^https?:\/\/bj\.su\/calculator\/ - reject
+^https?:\/\/bk\.goodline\.info\/ - reject
+^https?:\/\/block\.s2blosh\.com\/ - reject
+^https?:\/\/bn\.ohah\.ru\/ - reject
+^https?:\/\/bn\.orthodoxy\.ru\/ - reject
+^https?:\/\/booking\.com\/deal\.html - reject
+^https?:\/\/boom\.1ccbt\.com\/ - reject
+^https?:\/\/bugaga\.ru\/uploads\/new\/planetarii\.jpg - reject
+
+# === URL паттерны ===
+^https?:\/\/.*\.a-akamaihd\.com\/ - reject
+^https?:\/\/.*\/check\.php\?user_id= - reject
+^https?:\/\/.*\/getThumbs\?uid= - reject
+^https?:\/\/.*\/newcode\/\?kf= - reject
+
+# === Поддомены крупных сайтов (точная блокировка) ===
+^https?:\/\/adtech-digital\.ru\/ - reject
+^https?:\/\/mnogodiva\.ru\/ - reject
+^https?:\/\/asing\.ru\/ - reject
+^https?:\/\/mobilebanner\.ru\/ - reject
+^https?:\/\/aliadvert\.ru\/ - reject
+^https?:\/\/ogeri\.ru\/ - reject
+^https?:\/\/v1-c73e\.kxcdn\.com\/ - reject
+^https?:\/\/wmip\.ru\/ - reject
+^https?:\/\/targetseek\.ru\/ - reject
+^https?:\/\/vw\.xxxmshel\.org\/ - reject
+^https?:\/\/metrika\.traff\.space\/ - reject
+^https?:\/\/ad\.1k3\.com\/ - reject
+^https?:\/\/sminewsnet\.ru\/ - reject
+^https?:\/\/rezhiv\.ru\/ - reject
+^https?:\/\/s\.newsportalssl1\.top\/ - reject
+^https?:\/\/itrigra\.ru\/ - reject
+^https?:\/\/plyfoni\.ru\/ - reject
+^https?:\/\/content\.mql5\.com\/ - reject
+^https?:\/\/cdn\.movieads\.ru\/ - reject
+^https?:\/\/devtizer\.ru\/ - reject
+^https?:\/\/vyborexperta\.ru\/ - reject
+^https?:\/\/admediator\.ru\/ - reject
+^https?:\/\/cdn\.hunteryvely\.com\/ - reject
+^https?:\/\/skwstat\.ru\/ - reject
+^https?:\/\/kinoaction\.ru\/ - reject
+^https?:\/\/onemontay\.ru\/ - reject
+^https?:\/\/sm-ini\.ru\/ - reject
+^https?:\/\/xoor\.ru\/ - reject
+
+# === Поддомены (используем Rewrite для точности) ===
+^https?:\/\/kapitalrus\.ru\/ - reject
+^https?:\/\/v\.cdn4\.life\/ - reject
+^https?:\/\/catsnetwork\.ru\/ - reject
+^https?:\/\/xcec\.ru\/ - reject
+^https?:\/\/banner\.aismo\.ru\/ - reject
+^https?:\/\/widjet\.analnoe\.tv\/ - reject
+^https?:\/\/cdn\.yanews24\.com\/ - reject
+^https?:\/\/ads2\.pbxware\.ru\/ - reject
+^https?:\/\/ad\.vidver\.to\/ - reject
+^https?:\/\/static\.aio\.media\/ - reject
+^https?:\/\/go\.zdos\.ru\/ - reject
+^https?:\/\/ad\.letmeads\.com\/ - reject
+^https?:\/\/cszz\.ru\/ - reject
+^https?:\/\/clx\.ru\/ - reject
+^https?:\/\/z\.cdn\.trafficdok\.com\/ - reject
+^https?:\/\/adv\.pilseta24\.lv\/ - reject
+^https?:\/\/z\.cdn\.trafficlide\.com\/ - reject
+^https?:\/\/rtb\.mts\.ru\/ - reject
+^https?:\/\/vast\.videocdn\.tv\/ - reject
+^https?:\/\/prod\.html5-ads\.vk-apps\.com\/ - reject
+^https?:\/\/banners\.adfox\.ru\/ - reject
+^https?:\/\/banners\.adfox\.net\/ - reject
+^https?:\/\/tiz\.jsite\.top\/ - reject
+^https?:\/\/ssp\.bidvol\.com\/ - reject
+
+# === Поддомены крупных сайтов (точная блокировка) ===
+^https?:\/\/bvf\.ru\/upchk\/ - reject
+^https?:\/\/bx\.neolabs\.kz\/ - reject
+^https?:\/\/camadmin\.ru\/ - reject
+^https?:\/\/cashprom\.ru\/ - reject
+^https?:\/\/cbanners\.virtuagirlhd\.com\/ - reject
+^https?:\/\/cdn-rtb\.sape\.ru\/ - reject
+^https?:\/\/cdn\.actiflex\.org\/ - reject
+^https?:\/\/cdn\.planeta-online\.tv\/advvp\/ - reject
+^https?:\/\/click\.ad1\.ru\/ - reject
+^https?:\/\/clients\.cdnet\.tv\/lockadb\.php - reject
+^https?:\/\/clipta\.com\/informer\/ - reject
+^https?:\/\/co\.cc\/img\/affiliates\/ - reject
+^https?:\/\/cobrand\.ria\.com\/ - reject
+^https?:\/\/com\.com\/.*\/Ads\/ - reject
+^https?:\/\/comgran\.ru\/topsite\/button\.php\? - reject
+^https?:\/\/content\.printdirect\.ru\/ - reject
+^https?:\/\/costaction\.com\/refers\/ - reject
+^https?:\/\/counter\.megaindex\.ru\/ - reject
+^https?:\/\/countlog\.com\/rp\/mc - reject
+^https?:\/\/cpm\.worldoftanks\.com\/ - reject
+^https?:\/\/crackzplanet\.com\/.*\.gif - reject
+^https?:\/\/creatives\.livejasmin\.com\/ - reject
+^https?:\/\/cry\.ru\/sexclub\/ - reject
+^https?:\/\/cys\.ru\/button\.png\?url= - reject
+^https?:\/\/darkweb\.su\/peklama\/ - reject
+^https?:\/\/data\.neosmi\.ru\/ - reject
+^https?:\/\/delivery\.adrecover\.com\/ - reject
+^https?:\/\/delphisources\.ru\/pages\/scripts\/recl_ - reject
+^https?:\/\/delta\.mediafort\.ru\/ - reject
+^https?:\/\/depositphotos\.com\/js_c\/widget-ext\.js - reject
+^https?:\/\/dl\.qcash\.ws - reject
+^https?:\/\/do\.am\/stat - reject
+^https?:\/\/dommio\.ru\/partner_.*\.php - reject
+^https?:\/\/download\.mediaplay\.ru\/ - reject
+^https?:\/\/e-links\.ru\/pr\/\? - reject
+^https?:\/\/e-place\.ru\/v\/ - reject
+^https?:\/\/edge-dl\.andomedia\.com\/ - reject
+^https?:\/\/edirect\.efind\.ru\/ - reject
+^https?:\/\/elephant\.fotostrana\.ru\/ - reject
+^https?:\/\/engine\..*\.medialand\.ru\/ - reject
+^https?:\/\/enot\.k-yroky\.ru\/ - reject
+^https?:\/\/erahost\.ru\/partner\/ - reject
+^https?:\/\/eu\.market-place\.su\/ - reject
+^https?:\/\/eurostyle-express\.com\/ - reject
+^https?:\/\/f2\.ru\/iframe - reject
+^https?:\/\/fair\.ru\/.*\/i\.php\? - reject
+^https?:\/\/fairfax\.com\.au\/ - reject
+^https?:\/\/fermasosedi\.biz\/reflink\/ - reject
+^https?:\/\/file-bit\.net\/free - reject
+^https?:\/\/file-bit\.net\/images\/banners - reject
+^https?:\/\/flasher\.ru\/data\/images\/swf\/ - reject
+^https?:\/\/flysat\.com\/resim - reject
+^https?:\/\/footbolka\.ru\/.*partner= - reject
+^https?:\/\/forex4you\.org\/\?affid= - reject
+^https?:\/\/forex4you\.org\/flash\/partners\/ - reject
+^https?:\/\/fotkidepo\.ru\/ - reject
+^https?:\/\/fotostrana\.ru\/signup\/\?land=1 - reject
+^https?:\/\/fotostrana\.ru\/start\/ - reject
+^https?:\/\/freewm\.ru\/js\/bonus_code\.php\? - reject
+^https?:\/\/fxmag\.ru\/poster - reject
+^https?:\/\/g-tv\.ru\/ivi\.php\?host= - reject
+^https?:\/\/g2a\.com\/promo\/widget\/ - reject
+^https?:\/\/g4p\.redtram\.com\/ - reject
+^https?:\/\/gbs\.gamingmedia\.ru - reject
+^https?:\/\/gde-luchshe\.ru\/widget\/ - reject
+^https?:\/\/getb\.7ya\.ru\/ - reject
+^https?:\/\/gigapeta\.com\/reg\?r= - reject
+^https?:\/\/giveawayoftheday\.com\/ticker\/ - reject
+^https?:\/\/go\.jetswap\.com\/ - reject
+^https?:\/\/go\.media-x\.ru\/ - reject
+^https?:\/\/gold-music\.ru\/informer - reject
+^https?:\/\/goldline\.pro\/media - reject
+^https?:\/\/goodsblock\.dt00\.net\/ - reject
+^https?:\/\/govazd\.am\/bn\/ - reject
+^https?:\/\/govazd\.am\/cgi-bin\/pro\.cgi - reject
+^https?:\/\/grand-casino\.com\/\? - reject
+^https?:\/\/grattis\.ru\/promo\/ - reject
+^https?:\/\/gws\.ru\/gwscnt\/\? - reject
+^https?:\/\/h12\.ru\/images\/ - reject
+^https?:\/\/heroeswm\.ru\/ - reject
+^https?:\/\/hosting-ninja\.ru\/_inc\/images\/sale\/ - reject
+^https?:\/\/hts\.ru\/\?affid= - reject
+^https?:\/\/i\.j2j\.ru\/ - reject
+^https?:\/\/igra3k\.ru\/ref - reject
+^https?:\/\/igrun\.com\/\? - reject
+^https?:\/\/images\.stardock\.com\/store\/ - reject
+^https?:\/\/img\.labirint\.ru\/design\/partner\/banners_for_inst\/ - reject
+^https?:\/\/img\.ruclicks\.com\/ruclicks - reject
+^https?:\/\/inf\.wqa\.ru\/ - reject
+^https?:\/\/infiplay\.ru\/.*a= - reject
+^https?:\/\/info\.tm\/ - reject
+^https?:\/\/informers\.ukr\.net\/ - reject
+^https?:\/\/intelliworker\.kupivip\.ru\/ - reject
+^https?:\/\/intimshop\.ru\/.*&partner= - reject
+^https?:\/\/intimshop\.ru\/ - reject
+^https?:\/\/intimznaki\.tomsk\.ru\/ - reject
+^https?:\/\/ip2phrase\.com\/ip2phrase\.asp\? - reject
+^https?:\/\/iphone-caviar\.ru\/.*entranceId - reject
+^https?:\/\/ivoxua\.socratos\.net\/ - reject
+^https?:\/\/izcity\.com\/js\/norton_izcity\.js - reject
+^https?:\/\/japan\.leit\.ru\/button\.php\? - reject
+^https?:\/\/je\.revolvermaps\.com\/ - reject
+^https?:\/\/jet3\.ayola\.net\/cn\.php\? - reject
+^https?:\/\/jimdo\.com\/s\/img\/aff\/ - reject
+^https?:\/\/jlist\.com\/feed\.php\?affid= - reject
+^https?:\/\/joylandcasino\.com\/promoredirect\? - reject
+^https?:\/\/js\.goods\.redtram\.com - reject
+^https?:\/\/jsc\.idealmedia\.io\/ - reject
+^https?:\/\/jsn\.24smi\.org\/ - reject
+^https?:\/\/jvs\.price\.ru\/ - reject
+^https?:\/\/kaa\.gorodkirov\.ru\/kaFile - reject
+^https?:\/\/kavkazweb\.net\/tc\.cgi\? - reject
+^https?:\/\/kinder\.ru\/buttons\/.*\.asp\? - reject
+^https?:\/\/kioskas\.lt\/rex\/pop\.php\? - reject
+^https?:\/\/kleo\.ru\/cgi-bin\/ - reject
+^https?:\/\/kolobok\.us\/button\/ - reject
+^https?:\/\/komisite\.ru\/images\/ban.*\.gif - reject
+^https?:\/\/kreepo\.com\/sys\/js\/ - reject
+^https?:\/\/krutomaiki\.ru\/.*\/\?rid= - reject
+^https?:\/\/kupibonus\.ru\/.*partner= - reject
+^https?:\/\/kv\.by\/img\/ - reject
+^https?:\/\/lbn\.ru\/cgi-bin\/ - reject
+^https?:\/\/leadgid\.go2cloud\.org\/ - reject
+
 [Rule]
 # === Полная блокировка доменов ===
 DOMAIN-SUFFIX,cenoobi.run,REJECT
@@ -542,32 +804,6 @@ DOMAIN-SUFFIX,tneduf.com,REJECT
 DOMAIN-SUFFIX,bs.commontools.net,REJECT
 DOMAIN-SUFFIX,refractionius.com,REJECT
 
-# === Поддомены (используем Rewrite для точности) ===
-^https?:\/\/kapitalrus\.ru\/ - reject
-^https?:\/\/v\.cdn4\.life\/ - reject
-^https?:\/\/catsnetwork\.ru\/ - reject
-^https?:\/\/xcec\.ru\/ - reject
-^https?:\/\/banner\.aismo\.ru\/ - reject
-^https?:\/\/widjet\.analnoe\.tv\/ - reject
-^https?:\/\/cdn\.yanews24\.com\/ - reject
-^https?:\/\/ads2\.pbxware\.ru\/ - reject
-^https?:\/\/ad\.vidver\.to\/ - reject
-^https?:\/\/static\.aio\.media\/ - reject
-^https?:\/\/go\.zdos\.ru\/ - reject
-^https?:\/\/ad\.letmeads\.com\/ - reject
-^https?:\/\/cszz\.ru\/ - reject
-^https?:\/\/clx\.ru\/ - reject
-^https?:\/\/z\.cdn\.trafficdok\.com\/ - reject
-^https?:\/\/adv\.pilseta24\.lv\/ - reject
-^https?:\/\/z\.cdn\.trafficlide\.com\/ - reject
-^https?:\/\/rtb\.mts\.ru\/ - reject
-^https?:\/\/vast\.videocdn\.tv\/ - reject
-^https?:\/\/prod\.html5-ads\.vk-apps\.com\/ - reject
-^https?:\/\/banners\.adfox\.ru\/ - reject
-^https?:\/\/banners\.adfox\.net\/ - reject
-^https?:\/\/tiz\.jsite\.top\/ - reject
-^https?:\/\/ssp\.bidvol\.com\/ - reject
-
 # === Ключевые слова с подстановочными знаками ===
 DOMAIN-KEYWORD,tzbox,REJECT
 
@@ -645,44 +881,8 @@ DOMAIN-SUFFIX,kma.biz,REJECT
 DOMAIN-SUFFIX,red.by,REJECT
 DOMAIN-SUFFIX,w7.ru,REJECT
 
-# === Поддомены крупных сайтов (точная блокировка) ===
-^https?:\/\/adtech-digital\.ru\/ - reject
-^https?:\/\/mnogodiva\.ru\/ - reject
-^https?:\/\/asing\.ru\/ - reject
-^https?:\/\/mobilebanner\.ru\/ - reject
-^https?:\/\/aliadvert\.ru\/ - reject
-^https?:\/\/ogeri\.ru\/ - reject
-^https?:\/\/v1-c73e\.kxcdn\.com\/ - reject
-^https?:\/\/wmip\.ru\/ - reject
-^https?:\/\/targetseek\.ru\/ - reject
-^https?:\/\/vw\.xxxmshel\.org\/ - reject
-^https?:\/\/metrika\.traff\.space\/ - reject
-^https?:\/\/ad\.1k3\.com\/ - reject
-^https?:\/\/sminewsnet\.ru\/ - reject
-^https?:\/\/rezhiv\.ru\/ - reject
-^https?:\/\/s\.newsportalssl1\.top\/ - reject
-^https?:\/\/itrigra\.ru\/ - reject
-^https?:\/\/plyfoni\.ru\/ - reject
-^https?:\/\/content\.mql5\.com\/ - reject
-^https?:\/\/cdn\.movieads\.ru\/ - reject
-^https?:\/\/devtizer\.ru\/ - reject
-^https?:\/\/vyborexperta\.ru\/ - reject
-^https?:\/\/admediator\.ru\/ - reject
-^https?:\/\/cdn\.hunteryvely\.com\/ - reject
-^https?:\/\/skwstat\.ru\/ - reject
-^https?:\/\/kinoaction\.ru\/ - reject
-^https?:\/\/onemontay\.ru\/ - reject
-^https?:\/\/sm-ini\.ru\/ - reject
-^https?:\/\/xoor\.ru\/ - reject
-
 # === Wildcard домены (ключевые слова) ===
 DOMAIN-KEYWORD,swaxis,REJECT
-
-# === URL паттерны ===
-^https?:\/\/.*\.a-akamaihd\.com\/ - reject
-^https?:\/\/.*\/check\.php\?user_id= - reject
-^https?:\/\/.*\/getThumbs\?uid= - reject
-^https?:\/\/.*\/newcode\/\?kf= - reject
 
 # === Исключения (НЕ блокируем если основной домен разрешен) ===
 # admitad-connect.com блокируем только если это НЕ основной admitad.com
@@ -872,86 +1072,250 @@ IP-CIDR,88.85.77.92/32,REJECT
 IP-CIDR,91.207.192.31/32,REJECT
 IP-CIDR,95.211.125.226/32,REJECT
 
-# === Поддомены крупных сайтов (точная блокировка) ===
-^https?:\/\/24open\.ru\/.*\?from= - reject
-^https?:\/\/468\.vologdainfo\.ru\/ - reject
-^https?:\/\/66\.ru\/show\/ - reject
-^https?:\/\/87\.242\.91\..*\/adfox\/ - reject
-^https?:\/\/87\.242\.91\..*\/prepareCode\? - reject
-^https?:\/\/a\.fobos\.tv\/ - reject
-^https?:\/\/a\.jurnalu\.ru\/ - reject
-^https?:\/\/a\.kubik3\.ru\/ - reject
-^https?:\/\/a\.sdska\.ru\/ - reject
-^https?:\/\/a24help\.ru\/ - reject
-^https?:\/\/abs\.firstvds\.ru\/ - reject
-^https?:\/\/active\.interzet\.ru\/log\.php\? - reject
-^https?:\/\/ad-emea\.doubleclick\.net\/ - reject
-^https?:\/\/ad-words\.ru\/contextad\/ - reject
-^https?:\/\/ad\.dumedia\.ru\/ - reject
-^https?:\/\/ad\.edugram\.com\/ - reject
-^https?:\/\/ad\.hutor\.ru\/ - reject
-^https?:\/\/ad\.outstream\.today\/ - reject
-^https?:\/\/ad\.oyy\.ru\/ - reject
-^https?:\/\/ad\.vo-media\.ru\/ - reject
-^https?:\/\/ad\.yadro\.ru\/ - reject
-^https?:\/\/ad1game\.ru\/ - reject
-^https?:\/\/ad2\.rambler\.ru\/ - reject
-^https?:\/\/ad3\.rambler\.ru\/ - reject
-^https?:\/\/adbn\.ru\/ - reject
-^https?:\/\/adriverm\.narod2\.ru\/ - reject
-^https?:\/\/adshop\.ru\/adshop\/\? - reject
-^https?:\/\/adv\.vz\.ru\/ - reject
-^https?:\/\/advert\.polonsil\.ru\/ - reject
-^https?:\/\/advjump\.com\/jpromo\/ - reject
-^https?:\/\/affiliate\.astraweb\.com\/ - reject
-^https?:\/\/affiliates\.a2hosting\.com\/ - reject
-^https?:\/\/agro\.net\.ru\/ - reject
-^https?:\/\/aif\.ru\/iframes\/ - reject
-^https?:\/\/allnewspoint\.com\/static\/js\/informer\.js - reject
-^https?:\/\/alpari\.ru\/ - reject
-^https?:\/\/an\.webvisor\.org\/ - reject
-^https?:\/\/analyzethis\.ru\/informer\.cgi\? - reject
-^https?:\/\/animesector\.ru\/picz\/ - reject
-^https?:\/\/apitech\.ru\/.*\/rotator\.js - reject
-^https?:\/\/apitech\.ru\/Rotator\/ - reject
-^https?:\/\/appgrade\.ru\/server\/ - reject
-^https?:\/\/autodealer\.ru\/includes\/button\.php\? - reject
-^https?:\/\/autonet\.ru\/extra\/autoclub_informer\.aspx - reject
-^https?:\/\/autoreg\.ru\/images\/ - reject
-^https?:\/\/avia\.ru\/.*\.shtml - reject
-^https?:\/\/avifilm\.ru\/new\/ - reject
-^https?:\/\/awempire\.com\/ban\/ - reject
-^https?:\/\/b\.ddestiny\.ru\/ - reject
-^https?:\/\/b\.dotbrataev\.ru\/ - reject
-^https?:\/\/b\.nude-moon\.xyz\/ - reject
-^https?:\/\/b2bcontext\.ru\/ - reject
-^https?:\/\/ban\.mirorgazma\.ru\/ - reject
-^https?:\/\/banki\.ru\/_export\/informers\/ - reject
-^https?:\/\/banner\.lbs\.km\.ru\/ - reject
-^https?:\/\/banners\.getiton\.com\/ - reject
-^https?:\/\/bannet\.fryazino\.net\/ - reject
-^https?:\/\/beboss\.ru\/informer\/ - reject
-^https?:\/\/berdent\.com\/sys\/ - reject
-^https?:\/\/bestclick\.ru\/sokz\.php\? - reject
-^https?:\/\/bestreferat\.ru\/images\/b\/ - reject
-^https?:\/\/beta\.mediafort\.ru\/ - reject
-^https?:\/\/biglion\.ru\/general\/js\/partnership\.js\.php - reject
-^https?:\/\/binpartner\.com\/branding\/ - reject
-^https?:\/\/bizweb\.ru\/button\.php\? - reject
-^https?:\/\/bj\.su\/calculator\/ - reject
-^https?:\/\/bk\.goodline\.info\/ - reject
-^https?:\/\/block\.s2blosh\.com\/ - reject
-^https?:\/\/bn\.ohah\.ru\/ - reject
-^https?:\/\/bn\.orthodoxy\.ru\/ - reject
-^https?:\/\/booking\.com\/deal\.html - reject
-^https?:\/\/boom\.1ccbt\.com\/ - reject
-^https?:\/\/bugaga\.ru\/uploads\/new\/planetarii\.jpg - reject
-
 # === Wildcard домены (ключевые слова) ===
 DOMAIN-KEYWORD,adserver1,REJECT
 DOMAIN-KEYWORD,admulti,REJECT
 DOMAIN-KEYWORD,alishop,REJECT
 DOMAIN-KEYWORD,bondzgi,REJECT
+
+# === Чисто рекламные домены (безопасно блокировать полностью) ===
+DOMAIN-SUFFIX,bumaikr.com,REJECT
+DOMAIN-SUFFIX,buytraf.ru,REJECT
+DOMAIN-SUFFIX,buzzoola.com,REJECT
+DOMAIN-SUFFIX,bw95vpjda.ru,REJECT
+DOMAIN-SUFFIX,byeej.com,REJECT
+DOMAIN-SUFFIX,bytde.com,REJECT
+DOMAIN-SUFFIX,capliman.com,REJECT
+DOMAIN-SUFFIX,cbbvi.com,REJECT
+DOMAIN-SUFFIX,cdn7.network,REJECT
+DOMAIN-SUFFIX,cdn7.rocks,REJECT
+DOMAIN-SUFFIX,cellbux.com,REJECT
+DOMAIN-SUFFIX,cheaptop.ru,REJECT
+DOMAIN-SUFFIX,chtoumenja.biz,REJECT
+DOMAIN-SUFFIX,cityads.com,REJECT
+DOMAIN-SUFFIX,cityads.ru,REJECT
+DOMAIN-SUFFIX,cityadspix.com,REJECT
+DOMAIN-SUFFIX,clearac.com,REJECT
+DOMAIN-SUFFIX,cleen.ru,REJECT
+DOMAIN-SUFFIX,click2sell.eu,REJECT
+DOMAIN-SUFFIX,clickbux.ru,REJECT
+DOMAIN-SUFFIX,clickcashmoney.com,REJECT
+DOMAIN-SUFFIX,clickhere.ru,REJECT
+DOMAIN-SUFFIX,clickov.com,REJECT
+DOMAIN-SUFFIX,clickscapture.com,REJECT
+DOMAIN-SUFFIX,clickvip.ru,REJECT
+DOMAIN-SUFFIX,cmix.org,REJECT
+DOMAIN-SUFFIX,codeonclick.com,REJECT
+DOMAIN-SUFFIX,coinsup.com,REJECT
+DOMAIN-SUFFIX,com495.ru,REJECT
+DOMAIN-SUFFIX,contactreserve.com,REJECT
+DOMAIN-SUFFIX,contactsin.com,REJECT
+DOMAIN-SUFFIX,contema.ru,REJECT
+DOMAIN-SUFFIX,contextbar.ru,REJECT
+DOMAIN-SUFFIX,contextrtb.com,REJECT
+DOMAIN-SUFFIX,cpaevent.ru,REJECT
+DOMAIN-SUFFIX,cpatext.ru,REJECT
+DOMAIN-SUFFIX,cpazilla.ru,REJECT
+DOMAIN-SUFFIX,crackac.com,REJECT
+DOMAIN-SUFFIX,creara-media.ru,REJECT
+DOMAIN-SUFFIX,creofive.com,REJECT
+DOMAIN-SUFFIX,creofun.com,REJECT
+DOMAIN-SUFFIX,crutop.nu,REJECT
+DOMAIN-SUFFIX,cshi.ru,REJECT
+DOMAIN-SUFFIX,ctr-media.info,REJECT
+DOMAIN-SUFFIX,ctyzd.com,REJECT
+DOMAIN-SUFFIX,cufcw.com,REJECT
+DOMAIN-SUFFIX,cunderdr.net,REJECT
+DOMAIN-SUFFIX,cusok.ru,REJECT
+DOMAIN-SUFFIX,cxmolk.com,REJECT
+DOMAIN-SUFFIX,d-agency.net,REJECT
+DOMAIN-SUFFIX,d1jl096lp4cce0.cloudfront.net,REJECT
+DOMAIN-SUFFIX,d1mib12jcgwmnv.cloudfront.net,REJECT
+DOMAIN-SUFFIX,d30gt5larl1k8h.cloudfront.net,REJECT
+DOMAIN-SUFFIX,d3td6g0k30g56f.cloudfront.net,REJECT
+DOMAIN-SUFFIX,danilidi.ru,REJECT
+DOMAIN-SUFFIX,datamind.ru,REJECT
+DOMAIN-SUFFIX,dating-exchange.com,REJECT
+DOMAIN-SUFFIX,davarello.com,REJECT
+DOMAIN-SUFFIX,dddevki4u.com,REJECT
+DOMAIN-SUFFIX,delightcash.com,REJECT
+DOMAIN-SUFFIX,digital-forest.info,REJECT
+DOMAIN-SUFFIX,domertb.com,REJECT
+DOMAIN-SUFFIX,doortrade.ru,REJECT
+DOMAIN-SUFFIX,doptik.ru,REJECT
+DOMAIN-SUFFIX,dosugcz.info,REJECT
+DOMAIN-SUFFIX,drivenetwork.online,REJECT
+DOMAIN-SUFFIX,drivenetwork.ru,REJECT
+DOMAIN-SUFFIX,drtraff.ru,REJECT
+DOMAIN-SUFFIX,dt00.net,REJECT
+DOMAIN-SUFFIX,dt07.net,REJECT
+DOMAIN-SUFFIX,e-partner.ru,REJECT
+DOMAIN-SUFFIX,eberalofe.pro,REJECT
+DOMAIN-SUFFIX,econrus.ru,REJECT
+DOMAIN-SUFFIX,effad.ru,REJECT
+DOMAIN-SUFFIX,effectfree.net,REJECT
+DOMAIN-SUFFIX,ejevika.com,REJECT
+DOMAIN-SUFFIX,enfreine.com,REJECT
+DOMAIN-SUFFIX,ergs4.com,REJECT
+DOMAIN-SUFFIX,eroksen.ru,REJECT
+DOMAIN-SUFFIX,estiques.com,REJECT
+DOMAIN-SUFFIX,et-cod.com,REJECT
+DOMAIN-SUFFIX,et-code.ru,REJECT
+DOMAIN-SUFFIX,etarg.ru,REJECT
+DOMAIN-SUFFIX,ettalhap.com,REJECT
+DOMAIN-SUFFIX,evaff.com,REJECT
+DOMAIN-SUFFIX,evsembu.com,REJECT
+DOMAIN-SUFFIX,exaccess.ru,REJECT
+DOMAIN-SUFFIX,exoticads.com,REJECT
+DOMAIN-SUFFIX,fairlink.ru,REJECT
+DOMAIN-SUFFIX,falcoware.com,REJECT
+DOMAIN-SUFFIX,fast2load.ru,REJECT
+DOMAIN-SUFFIX,fastsex.ru,REJECT
+DOMAIN-SUFFIX,fdsur.com,REJECT
+DOMAIN-SUFFIX,fialet.com,REJECT
+DOMAIN-SUFFIX,filmplus.ru,REJECT
+DOMAIN-SUFFIX,firelove.ru,REJECT
+DOMAIN-SUFFIX,firsttrack.ru,REJECT
+DOMAIN-SUFFIX,fkehg.com,REJECT
+DOMAIN-SUFFIX,flapoint.ru,REJECT
+DOMAIN-SUFFIX,flygo.ru,REJECT
+DOMAIN-SUFFIX,fogtrack.net,REJECT
+DOMAIN-SUFFIX,foundtr.com,REJECT
+DOMAIN-SUFFIX,franecki.net,REJECT
+DOMAIN-SUFFIX,freeavalanche.ru,REJECT
+DOMAIN-SUFFIX,freeexchange.ru,REJECT
+DOMAIN-SUFFIX,fresh-video.com,REJECT
+DOMAIN-SUFFIX,fznpq.com,REJECT
+DOMAIN-SUFFIX,galaxymeet.ru,REJECT
+DOMAIN-SUFFIX,gamedl.ru,REJECT
+DOMAIN-SUFFIX,gameteaser.ru,REJECT
+DOMAIN-SUFFIX,gatewey.net,REJECT
+DOMAIN-SUFFIX,gdeslon.ru,REJECT
+DOMAIN-SUFFIX,get-ads.ru,REJECT
+DOMAIN-SUFFIX,get-click.ru,REJECT
+DOMAIN-SUFFIX,get35.com,REJECT
+DOMAIN-SUFFIX,getfon.ru,REJECT
+DOMAIN-SUFFIX,gethit.ru,REJECT
+DOMAIN-SUFFIX,gettopup.com,REJECT
+DOMAIN-SUFFIX,gfstrck.com,REJECT
+DOMAIN-SUFFIX,gigamega.ru,REJECT
+DOMAIN-SUFFIX,ginads.com,REJECT
+DOMAIN-SUFFIX,gingardo.com,REJECT
+DOMAIN-SUFFIX,giosany.com,REJECT
+DOMAIN-SUFFIX,giotyo.com,REJECT
+DOMAIN-SUFFIX,giraff.io,REJECT
+DOMAIN-SUFFIX,glamurka.net,REJECT
+DOMAIN-SUFFIX,globalstars.ru,REJECT
+DOMAIN-SUFFIX,globalteaser.com,REJECT
+DOMAIN-SUFFIX,globalteaser.ru,REJECT
+DOMAIN-SUFFIX,globaltizer.ru,REJECT
+DOMAIN-SUFFIX,gnezdo.ru,REJECT
+DOMAIN-SUFFIX,gobf.ru,REJECT
+DOMAIN-SUFFIX,gogetlinks.net,REJECT
+DOMAIN-SUFFIX,gogousenet.com,REJECT
+DOMAIN-SUFFIX,gomakemerich.com,REJECT
+DOMAIN-SUFFIX,gomakemerich2.com,REJECT
+DOMAIN-SUFFIX,goon.ru,REJECT
+DOMAIN-SUFFIX,goossb.com,REJECT
+DOMAIN-SUFFIX,gotraff.ru,REJECT
+DOMAIN-SUFFIX,gowoman.ru,REJECT
+DOMAIN-SUFFIX,grebibablo.com,REJECT
+DOMAIN-SUFFIX,gredinatib.org,REJECT
+DOMAIN-SUFFIX,greeentea.ru,REJECT
+DOMAIN-SUFFIX,grteab.com,REJECT
+DOMAIN-SUFFIX,gsmonitor.ru,REJECT
+DOMAIN-SUFFIX,gvapp.ru,REJECT
+DOMAIN-SUFFIX,gynax.com,REJECT
+DOMAIN-SUFFIX,hdat.xyz,REJECT
+DOMAIN-SUFFIX,hdtracker.ru,REJECT
+DOMAIN-SUFFIX,hellywood.ru,REJECT
+DOMAIN-SUFFIX,her-ber.top,REJECT
+DOMAIN-SUFFIX,hhit.xyz,REJECT
+DOMAIN-SUFFIX,hid24.com,REJECT
+DOMAIN-SUFFIX,hiopdi.com,REJECT
+DOMAIN-SUFFIX,hit-star.ru,REJECT
+DOMAIN-SUFFIX,hitlist.ru,REJECT
+DOMAIN-SUFFIX,hitter.ru,REJECT
+DOMAIN-SUFFIX,hkeig.com,REJECT
+DOMAIN-SUFFIX,hnixr.com,REJECT
+DOMAIN-SUFFIX,hochu-deneg.ru,REJECT
+DOMAIN-SUFFIX,holm.ru,REJECT
+DOMAIN-SUFFIX,huminfakt.ru,REJECT
+DOMAIN-SUFFIX,iadvert.net,REJECT
+DOMAIN-SUFFIX,ice-media.ru,REJECT
+DOMAIN-SUFFIX,iclckk.com,REJECT
+DOMAIN-SUFFIX,idvd.su,REJECT
+DOMAIN-SUFFIX,idwrx.com,REJECT
+DOMAIN-SUFFIX,iframepay.com,REJECT
+DOMAIN-SUFFIX,iiutq.xyz,REJECT
+DOMAIN-SUFFIX,ikiif.com,REJECT
+DOMAIN-SUFFIX,imarker.ru,REJECT
+DOMAIN-SUFFIX,img1458.r.worldssl.net,REJECT
+DOMAIN-SUFFIX,img1461.r.worldssl.net,REJECT
+DOMAIN-SUFFIX,imgg.dt00.net,REJECT
+DOMAIN-SUFFIX,imho.ru,REJECT
+DOMAIN-SUFFIX,imrk.net,REJECT
+DOMAIN-SUFFIX,inetlog.ru,REJECT
+DOMAIN-SUFFIX,inextlink.com,REJECT
+DOMAIN-SUFFIX,infocentro.ru,REJECT
+DOMAIN-SUFFIX,inskinmedia.com,REJECT
+DOMAIN-SUFFIX,instantcash.ru,REJECT
+DOMAIN-SUFFIX,intencysrv.com,REJECT
+DOMAIN-SUFFIX,intimmag.ru,REJECT
+DOMAIN-SUFFIX,invest-pool.ru,REJECT
+DOMAIN-SUFFIX,invest-system.net,REJECT
+DOMAIN-SUFFIX,ipgold.ru,REJECT
+DOMAIN-SUFFIX,iqok.ru,REJECT
+DOMAIN-SUFFIX,iredirr.com,REJECT
+DOMAIN-SUFFIX,islamclick.ru,REJECT
+DOMAIN-SUFFIX,iso100.ru,REJECT
+DOMAIN-SUFFIX,isonlynews.net,REJECT
+DOMAIN-SUFFIX,ispeakvideo.ru,REJECT
+DOMAIN-SUFFIX,istcs.top,REJECT
+DOMAIN-SUFFIX,it-pearl.com,REJECT
+DOMAIN-SUFFIX,ivanie.com,REJECT
+DOMAIN-SUFFIX,jofbu.com,REJECT
+DOMAIN-SUFFIX,joycasino.com,REJECT
+DOMAIN-SUFFIX,kadam.net,REJECT
+DOMAIN-SUFFIX,kalooga.com,REJECT
+DOMAIN-SUFFIX,kazmedia.su,REJECT
+DOMAIN-SUFFIX,kdsk32lfa.xyz,REJECT
+DOMAIN-SUFFIX,keyti.ru,REJECT
+DOMAIN-SUFFIX,kinotraff.ru,REJECT
+DOMAIN-SUFFIX,kinott.com,REJECT
+DOMAIN-SUFFIX,kissmyads.biz,REJECT
+DOMAIN-SUFFIX,kistured.com,REJECT
+DOMAIN-SUFFIX,kitopr.com,REJECT
+DOMAIN-SUFFIX,klivz.com,REJECT
+DOMAIN-SUFFIX,klonedaset.org,REJECT
+DOMAIN-SUFFIX,knewy.com,REJECT
+DOMAIN-SUFFIX,kokos.click,REJECT
+DOMAIN-SUFFIX,kont-news.com,REJECT
+DOMAIN-SUFFIX,kontera.com,REJECT
+DOMAIN-SUFFIX,korenizsemi.net,REJECT
+DOMAIN-SUFFIX,koreniztreh.net,REJECT
+DOMAIN-SUFFIX,kost.tv,REJECT
+DOMAIN-SUFFIX,krasisa.info,REJECT
+DOMAIN-SUFFIX,krolikplatit.ru,REJECT
+DOMAIN-SUFFIX,krutilka.net,REJECT
+DOMAIN-SUFFIX,krytilka.ru,REJECT
+DOMAIN-SUFFIX,kuveres.com,REJECT
+DOMAIN-SUFFIX,ladycash.ru,REJECT
+DOMAIN-SUFFIX,ladyclicks.ru,REJECT
+DOMAIN-SUFFIX,ladyshopping.ru,REJECT
+DOMAIN-SUFFIX,lapeduzis.org,REJECT
+DOMAIN-SUFFIX,lbbanners.com,REJECT
+DOMAIN-SUFFIX,lc2ads.ru,REJECT
+DOMAIN-SUFFIX,lcads.ru,REJECT
+DOMAIN-SUFFIX,leads.su,REJECT
+DOMAIN-SUFFIX,leadsleader.ru,REJECT
+
+# === Wildcard домены (ключевые слова) ===
+DOMAIN-KEYWORD,flipflapflo,REJECT
+DOMAIN-KEYWORD,gonews,REJECT
+DOMAIN-KEYWORD,goodadvert,REJECT
+DOMAIN-KEYWORD,icq-window,REJECT
+DOMAIN-KEYWORD,icqwindow,REJECT
 
 [MITM]
 hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua
