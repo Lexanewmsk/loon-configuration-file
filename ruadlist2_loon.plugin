@@ -725,6 +725,14 @@
 ^https?:\/\/zero\.kz\/c\.php\? - reject
 ^https?:\/\/zoomumba\.bigpoint\.com\/\?aid= - reject
 
+^https?:\/\/an\.yandex\. - reject
+^https?:\/\/an\.yandex\.ru\/ - reject
+
+^https?:\/\/banner.*\.kinogo\.by\/ - reject
+^https?:\/\/ivi\.ru\/player\/\?videoid=&enableseries=1&autostart=1 - reject
+
+^https?:\/\/ssp\.rambler\.ru\/ - reject-dict
+
 [Rule]
 
 # === Wildcard домены (ключевые слова) ===
@@ -767,6 +775,7 @@ DOMAIN-KEYWORD,videoclick,REJECT
 DOMAIN-KEYWORD,videoclik,REJECT
 DOMAIN-KEYWORD,web-visor,REJECT
 DOMAIN-KEYWORD,wstatistics,REJECT
+DOMAIN-KEYWORD,dw-informer-,REJECT
 
 # === Полная блокировка доменов ===
 DOMAIN-SUFFIX,cenoobi.run,REJECT
@@ -2077,6 +2086,109 @@ DOMAIN-SUFFIX,cpm.wargaming.net,REJECT
 DOMAIN-SUFFIX,ad.cub.red,REJECT
 DOMAIN-SUFFIX,exad.smi2.ru,REJECT
 DOMAIN-SUFFIX,tgb.hsmedia.ru,REJECT
+DOMAIN-SUFFIX,auraodin.com,REJECT
+DOMAIN-SUFFIX,ssp.rutube.ru,REJECT
+DOMAIN-SUFFIX,media-advcycle.imgsmail.ru,REJECT
+DOMAIN-SUFFIX,r1.ati.su,REJECT
+DOMAIN-SUFFIX,rcmjs.rambler.ru,REJECT
+DOMAIN-SUFFIX,sharemefiles.ru,REJECT
+DOMAIN-SUFFIX,userdata.ati.su,REJECT
+DOMAIN-SUFFIX,r.z3.fm,REJECT
+DOMAIN-SUFFIX,adv.topvideo.tj,REJECT
+DOMAIN-SUFFIX,vast.playmatic.video,REJECT
+DOMAIN-SUFFIX,oba.rus-km.ru,REJECT
+DOMAIN-SUFFIX,dab.rus-km.ru,REJECT
+DOMAIN-SUFFIX,placeholder.treeum.net,REJECT
+DOMAIN-SUFFIX,api.rnet.plus,REJECT
+DOMAIN-SUFFIX,ex.newsland.com,REJECT
+DOMAIN-SUFFIX,news.mirtesen.ru,REJECT
+DOMAIN-SUFFIX,jsn.24smi.net,REJECT
+DOMAIN-SUFFIX,data.24smi.net,REJECT
+DOMAIN-SUFFIX,smi.today,REJECT
+DOMAIN-SUFFIX,vi.bigmir.net,REJECT
+DOMAIN-SUFFIX,smi24.kz,REJECT
+DOMAIN-SUFFIX,banner.kaktus.media,REJECT
+DOMAIN-SUFFIX,rtb.wedeo.ru,REJECT
+DOMAIN-SUFFIX,flowers.moex.com,REJECT
+DOMAIN-SUFFIX,delikatsov.com,REJECT
+DOMAIN-SUFFIX,relap.mail.ru,REJECT
+DOMAIN-SUFFIX,banners.tapclap.com,REJECT
+DOMAIN-SUFFIX,compare.meteoservice.ru,REJECT
+DOMAIN-SUFFIX,ad.megapeer.ru,REJECT
+DOMAIN-SUFFIX,adsparking.inzhener-info.ru,REJECT
+DOMAIN-SUFFIX,t.sur.new.gorodkirov.ru,REJECT
+DOMAIN-SUFFIX,lzupkz.com,REJECT
+DOMAIN-SUFFIX,ad.tehno-rating.ru,REJECT
+DOMAIN-SUFFIX,r.z2.fm,REJECT
+DOMAIN-SUFFIX,ads.interfax.ru,REJECT
+DOMAIN-SUFFIX,banner.profile.ru,REJECT
+DOMAIN-SUFFIX,adbn.masterinvest.info,REJECT
+DOMAIN-SUFFIX,bs.orsk.ru,REJECT
+DOMAIN-SUFFIX,nativ.podruzke.ru,REJECT
+DOMAIN-SUFFIX,banner.zol.ru,REJECT
+DOMAIN-SUFFIX,engine-pmbk.ligastavok.ru,REJECT
+DOMAIN-SUFFIX,ad.erkiss.club,REJECT
+DOMAIN-SUFFIX,d2dc2sk4vkh2xn.cloudfront.net,REJECT
+DOMAIN-SUFFIX,chfpgcbe.com,REJECT
+DOMAIN-SUFFIX,b.kakoysegodnyaprazdnik.ru,REJECT
+DOMAIN-SUFFIX,gorod.tunt.lv,REJECT
+DOMAIN-SUFFIX,d31nb97nd8ha11.cloudfront.net,REJECT
+DOMAIN-SUFFIX,advast.sibnet.ru,REJECT
+DOMAIN-SUFFIX,nov.evmenov37.ru,REJECT
+DOMAIN-SUFFIX,ads-delivery.gameforge.com,REJECT
+DOMAIN-SUFFIX,unisound.cdnvideo.ru,REJECT
+DOMAIN-SUFFIX,ban.zab.ru,REJECT
+DOMAIN-SUFFIX,prostoimya.kino-o-voine.ru,REJECT
+DOMAIN-SUFFIX,a.kakoysegodnyaprazdnik.ru,REJECT
+DOMAIN-SUFFIX,test.besstidniki.ru,REJECT
+DOMAIN-SUFFIX,ad.velomania.ru,REJECT
+DOMAIN-SUFFIX,a.kidstaff.net,REJECT
+DOMAIN-SUFFIX,d1uw69x4c2zrim.cloudfront.net,REJECT
+DOMAIN-SUFFIX,d10g3hyu3zeg91.cloudfront.net,REJECT
+DOMAIN-SUFFIX,info.kinoclub77.ru,REJECT
+DOMAIN-SUFFIX,action.evrikak.ru,REJECT
+DOMAIN-SUFFIX,ad.cbonds.info,REJECT
+DOMAIN-SUFFIX,ad.iplayer.org,REJECT
+DOMAIN-SUFFIX,ad.topwar.ru,REJECT
+DOMAIN-SUFFIX,ads.211.ru,REJECT
+DOMAIN-SUFFIX,ads.dfiles.ru,REJECT
+DOMAIN-SUFFIX,ads.livetvcdn.net,REJECT
+DOMAIN-SUFFIX,adshow.sc2tv.ru,REJECT
+DOMAIN-SUFFIX,afbanner.kinobomber3.online,REJECT
+DOMAIN-SUFFIX,b.1istochnik.ru,REJECT
+DOMAIN-SUFFIX,b.povarenok.ru,REJECT
+DOMAIN-SUFFIX,b13.penzainform.ru,REJECT
+DOMAIN-SUFFIX,banners.haqqin.az,REJECT
+DOMAIN-SUFFIX,banners.prikol.ru,REJECT
+DOMAIN-SUFFIX,banshop.gruntovik.ru,REJECT
+DOMAIN-SUFFIX,bet.championat.com,REJECT
+DOMAIN-SUFFIX,bn.take-profit.org,REJECT
+DOMAIN-SUFFIX,c.grimuar.ru,REJECT
+DOMAIN-SUFFIX,d1af165twk0zgn.cloudfront.net,REJECT
+DOMAIN-SUFFIX,d899.webazilla.com,REJECT
+DOMAIN-SUFFIX,da.rosrabota.ru,REJECT
+DOMAIN-SUFFIX,daast.digitalbox.ru,REJECT
+DOMAIN-SUFFIX,e.60sk.ru,REJECT
+DOMAIN-SUFFIX,easy.au.ru,REJECT
+DOMAIN-SUFFIX,export.voffka.com,REJECT
+DOMAIN-SUFFIX,fastpicc.ru,REJECT
+DOMAIN-SUFFIX,ff.astv.ru,REJECT
+DOMAIN-SUFFIX,honey.briefly.ru,REJECT
+DOMAIN-SUFFIX,host.pornolenta.cc,REJECT
+DOMAIN-SUFFIX,isi-tracking.eventim.com,REJECT
+DOMAIN-SUFFIX,jet.zbp.ru,REJECT
+DOMAIN-SUFFIX,js.newrutor.eu.org,REJECT
+DOMAIN-SUFFIX,json.smotri.com,REJECT
+DOMAIN-SUFFIX,kinogo.r.worldssl.net,REJECT
+DOMAIN-SUFFIX,lobster.unionpeer.com,REJECT
+DOMAIN-SUFFIX,loki.maximonline.ru,REJECT
+DOMAIN-SUFFIX,m.kinolot.com,REJECT
+DOMAIN-SUFFIX,ncs.eadaily.com,REJECT
+DOMAIN-SUFFIX,neobasnet.timeout.ru,REJECT
+DOMAIN-SUFFIX,o.60sk.ru,REJECT
+DOMAIN-SUFFIX,partner.pladform.ru,REJECT
+DOMAIN-SUFFIX,partners.a24.biz,REJECT
+DOMAIN-SUFFIX,partners.parimatch.net,REJECT
 
 # === IP блокировка рекламных серверов ===
 IP-CIDR,62.76.25.27/32,REJECT
@@ -2087,4 +2199,4 @@ IP-CIDR,193.200.65.61/32,REJECT
 IP-CIDR,45.82.68.79/32,REJECT
 
 [MITM]
-hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua, *.adfox.ru, *.adfox.net, *.sape.ru, *.begun.ru, *.marketgid.com, *.mgid.com, *.rambler.ru, *.mail.ru, *.yandex.ru, *.vk.com, *.ok.ru, *.mts.ru, *.sport-express.ru, *.vz.ru, *.doubleclick.net, *.googlesyndication.com, *.googleadservices.com
+hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua, *.adfox.ru, *.adfox.net, *.sape.ru, *.begun.ru, *.marketgid.com, *.mgid.com, *.rambler.ru, *.mail.ru, *.yandex.ru, *.vk.com, *.ok.ru, *.mts.ru, *.sport-express.ru, *.vz.ru, *.doubleclick.net, *.googlesyndication.com, *.googleadservices.com, an.yandex.ru, *.yandex.ru, *.kinogo.by, ivi.ru, ssp.rambler.ru
