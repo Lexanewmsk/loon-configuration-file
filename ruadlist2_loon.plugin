@@ -2074,6 +2074,9 @@ DOMAIN-SUFFIX,bjiuck.com,REJECT
 DOMAIN-SUFFIX,greencuttlefish.com,REJECT
 DOMAIN-SUFFIX,adbetnet.com,REJECT
 DOMAIN-SUFFIX,cpm.wargaming.net,REJECT
+DOMAIN-SUFFIX,ad.cub.red,REJECT
+DOMAIN-SUFFIX,exad.smi2.ru,REJECT
+DOMAIN-SUFFIX,tgb.hsmedia.ru,REJECT
 
 # === IP блокировка рекламных серверов ===
 IP-CIDR,62.76.25.27/32,REJECT
