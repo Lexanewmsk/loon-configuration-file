@@ -114,3 +114,70 @@
 
 # Webmasterskyi draw ad script
 ^https?:\/\/.*\/resources\/draw_ad_script\.js - reject
+
+# === Additional blocking rules ===
+
+# Site JS with referrer
+^https?:\/\/.*\.site\/.*\.js\?referrer= - reject
+
+# XYZ get code
+^https?:\/\/.*\.xyz\/get_code\?w= - reject
+
+# MBP/CU/DBP pre ads with SID
+^https?:\/\/.*\/mbp\/pre\/.*\?sid= - reject
+^https?:\/\/.*\/cu\/pre\/.*\?sid= - reject
+^https?:\/\/.*\/dbp\/pre\/ - reject
+
+# jQuery fake with ref
+^https?:\/\/.*\/jquery-2\.3\.1\.min\.js\?ref=.*&pef= - reject
+
+# uCoz/Clan.su ads - specific scripts
+^https?:\/\/.*\/\.s\/src\/crit_image\.js - reject
+^https?:\/\/.*\/\.s\/src\/aw3bg1vw57wwpi\.js - reject
+^https?:\/\/.*\/\.s\/src\/5bs387qwpyw73\.js - reject
+^https?:\/\/.*\/\.s\/src\/282bde48fz\.js - reject
+^https?:\/\/.*\/\.s\/src\/a3gj754wp9t73\.js - reject
+^https?:\/\/.*\/\.s\/flash\/bnr\/ - reject
+
+# uCoz utils
+^https?:\/\/ucoz\..*\/cgi\/uutils\.fcg\?.*&r= - reject
+
+# uCoz random script patterns
+^https?:\/\/.*ucoz\..*\/\?.*%21.*%3B - reject
+
+# Bpoint ads
+^https?:\/\/.*\.ru\/bpoint\/src\/vvpl\.js\? - reject
+^https?:\/\/.*\.ru\/bpoint\/bnr\/blocks\/vastvpaid_player\.js - reject
+
+# Various encoded ads
+^https?:\/\/.*\/avXntA\/ik47z\/4I4Irk\?%21 - reject
+^https?:\/\/.*\/clan\.su\/\?[A-Za-z0-9]+%21.*%5E\/ - reject
+^https?:\/\/.*\/porebl\/\?Izo84uQ4=.*% - reject
+^https?:\/\/.*\/tG3a8U7s\/\?x37gWsOk= - reject
+^https?:\/\/.*\/uglobjs\/\?w3j0s9tL= - reject
+
+# uCoz vastvpaid player
+^https?:\/\/ucoz\.net\/bnr\/blocks\/vastvpaid_player\.js - reject
+
+# Dear/Embed code goclick
+^https?:\/\/.*\/dear_code\/.*\/goclick\?t=.*&ref= - reject
+^https?:\/\/.*\/embed_code\/.*\/goclick\?t=.*&ref= - reject
+
+# PP.ua scripts
+^https?:\/\/.*\.pp\.ua - reject
+
+# CSP scripts
+^https?:\/\/csp-.*\.ru\/ - reject
+
+# Resources with key
+^https?:\/\/.*\.ru\/resources\?key= - reject
+
+# Medicine teaser ads (various patterns)
+^https?:\/\/.*\.info\/v2\/show\/\?.*=.*&.*&.*= - reject
+^https?:\/\/.*\.info\/show\/\?.*=.*&.*=.*&.*=.*%20.*%20.*& - reject
+^https?:\/\/.*\.ru\/show\/\?.*=.*&.*=.*&.*=.*%20.*%20.*& - reject
+^https?:\/\/.*\.ru\/show\/\?.*=.*&.*=.*%D0.*\|%20.*& - reject
+^https?:\/\/.*\.ru\/show\/\?.*&block_id= - reject
+^https?:\/\/.*\.ru\/show\/\?.*=.*&.*=.*&.*=.*& - reject
+^https?:\/\/.*\.ru\/show\/\?.*=.*=.*&.*=.*::.*& - reject
+^https?:\/\/.*\.ru\/show\/\?block_id= - reject
