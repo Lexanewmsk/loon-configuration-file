@@ -2069,6 +2069,19 @@ DOMAIN-SUFFIX,zhkzt.com,REJECT
 DOMAIN-SUFFIX,zoda.ru,REJECT
 DOMAIN-SUFFIX,zorkabiz.ru,REJECT
 DOMAIN-SUFFIX,zqmwf.xyz,REJECT
+DOMAIN-SUFFIX,popvalk.com,REJECT
+DOMAIN-SUFFIX,bjiuck.com,REJECT
+DOMAIN-SUFFIX,greencuttlefish.com,REJECT
+DOMAIN-SUFFIX,adbetnet.com,REJECT
+DOMAIN-SUFFIX,cpm.wargaming.net,REJECT
+
+# === IP блокировка рекламных серверов ===
+IP-CIDR,62.76.25.27/32,REJECT
+IP-CIDR,62.76.25.28/32,REJECT
+IP-CIDR,193.200.64.24/32,REJECT
+IP-CIDR,206.54.181.250/32,REJECT
+IP-CIDR,193.200.65.61/32,REJECT
+IP-CIDR,45.82.68.79/32,REJECT
 
 [MITM]
 hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua, *.adfox.ru, *.adfox.net, *.sape.ru, *.begun.ru, *.marketgid.com, *.mgid.com, *.rambler.ru, *.mail.ru, *.yandex.ru, *.vk.com, *.ok.ru, *.mts.ru, *.sport-express.ru, *.vz.ru, *.doubleclick.net, *.googlesyndication.com, *.googleadservices.com
