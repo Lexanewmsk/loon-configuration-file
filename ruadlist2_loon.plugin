@@ -559,6 +559,105 @@
 ^https?:\/\/pokerstrategy\.com\/# - reject
 ^https?:\/\/pomogi\.org\/urgent\/1\/ - reject
 
+# === Поддомены крупных сайтов (точная блокировка) ===
+^https?:\/\/post\.rmbn\.ru\/ - reject
+^https?:\/\/prcy-info\.ru\/informer\.php\? - reject
+^https?:\/\/pressball\.by\/files\/ - reject
+^https?:\/\/printdirect\.ru\/.*\?partner_id= - reject
+^https?:\/\/promo\.md\/ - reject
+^https?:\/\/promo\.partner\.alawar\.ru\/ - reject
+^https?:\/\/promo\.rzonline\.ru\/ - reject
+^https?:\/\/protectorfirewall\.com\/\? - reject
+^https?:\/\/protoplex\.ru\/cgi-bin\/informer\.pl\? - reject
+^https?:\/\/protoplex\.ru\/images\/rating\/ - reject
+^https?:\/\/puls\.lv\/ - reject
+^https?:\/\/qle\.ru\/cgi-bin\/ - reject
+^https?:\/\/quatrix\.ru\/scripts - reject
+^https?:\/\/r-broker\.ru\/files - reject
+^https?:\/\/r\.ad1\.ru\/ - reject
+^https?:\/\/r\.partner\.badoo\.ru\/ - reject
+^https?:\/\/r\.qip\.ru\/ - reject
+^https?:\/\/r\.toplaygame\.ru\/ - reject
+^https?:\/\/radio-t\.com\/buttons\/ - reject
+^https?:\/\/radver\.ru\/widget\/ - reject
+^https?:\/\/rambler\.ru\/i\.ban\? - reject
+^https?:\/\/rb.*\.design\.ru\/ - reject
+^https?:\/\/rb\.rfn\.ru\/ - reject
+^https?:\/\/rb\.sport-express\.ru\/ - reject
+^https?:\/\/red\.by\/redban - reject
+^https?:\/\/redsquare\.rambler\.ru\/ - reject
+^https?:\/\/redvase\.bravenet\.com\/ - reject
+^https?:\/\/referral\.game-insight\.com\/ - reject
+^https?:\/\/reforum\.ru\/j\/widgets\.js - reject
+^https?:\/\/reg\.ru\/i\/affiliate\/ - reject
+^https?:\/\/region59\.net\/Buttons\/ - reject
+^https?:\/\/rosinvest\.com\/informs\/ - reject
+^https?:\/\/rot\.rusoul\.ru\/ - reject
+^https?:\/\/rot\.spotsniper\.ru\/ - reject
+^https?:\/\/rotator\.promokrot\.com\/ - reject
+^https?:\/\/rtl.*\.org\/init\.js\? - reject
+^https?:\/\/ru4\.com\/ - reject
+^https?:\/\/ruclicks\.com\/in\/ - reject
+^https?:\/\/ruklik\.com\/ - reject
+^https?:\/\/ruscams\.com - reject
+^https?:\/\/rutrk\.org\/ - reject
+^https?:\/\/s\.agava\.ru\/cgi\/actions\/c\.cgi\? - reject
+^https?:\/\/s\.finbs\.ru\/Scripts\/ - reject
+^https?:\/\/s\.holm\.ru\/stat\/ - reject
+^https?:\/\/s\.kma1\.biz\/ - reject
+^https?:\/\/s\.ladoshki\.com\/pics\/shirts\/ - reject
+^https?:\/\/s\.sdx\.ru\/ - reject
+^https?:\/\/s1\.intimshop\.ru\/ - reject
+^https?:\/\/sape\.ru\/bn\/ - reject
+^https?:\/\/sape\.ru\/partner-b\/ - reject
+^https?:\/\/sdelaimebel\.ru\/partners\/ - reject
+^https?:\/\/secure-it\.imrworldwide\.com\/cgi-bin\/m\? - reject
+^https?:\/\/seo-monster\.ru\/img_ - reject
+^https?:\/\/seo\.arxua\.com\/ - reject
+^https?:\/\/seowebtools\.ru\/inform\/infb\.php\? - reject
+^https?:\/\/sergey-mavrodi\.com\/img\/ - reject
+^https?:\/\/serve\.5visions\.com\/ - reject
+^https?:\/\/sex-news\.ru\/_connect\/dating - reject
+^https?:\/\/sexfabrika\.ru\/.*\.gif - reject
+^https?:\/\/skazkipro\.com\/\?code= - reject
+^https?:\/\/smart\.allocine\.fr - reject
+^https?:\/\/smartclip\.net\/delivery\/tag\? - reject
+^https?:\/\/soccer\.ru\/sites\/all\/modules\/baner\/baner\.js - reject
+^https?:\/\/sorcerers\.net\/includes\/butler\/butler\.php\? - reject
+^https?:\/\/sotmarket\.ru\/partner - reject
+^https?:\/\/sp9hb5jy81iw\.ru\/ - reject
+^https?:\/\/spbland\.ru\/bban\/ - reject
+^https?:\/\/spitter\.pauk\.ru\/ - reject
+^https?:\/\/spotsniper\.ru\/\?pid= - reject
+^https?:\/\/spytrack\.tic\.ru\/ - reject
+^https?:\/\/st\.astraone\.io\/ - reject
+^https?:\/\/st\.pay-click\.ru\/ - reject
+^https?:\/\/start\.fotostrana\.ru\/ - reject
+^https?:\/\/static\.clickscloud\.net\/ - reject
+^https?:\/\/static\.terrhq\.ru\/ - reject
+^https?:\/\/stepbystep\.spb\.ru\/reting_stat\.php\? - reject
+^https?:\/\/submitter\.ru\/.*\/i\.php - reject
+^https?:\/\/super\.md\/\?col= - reject
+^https?:\/\/t\.proext\.com\/ - reject
+^https?:\/\/tds\.vrcteam\.ru\/ - reject
+^https?:\/\/teasers\.ucoz\.ru\/ - reject
+^https?:\/\/teststudio\.ru\/in\? - reject
+^https?:\/\/tg\.mybb\.ru\/ - reject
+^https?:\/\/thr\.ru\/public\/promo-branding\/ - reject
+^https?:\/\/tibu\.ru\/p - reject
+^https?:\/\/tic-pr\.info\/.*\/button.* - reject
+^https?:\/\/tinydeal\.com\/.*\?sk= - reject
+^https?:\/\/tiz\.neosmi\.ru - reject
+^https?:\/\/tizer\.passion\.ru\/ - reject
+^https?:\/\/tizer\.ukraine-ru\.net\/ - reject
+^https?:\/\/tizerlady\..*\/init\.js - reject
+^https?:\/\/tnd\.ecefibwja\.xyz\/ - reject
+^https?:\/\/tnx\.net\/ - reject
+^https?:\/\/top100\.ezar\.ru\/ - reject
+^https?:\/\/top20\.md\/client\/scripts\/ - reject
+^https?:\/\/tr\.samoresim\.ru\/ - reject
+^https?:\/\/trafficmaxx\.de\/thx\.php\? - reject
+
 [Rule]
 
 # === Wildcard домены (ключевые слова) ===
@@ -588,6 +687,12 @@ DOMAIN-KEYWORD,poptraf,REJECT
 DOMAIN-KEYWORD,popunder,REJECT
 DOMAIN-KEYWORD,popupclick,REJECT
 DOMAIN-KEYWORD,popuptraf,REJECT
+DOMAIN-KEYWORD,poshalim,REJECT
+DOMAIN-KEYWORD,realtraf,REJECT
+DOMAIN-KEYWORD,rotaban,REJECT
+DOMAIN-KEYWORD,rotabanner,REJECT
+DOMAIN-KEYWORD,rotator,REJECT
+DOMAIN-KEYWORD,subnewss,REJECT
 
 # === Полная блокировка доменов ===
 DOMAIN-SUFFIX,cenoobi.run,REJECT
@@ -1560,6 +1665,190 @@ DOMAIN-SUFFIX,pokitom.com,REJECT
 DOMAIN-SUFFIX,pokrutim.ru,REJECT
 DOMAIN-SUFFIX,popinads.com,REJECT
 DOMAIN-SUFFIX,pornorunet.ru,REJECT
+DOMAIN-SUFFIX,pozzitiv.ru,REJECT
+DOMAIN-SUFFIX,prbn.ru,REJECT
+DOMAIN-SUFFIX,primechoice.ru,REJECT
+DOMAIN-SUFFIX,profit-casino.com,REJECT
+DOMAIN-SUFFIX,profit-partner.ru,REJECT
+DOMAIN-SUFFIX,promoblocks.ru,REJECT
+DOMAIN-SUFFIX,promoheads.com,REJECT
+DOMAIN-SUFFIX,protovid.com,REJECT
+DOMAIN-SUFFIX,psma01.com,REJECT
+DOMAIN-SUFFIX,psma02.com,REJECT
+DOMAIN-SUFFIX,psma03.com,REJECT
+DOMAIN-SUFFIX,psmardr.com,REJECT
+DOMAIN-SUFFIX,putana.cz,REJECT
+DOMAIN-SUFFIX,pwnz.org,REJECT
+DOMAIN-SUFFIX,q1ilb0enze.ru,REJECT
+DOMAIN-SUFFIX,qkffv.com,REJECT
+DOMAIN-SUFFIX,qrstes.com,REJECT
+DOMAIN-SUFFIX,qshare.ru,REJECT
+DOMAIN-SUFFIX,quber.ru,REJECT
+DOMAIN-SUFFIX,quisma.com,REJECT
+DOMAIN-SUFFIX,qwertypay.com,REJECT
+DOMAIN-SUFFIX,qxplus.ru,REJECT
+DOMAIN-SUFFIX,rap4me.com,REJECT
+DOMAIN-SUFFIX,rasskaju.ru,REJECT
+DOMAIN-SUFFIX,ratke.biz,REJECT
+DOMAIN-SUFFIX,rbcdn.com,REJECT
+DOMAIN-SUFFIX,rbnt.org,REJECT
+DOMAIN-SUFFIX,rbrxg.com,REJECT
+DOMAIN-SUFFIX,rdiul.com,REJECT
+DOMAIN-SUFFIX,readme.ru,REJECT
+DOMAIN-SUFFIX,ready4win.com,REJECT
+DOMAIN-SUFFIX,realbig.media,REJECT
+DOMAIN-SUFFIX,realer.info,REJECT
+DOMAIN-SUFFIX,realtraf.net,REJECT
+DOMAIN-SUFFIX,reasulty.com,REJECT
+DOMAIN-SUFFIX,rebevengwas.com,REJECT
+DOMAIN-SUFFIX,rebill.me,REJECT
+DOMAIN-SUFFIX,redclick.ru,REJECT
+DOMAIN-SUFFIX,redexchange.net,REJECT
+DOMAIN-SUFFIX,redflu.ru,REJECT
+DOMAIN-SUFFIX,redsurf.ru,REJECT
+DOMAIN-SUFFIX,redtram.com,REJECT
+DOMAIN-SUFFIX,refbanners.website,REJECT
+DOMAIN-SUFFIX,refer.ru,REJECT
+DOMAIN-SUFFIX,refpa.top,REJECT
+DOMAIN-SUFFIX,regpole.com,REJECT
+DOMAIN-SUFFIX,rekl1.com,REJECT
+DOMAIN-SUFFIX,reklamaizer.ru,REJECT
+DOMAIN-SUFFIX,reklamaster.com,REJECT
+DOMAIN-SUFFIX,release-me.ru,REJECT
+DOMAIN-SUFFIX,renewnewss.net,REJECT
+DOMAIN-SUFFIX,republer.com,REJECT
+DOMAIN-SUFFIX,rewdinghes.com,REJECT
+DOMAIN-SUFFIX,rfity.com,REJECT
+DOMAIN-SUFFIX,rg-be.ru,REJECT
+DOMAIN-SUFFIX,richthof.com,REJECT
+DOMAIN-SUFFIX,risale.ru,REJECT
+DOMAIN-SUFFIX,riverlead.ru,REJECT
+DOMAIN-SUFFIX,rmbn.ru,REJECT
+DOMAIN-SUFFIX,rokno.com,REJECT
+DOMAIN-SUFFIX,rollad.ru,REJECT
+DOMAIN-SUFFIX,rontar.com,REJECT
+DOMAIN-SUFFIX,rorer.ru,REJECT
+DOMAIN-SUFFIX,rsuuc.com,REJECT
+DOMAIN-SUFFIX,rtb-media.ru,REJECT
+DOMAIN-SUFFIX,rtb.com.ru,REJECT
+DOMAIN-SUFFIX,rtbweb.com,REJECT
+DOMAIN-SUFFIX,ruscontext.com,REJECT
+DOMAIN-SUFFIX,rushkolnik.ru,REJECT
+DOMAIN-SUFFIX,rusmedserv.com,REJECT
+DOMAIN-SUFFIX,rusrestbest,REJECT
+DOMAIN-SUFFIX,rustrackers.ru,REJECT
+DOMAIN-SUFFIX,rutarget.ru,REJECT
+DOMAIN-SUFFIX,ruttwind.com,REJECT
+DOMAIN-SUFFIX,rutvind.com,REJECT
+DOMAIN-SUFFIX,rwhxz.space,REJECT
+DOMAIN-SUFFIX,s-manager.com,REJECT
+DOMAIN-SUFFIX,s1vesta.com,REJECT
+DOMAIN-SUFFIX,saferedirrect.com,REJECT
+DOMAIN-SUFFIX,samiana.com,REJECT
+DOMAIN-SUFFIX,sasisa.ru,REJECT
+DOMAIN-SUFFIX,sb-money.ru,REJECT
+DOMAIN-SUFFIX,scafer.ru,REJECT
+DOMAIN-SUFFIX,searchtds.ru,REJECT
+DOMAIN-SUFFIX,seedr.com,REJECT
+DOMAIN-SUFFIX,seedr.ru,REJECT
+DOMAIN-SUFFIX,seo-sport.ru,REJECT
+DOMAIN-SUFFIX,seobloger.ru,REJECT
+DOMAIN-SUFFIX,seopult.ru,REJECT
+DOMAIN-SUFFIX,seorate.ru,REJECT
+DOMAIN-SUFFIX,seosprint.net,REJECT
+DOMAIN-SUFFIX,serialinfo.ru,REJECT
+DOMAIN-SUFFIX,serialo.net,REJECT
+DOMAIN-SUFFIX,seriouspartner.biz,REJECT
+DOMAIN-SUFFIX,serl.mooo.com,REJECT
+DOMAIN-SUFFIX,servebbs.net,REJECT
+DOMAIN-SUFFIX,sgood.ru,REJECT
+DOMAIN-SUFFIX,shakeson.ru,REJECT
+DOMAIN-SUFFIX,shopnetic.com,REJECT
+DOMAIN-SUFFIX,shuffele.com,REJECT
+DOMAIN-SUFFIX,sitorew.com,REJECT
+DOMAIN-SUFFIX,sjsmartcontent.org,REJECT
+DOMAIN-SUFFIX,skyad.video,REJECT
+DOMAIN-SUFFIX,skycdnhost.com,REJECT
+DOMAIN-SUFFIX,skypromotion.ru,REJECT
+DOMAIN-SUFFIX,slickjump.net,REJECT
+DOMAIN-SUFFIX,slopeac.com,REJECT
+DOMAIN-SUFFIX,smigid.ru,REJECT
+DOMAIN-SUFFIX,smilered.com,REJECT
+DOMAIN-SUFFIX,sn00.net,REJECT
+DOMAIN-SUFFIX,socadvnet.com,REJECT
+DOMAIN-SUFFIX,sochetat.net,REJECT
+DOMAIN-SUFFIX,sopital.com,REJECT
+DOMAIN-SUFFIX,sparelli.com,REJECT
+DOMAIN-SUFFIX,sponsorads.de,REJECT
+DOMAIN-SUFFIX,sputnik1.ru,REJECT
+DOMAIN-SUFFIX,standadv.com,REJECT
+DOMAIN-SUFFIX,startscript.ru,REJECT
+DOMAIN-SUFFIX,stripvidz.com,REJECT
+DOMAIN-SUFFIX,superpcexpert.ru,REJECT
+DOMAIN-SUFFIX,superstyle.ru,REJECT
+DOMAIN-SUFFIX,supertop.ru,REJECT
+DOMAIN-SUFFIX,supertura.com,REJECT
+DOMAIN-SUFFIX,surfe.pro,REJECT
+DOMAIN-SUFFIX,surfearner.com,REJECT
+DOMAIN-SUFFIX,svk-native.ru,REJECT
+DOMAIN-SUFFIX,talkfusion.com,REJECT
+DOMAIN-SUFFIX,talysu.info,REJECT
+DOMAIN-SUFFIX,targetix.net,REJECT
+DOMAIN-SUFFIX,td-everest.biz,REJECT
+DOMAIN-SUFFIX,teachac.com,REJECT
+DOMAIN-SUFFIX,teaser-goods.ru,REJECT
+DOMAIN-SUFFIX,teaser.cc,REJECT
+DOMAIN-SUFFIX,teasereach.com,REJECT
+DOMAIN-SUFFIX,teasergold.ru,REJECT
+DOMAIN-SUFFIX,teaserleads.com,REJECT
+DOMAIN-SUFFIX,teasermall.com,REJECT
+DOMAIN-SUFFIX,teasermedia.net,REJECT
+DOMAIN-SUFFIX,teasers.ru,REJECT
+DOMAIN-SUFFIX,techbeat.com,REJECT
+DOMAIN-SUFFIX,test-studio.ru,REJECT
+DOMAIN-SUFFIX,testsbox.ru,REJECT
+DOMAIN-SUFFIX,texto.click,REJECT
+DOMAIN-SUFFIX,textun.ru,REJECT
+DOMAIN-SUFFIX,th700.com,REJECT
+DOMAIN-SUFFIX,timedirect.ru,REJECT
+DOMAIN-SUFFIX,titanpoker.com,REJECT
+DOMAIN-SUFFIX,tizer24.ru,REJECT
+DOMAIN-SUFFIX,tizerbank.com,REJECT
+DOMAIN-SUFFIX,tizerbox.ru,REJECT
+DOMAIN-SUFFIX,tizerclik.com,REJECT
+DOMAIN-SUFFIX,tizerfly.net,REJECT
+DOMAIN-SUFFIX,tizermine.net,REJECT
+DOMAIN-SUFFIX,tizermy.net,REJECT
+DOMAIN-SUFFIX,tizernaya-reklama.ru,REJECT
+DOMAIN-SUFFIX,tizeroff.ru,REJECT
+DOMAIN-SUFFIX,tizru.com,REJECT
+DOMAIN-SUFFIX,tizy.ru,REJECT
+DOMAIN-SUFFIX,tle.ru,REJECT
+DOMAIN-SUFFIX,tm-core.net,REJECT
+DOMAIN-SUFFIX,tmozs.com,REJECT
+DOMAIN-SUFFIX,tmserver-2.net,REJECT
+DOMAIN-SUFFIX,tmstrack.com,REJECT
+DOMAIN-SUFFIX,todaymix.ru,REJECT
+DOMAIN-SUFFIX,top-shop.ru,REJECT
+DOMAIN-SUFFIX,topad.mobi,REJECT
+DOMAIN-SUFFIX,topadvert.ru,REJECT
+DOMAIN-SUFFIX,topcpa.ru,REJECT
+DOMAIN-SUFFIX,topcto.ru,REJECT
+DOMAIN-SUFFIX,torgdom.biz,REJECT
+DOMAIN-SUFFIX,torgnn.ru,REJECT
+DOMAIN-SUFFIX,tqqjk.top,REJECT
+DOMAIN-SUFFIX,tradedoubler.com,REJECT
+DOMAIN-SUFFIX,tradeleads.su,REJECT
+DOMAIN-SUFFIX,traff.ru,REJECT
+DOMAIN-SUFFIX,traffer.net,REJECT
+DOMAIN-SUFFIX,traffic-delivery.com,REJECT
+DOMAIN-SUFFIX,traffic-media.co,REJECT
+DOMAIN-SUFFIX,trafficcost.ru,REJECT
+DOMAIN-SUFFIX,traffshop.com,REJECT
+DOMAIN-SUFFIX,trafka.ru,REJECT
+DOMAIN-SUFFIX,trafmag.com,REJECT
+DOMAIN-SUFFIX,trafovod.com,REJECT
+
 
 [MITM]
 hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua
