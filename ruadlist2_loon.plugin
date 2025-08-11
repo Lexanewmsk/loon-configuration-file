@@ -687,5 +687,271 @@ DOMAIN-KEYWORD,swaxis,REJECT
 # === Исключения (НЕ блокируем если основной домен разрешен) ===
 # admitad-connect.com блокируем только если это НЕ основной admitad.com
 
+# === Чисто рекламные домены (безопасно блокировать полностью) ===
+DOMAIN-SUFFIX,0816bvh.ru,REJECT
+DOMAIN-SUFFIX,uektb.com,REJECT
+DOMAIN-SUFFIX,0916video.ru,REJECT
+DOMAIN-SUFFIX,123fvd.com,REJECT
+DOMAIN-SUFFIX,1bestgoods.com,REJECT
+DOMAIN-SUFFIX,1sputnik.ru,REJECT
+DOMAIN-SUFFIX,1traf.ru,REJECT
+DOMAIN-SUFFIX,24new.ru,REJECT
+DOMAIN-SUFFIX,34bogatirya.ru,REJECT
+DOMAIN-SUFFIX,3mtr.ru,REJECT
+DOMAIN-SUFFIX,69m.info,REJECT
+DOMAIN-SUFFIX,6likosy.com,REJECT
+DOMAIN-SUFFIX,7offers.ru,REJECT
+DOMAIN-SUFFIX,7porn.ru,REJECT
+DOMAIN-SUFFIX,7rtv.com,REJECT
+DOMAIN-SUFFIX,abs-static.org,REJECT
+DOMAIN-SUFFIX,aceadsys.net,REJECT
+DOMAIN-SUFFIX,actiflex.org,REJECT
+DOMAIN-SUFFIX,actionpay.ru,REJECT
+DOMAIN-SUFFIX,actionrtb.com,REJECT
+DOMAIN-SUFFIX,ad4sell.com,REJECT
+DOMAIN-SUFFIX,adbean.ru,REJECT
+DOMAIN-SUFFIX,adbmi.com,REJECT
+DOMAIN-SUFFIX,adbomb.ru,REJECT
+DOMAIN-SUFFIX,adbutton.net,REJECT
+DOMAIN-SUFFIX,adcamp.ru,REJECT
+DOMAIN-SUFFIX,addweb.ru,REJECT
+DOMAIN-SUFFIX,addynamo.com,REJECT
+DOMAIN-SUFFIX,adeclc.com,REJECT
+DOMAIN-SUFFIX,adforce.ru,REJECT
+DOMAIN-SUFFIX,adforce.team,REJECT
+DOMAIN-SUFFIX,adfox.ru,REJECT
+DOMAIN-SUFFIX,adfun.ru,REJECT
+DOMAIN-SUFFIX,adhands.ru,REJECT
+DOMAIN-SUFFIX,adhub.ru,REJECT
+DOMAIN-SUFFIX,adinfo.ru,REJECT
+DOMAIN-SUFFIX,adlabs.ru,REJECT
+DOMAIN-SUFFIX,adlabsnetworks.com,REJECT
+DOMAIN-SUFFIX,adland.ru,REJECT
+DOMAIN-SUFFIX,adlift.ru,REJECT
+DOMAIN-SUFFIX,adlmerge.com,REJECT
+DOMAIN-SUFFIX,adlook.net,REJECT
+DOMAIN-SUFFIX,admachina.com,REJECT
+DOMAIN-SUFFIX,admilk.ru,REJECT
+DOMAIN-SUFFIX,admixer.net,REJECT
+DOMAIN-SUFFIX,adne.info,REJECT
+DOMAIN-SUFFIX,adnetpartner.com,REJECT
+DOMAIN-SUFFIX,adnova.ru,REJECT
+DOMAIN-SUFFIX,adone.ru,REJECT
+DOMAIN-SUFFIX,adoneast.ru,REJECT
+DOMAIN-SUFFIX,adplus.io,REJECT
+DOMAIN-SUFFIX,adpod.in,REJECT
+DOMAIN-SUFFIX,adpremium.ru,REJECT
+DOMAIN-SUFFIX,adprofy.com,REJECT
+DOMAIN-SUFFIX,adrecreate.com,REJECT
+DOMAIN-SUFFIX,adregain.ru,REJECT
+DOMAIN-SUFFIX,adrock.ru,REJECT
+DOMAIN-SUFFIX,adservone.com,REJECT
+DOMAIN-SUFFIX,adsgid.com,REJECT
+DOMAIN-SUFFIX,adsmmgp.com,REJECT
+DOMAIN-SUFFIX,adsmo.ru,REJECT
+DOMAIN-SUFFIX,adstock.pro,REJECT
+DOMAIN-SUFFIX,adstock.ru,REJECT
+DOMAIN-SUFFIX,adsyst.ru,REJECT
+DOMAIN-SUFFIX,adtags.pro,REJECT
+DOMAIN-SUFFIX,adtelligent.com,REJECT
+DOMAIN-SUFFIX,adultpay.net,REJECT
+DOMAIN-SUFFIX,adulttraffic.ru,REJECT
+DOMAIN-SUFFIX,advaction.ru,REJECT
+DOMAIN-SUFFIX,advarkads.com,REJECT
+DOMAIN-SUFFIX,advbroker.ru,REJECT
+DOMAIN-SUFFIX,advclicks.net,REJECT
+DOMAIN-SUFFIX,adveasy.ru,REJECT
+DOMAIN-SUFFIX,adverdata.net,REJECT
+DOMAIN-SUFFIX,advertise.ru,REJECT
+DOMAIN-SUFFIX,advertlink.ru,REJECT
+DOMAIN-SUFFIX,advertone.ru,REJECT
+DOMAIN-SUFFIX,advertstar.ru,REJECT
+DOMAIN-SUFFIX,advg.agency,REJECT
+DOMAIN-SUFFIX,advgame.org,REJECT
+DOMAIN-SUFFIX,advideo.ru,REJECT
+DOMAIN-SUFFIX,advkino.ru,REJECT
+DOMAIN-SUFFIX,advmaker.net,REJECT
+DOMAIN-SUFFIX,advmaker.su,REJECT
+DOMAIN-SUFFIX,advon.net,REJECT
+DOMAIN-SUFFIX,advrush.com,REJECT
+DOMAIN-SUFFIX,adwidgets.ru,REJECT
+DOMAIN-SUFFIX,adwolf.ru,REJECT
+DOMAIN-SUFFIX,adxxx.com,REJECT
+DOMAIN-SUFFIX,adylalahb.ru,REJECT
+DOMAIN-SUFFIX,aerontre.com,REJECT
+DOMAIN-SUFFIX,afdads.com,REJECT
+DOMAIN-SUFFIX,agitazio.com,REJECT
+DOMAIN-SUFFIX,aiadvi.com,REJECT
+DOMAIN-SUFFIX,airlead.ru,REJECT
+DOMAIN-SUFFIX,aixcdn.com,REJECT
+DOMAIN-SUFFIX,akabo.ru,REJECT
+DOMAIN-SUFFIX,alfainternet.su,REJECT
+DOMAIN-SUFFIX,alfatarget.ru,REJECT
+DOMAIN-SUFFIX,allbn.net,REJECT
+DOMAIN-SUFFIX,allmt.com,REJECT
+DOMAIN-SUFFIX,allowac.com,REJECT
+DOMAIN-SUFFIX,alltizer.ru,REJECT
+DOMAIN-SUFFIX,almosto.com,REJECT
+DOMAIN-SUFFIX,amazingcl.ru,REJECT
+DOMAIN-SUFFIX,amzbr.com,REJECT
+DOMAIN-SUFFIX,andsedrit.com,REJECT
+DOMAIN-SUFFIX,anews.cc,REJECT
+DOMAIN-SUFFIX,anyfiles.ru,REJECT
+DOMAIN-SUFFIX,api9.net,REJECT
+DOMAIN-SUFFIX,apytrc.com,REJECT
+DOMAIN-SUFFIX,asiantraffic.net,REJECT
+DOMAIN-SUFFIX,askfuelads.com,REJECT
+DOMAIN-SUFFIX,aso1.net,REJECT
+DOMAIN-SUFFIX,associazio.com,REJECT
+DOMAIN-SUFFIX,atlassolutions.com,REJECT
+DOMAIN-SUFFIX,attivertura.com,REJECT
+DOMAIN-SUFFIX,audtd.com,REJECT
+DOMAIN-SUFFIX,aurabom.ru,REJECT
+DOMAIN-SUFFIX,autodengi.com,REJECT
+DOMAIN-SUFFIX,autoteaser.ru,REJECT
+DOMAIN-SUFFIX,autoua.com,REJECT
+DOMAIN-SUFFIX,avazone.ru,REJECT
+DOMAIN-SUFFIX,avdego.net,REJECT
+DOMAIN-SUFFIX,awesomeredirector.com,REJECT
+DOMAIN-SUFFIX,azartcash.com,REJECT
+DOMAIN-SUFFIX,azartplay.com,REJECT
+DOMAIN-SUFFIX,azbns.com,REJECT
+DOMAIN-SUFFIX,azmnp.com,REJECT
+DOMAIN-SUFFIX,babyboomboomads.com,REJECT
+DOMAIN-SUFFIX,backromy.com,REJECT
+DOMAIN-SUFFIX,bakteso.ru,REJECT
+DOMAIN-SUFFIX,ban-host.ru,REJECT
+DOMAIN-SUFFIX,banamertur.com,REJECT
+DOMAIN-SUFFIX,banerator.net,REJECT
+DOMAIN-SUFFIX,banner-in.net,REJECT
+DOMAIN-SUFFIX,bannerbook.ru,REJECT
+DOMAIN-SUFFIX,bannernetwork.net,REJECT
+DOMAIN-SUFFIX,bannuncio.com,REJECT
+DOMAIN-SUFFIX,bantex.ru,REJECT
+DOMAIN-SUFFIX,basetts.com,REJECT
+DOMAIN-SUFFIX,bdros.com,REJECT
+DOMAIN-SUFFIX,beetraf.ru,REJECT
+DOMAIN-SUFFIX,beroll.ru,REJECT
+DOMAIN-SUFFIX,best-cargo.ru,REJECT
+DOMAIN-SUFFIX,bestdoska.ru,REJECT
+DOMAIN-SUFFIX,bigbord.net,REJECT
+DOMAIN-SUFFIX,bigclick.me,REJECT
+DOMAIN-SUFFIX,bigleads.ru,REJECT
+DOMAIN-SUFFIX,bioxtubes.com,REJECT
+DOMAIN-SUFFIX,bizua.com,REJECT
+DOMAIN-SUFFIX,bjpwv.com,REJECT
+DOMAIN-SUFFIX,bkrkv.com,REJECT
+DOMAIN-SUFFIX,blogan.ru,REJECT
+DOMAIN-SUFFIX,blogun.ru,REJECT
+DOMAIN-SUFFIX,bnstero.com,REJECT
+DOMAIN-SUFFIX,bobi-bobi.info,REJECT
+DOMAIN-SUFFIX,bobi-mobi.info,REJECT
+DOMAIN-SUFFIX,bodaybo.net,REJECT
+DOMAIN-SUFFIX,bodyclick.net,REJECT
+DOMAIN-SUFFIX,bolshoykush.ru,REJECT
+DOMAIN-SUFFIX,bongacash.com,REJECT
+DOMAIN-SUFFIX,bongobono.com,REJECT
+DOMAIN-SUFFIX,boobzi.com,REJECT
+DOMAIN-SUFFIX,botkano.info,REJECT
+DOMAIN-SUFFIX,brandarium.net,REJECT
+DOMAIN-SUFFIX,brdmin.com,REJECT
+DOMAIN-SUFFIX,breedac.com,REJECT
+DOMAIN-SUFFIX,brndrm.com,REJECT
+DOMAIN-SUFFIX,buckridge.link,REJECT
+
+# === IP адреса (рекламные сервера) ===
+IP-CIDR,37.220.26.135/32,REJECT
+IP-CIDR,37.220.26.136/32,REJECT
+IP-CIDR,37.220.26.137/32,REJECT
+IP-CIDR,52.210.16.150/32,REJECT
+IP-CIDR,77.247.178.41/32,REJECT
+IP-CIDR,78.140.134.198/32,REJECT
+IP-CIDR,78.140.149.216/32,REJECT
+IP-CIDR,88.85.75.147/32,REJECT
+IP-CIDR,88.85.77.92/32,REJECT
+IP-CIDR,91.207.192.31/32,REJECT
+IP-CIDR,95.211.125.226/32,REJECT
+
+# === Поддомены крупных сайтов (точная блокировка) ===
+^https?:\/\/24open\.ru\/.*\?from= - reject
+^https?:\/\/468\.vologdainfo\.ru\/ - reject
+^https?:\/\/66\.ru\/show\/ - reject
+^https?:\/\/87\.242\.91\..*\/adfox\/ - reject
+^https?:\/\/87\.242\.91\..*\/prepareCode\? - reject
+^https?:\/\/a\.fobos\.tv\/ - reject
+^https?:\/\/a\.jurnalu\.ru\/ - reject
+^https?:\/\/a\.kubik3\.ru\/ - reject
+^https?:\/\/a\.sdska\.ru\/ - reject
+^https?:\/\/a24help\.ru\/ - reject
+^https?:\/\/abs\.firstvds\.ru\/ - reject
+^https?:\/\/active\.interzet\.ru\/log\.php\? - reject
+^https?:\/\/ad-emea\.doubleclick\.net\/ - reject
+^https?:\/\/ad-words\.ru\/contextad\/ - reject
+^https?:\/\/ad\.dumedia\.ru\/ - reject
+^https?:\/\/ad\.edugram\.com\/ - reject
+^https?:\/\/ad\.hutor\.ru\/ - reject
+^https?:\/\/ad\.outstream\.today\/ - reject
+^https?:\/\/ad\.oyy\.ru\/ - reject
+^https?:\/\/ad\.vo-media\.ru\/ - reject
+^https?:\/\/ad\.yadro\.ru\/ - reject
+^https?:\/\/ad1game\.ru\/ - reject
+^https?:\/\/ad2\.rambler\.ru\/ - reject
+^https?:\/\/ad3\.rambler\.ru\/ - reject
+^https?:\/\/adbn\.ru\/ - reject
+^https?:\/\/adriverm\.narod2\.ru\/ - reject
+^https?:\/\/adshop\.ru\/adshop\/\? - reject
+^https?:\/\/adv\.vz\.ru\/ - reject
+^https?:\/\/advert\.polonsil\.ru\/ - reject
+^https?:\/\/advjump\.com\/jpromo\/ - reject
+^https?:\/\/affiliate\.astraweb\.com\/ - reject
+^https?:\/\/affiliates\.a2hosting\.com\/ - reject
+^https?:\/\/agro\.net\.ru\/ - reject
+^https?:\/\/aif\.ru\/iframes\/ - reject
+^https?:\/\/allnewspoint\.com\/static\/js\/informer\.js - reject
+^https?:\/\/alpari\.ru\/ - reject
+^https?:\/\/an\.webvisor\.org\/ - reject
+^https?:\/\/analyzethis\.ru\/informer\.cgi\? - reject
+^https?:\/\/animesector\.ru\/picz\/ - reject
+^https?:\/\/apitech\.ru\/.*\/rotator\.js - reject
+^https?:\/\/apitech\.ru\/Rotator\/ - reject
+^https?:\/\/appgrade\.ru\/server\/ - reject
+^https?:\/\/autodealer\.ru\/includes\/button\.php\? - reject
+^https?:\/\/autonet\.ru\/extra\/autoclub_informer\.aspx - reject
+^https?:\/\/autoreg\.ru\/images\/ - reject
+^https?:\/\/avia\.ru\/.*\.shtml - reject
+^https?:\/\/avifilm\.ru\/new\/ - reject
+^https?:\/\/awempire\.com\/ban\/ - reject
+^https?:\/\/b\.ddestiny\.ru\/ - reject
+^https?:\/\/b\.dotbrataev\.ru\/ - reject
+^https?:\/\/b\.nude-moon\.xyz\/ - reject
+^https?:\/\/b2bcontext\.ru\/ - reject
+^https?:\/\/ban\.mirorgazma\.ru\/ - reject
+^https?:\/\/banki\.ru\/_export\/informers\/ - reject
+^https?:\/\/banner\.lbs\.km\.ru\/ - reject
+^https?:\/\/banners\.getiton\.com\/ - reject
+^https?:\/\/bannet\.fryazino\.net\/ - reject
+^https?:\/\/beboss\.ru\/informer\/ - reject
+^https?:\/\/berdent\.com\/sys\/ - reject
+^https?:\/\/bestclick\.ru\/sokz\.php\? - reject
+^https?:\/\/bestreferat\.ru\/images\/b\/ - reject
+^https?:\/\/beta\.mediafort\.ru\/ - reject
+^https?:\/\/biglion\.ru\/general\/js\/partnership\.js\.php - reject
+^https?:\/\/binpartner\.com\/branding\/ - reject
+^https?:\/\/bizweb\.ru\/button\.php\? - reject
+^https?:\/\/bj\.su\/calculator\/ - reject
+^https?:\/\/bk\.goodline\.info\/ - reject
+^https?:\/\/block\.s2blosh\.com\/ - reject
+^https?:\/\/bn\.ohah\.ru\/ - reject
+^https?:\/\/bn\.orthodoxy\.ru\/ - reject
+^https?:\/\/booking\.com\/deal\.html - reject
+^https?:\/\/boom\.1ccbt\.com\/ - reject
+^https?:\/\/bugaga\.ru\/uploads\/new\/planetarii\.jpg - reject
+
+# === Wildcard домены (ключевые слова) ===
+DOMAIN-KEYWORD,adserver1,REJECT
+DOMAIN-KEYWORD,admulti,REJECT
+DOMAIN-KEYWORD,alishop,REJECT
+DOMAIN-KEYWORD,bondzgi,REJECT
+
 [MITM]
 hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua
