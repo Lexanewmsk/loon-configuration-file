@@ -490,6 +490,24 @@
 ^https?:\/\/leadgid\.go2cloud\.org\/ - reject
 
 [Rule]
+
+# === Wildcard домены (ключевые слова) ===
+DOMAIN-KEYWORD,flipflapflo,REJECT
+DOMAIN-KEYWORD,gonews,REJECT
+DOMAIN-KEYWORD,goodadvert,REJECT
+DOMAIN-KEYWORD,icq-window,REJECT
+DOMAIN-KEYWORD,icqwindow,REJECT
+DOMAIN-KEYWORD,adserver1,REJECT
+DOMAIN-KEYWORD,admulti,REJECT
+DOMAIN-KEYWORD,alishop,REJECT
+DOMAIN-KEYWORD,bondzgi,REJECT
+DOMAIN-KEYWORD,swaxis,REJECT
+DOMAIN-KEYWORD,tzbox,REJECT
+DOMAIN-KEYWORD,broredir,REJECT
+DOMAIN-KEYWORD,videolink,REJECT
+DOMAIN-KEYWORD,appcodepnik,REJECT
+DOMAIN-KEYWORD,orbit,REJECT
+
 # === Полная блокировка доменов ===
 DOMAIN-SUFFIX,cenoobi.run,REJECT
 DOMAIN-SUFFIX,adtec.ru,REJECT
@@ -510,8 +528,6 @@ DOMAIN-SUFFIX,bolayaros.com,REJECT
 DOMAIN-SUFFIX,adlook.tech,REJECT
 DOMAIN-SUFFIX,showsclick.com,REJECT
 DOMAIN-SUFFIX,7kprtners.com,REJECT
-
-# === Украинские рекламные сети ===
 DOMAIN-SUFFIX,top-js-metrics.top.my.ua,REJECT
 DOMAIN-SUFFIX,cdn.umh.ua,REJECT
 DOMAIN-SUFFIX,go.xl.ua,REJECT
@@ -540,8 +556,6 @@ DOMAIN-SUFFIX,svc.kartinka.com.ua,REJECT
 DOMAIN-SUFFIX,tds.org.ua,REJECT
 DOMAIN-SUFFIX,teaser.meta.ua,REJECT
 DOMAIN-SUFFIX,zakladka.org.ua,REJECT
-
-# === Дополнительные рекламные домены ===
 DOMAIN-SUFFIX,clickwhitecode.com,REJECT
 DOMAIN-SUFFIX,virtonnews.com,REJECT
 DOMAIN-SUFFIX,info.emoment.com,REJECT
@@ -553,14 +567,6 @@ DOMAIN-SUFFIX,mpuls.ru,REJECT
 DOMAIN-SUFFIX,newseek.org,REJECT
 DOMAIN-SUFFIX,infox.sg,REJECT
 DOMAIN-SUFFIX,sv-pr.ru,REJECT
-
-# === Ключевые слова ===
-DOMAIN-KEYWORD,broredir,REJECT
-DOMAIN-KEYWORD,videolink,REJECT
-DOMAIN-KEYWORD,appcodepnik,REJECT
-DOMAIN-KEYWORD,orbit,REJECT
-
-# === Чисто рекламные домены (безопасно блокировать полностью) ===
 DOMAIN-SUFFIX,6c5xnntfvi.com,REJECT
 DOMAIN-SUFFIX,portoteamo.com,REJECT
 DOMAIN-SUFFIX,r9ljguu1k4.ru,REJECT
@@ -803,11 +809,6 @@ DOMAIN-SUFFIX,digitaltarget.ru,REJECT
 DOMAIN-SUFFIX,tneduf.com,REJECT
 DOMAIN-SUFFIX,bs.commontools.net,REJECT
 DOMAIN-SUFFIX,refractionius.com,REJECT
-
-# === Ключевые слова с подстановочными знаками ===
-DOMAIN-KEYWORD,tzbox,REJECT
-
-# === Чисто рекламные домены (безопасно блокировать полностью) ===
 DOMAIN-SUFFIX,sellaction.net,REJECT
 DOMAIN-SUFFIX,uezbshzpdcbb.info,REJECT
 DOMAIN-SUFFIX,oijkse.com,REJECT
@@ -880,14 +881,6 @@ DOMAIN-SUFFIX,jhf.ru,REJECT
 DOMAIN-SUFFIX,kma.biz,REJECT
 DOMAIN-SUFFIX,red.by,REJECT
 DOMAIN-SUFFIX,w7.ru,REJECT
-
-# === Wildcard домены (ключевые слова) ===
-DOMAIN-KEYWORD,swaxis,REJECT
-
-# === Исключения (НЕ блокируем если основной домен разрешен) ===
-# admitad-connect.com блокируем только если это НЕ основной admitad.com
-
-# === Чисто рекламные домены (безопасно блокировать полностью) ===
 DOMAIN-SUFFIX,0816bvh.ru,REJECT
 DOMAIN-SUFFIX,uektb.com,REJECT
 DOMAIN-SUFFIX,0916video.ru,REJECT
@@ -1058,8 +1051,6 @@ DOMAIN-SUFFIX,brdmin.com,REJECT
 DOMAIN-SUFFIX,breedac.com,REJECT
 DOMAIN-SUFFIX,brndrm.com,REJECT
 DOMAIN-SUFFIX,buckridge.link,REJECT
-
-# === IP адреса (рекламные сервера) ===
 IP-CIDR,37.220.26.135/32,REJECT
 IP-CIDR,37.220.26.136/32,REJECT
 IP-CIDR,37.220.26.137/32,REJECT
@@ -1071,14 +1062,6 @@ IP-CIDR,88.85.75.147/32,REJECT
 IP-CIDR,88.85.77.92/32,REJECT
 IP-CIDR,91.207.192.31/32,REJECT
 IP-CIDR,95.211.125.226/32,REJECT
-
-# === Wildcard домены (ключевые слова) ===
-DOMAIN-KEYWORD,adserver1,REJECT
-DOMAIN-KEYWORD,admulti,REJECT
-DOMAIN-KEYWORD,alishop,REJECT
-DOMAIN-KEYWORD,bondzgi,REJECT
-
-# === Чисто рекламные домены (безопасно блокировать полностью) ===
 DOMAIN-SUFFIX,bumaikr.com,REJECT
 DOMAIN-SUFFIX,buytraf.ru,REJECT
 DOMAIN-SUFFIX,buzzoola.com,REJECT
@@ -1309,13 +1292,6 @@ DOMAIN-SUFFIX,lc2ads.ru,REJECT
 DOMAIN-SUFFIX,lcads.ru,REJECT
 DOMAIN-SUFFIX,leads.su,REJECT
 DOMAIN-SUFFIX,leadsleader.ru,REJECT
-
-# === Wildcard домены (ключевые слова) ===
-DOMAIN-KEYWORD,flipflapflo,REJECT
-DOMAIN-KEYWORD,gonews,REJECT
-DOMAIN-KEYWORD,goodadvert,REJECT
-DOMAIN-KEYWORD,icq-window,REJECT
-DOMAIN-KEYWORD,icqwindow,REJECT
 
 [MITM]
 hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua
