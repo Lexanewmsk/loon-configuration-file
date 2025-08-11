@@ -1168,13 +1168,6 @@
 # RTTR scripts (non-third-party exception)
 ^https?:\/\/.*\/rttr.*\.min\.js - reject
 
-[Rule]
-# Specific domains that should be completely blocked
-DOMAIN-SUFFIX,carambis.ru,REJECT
-DOMAIN-KEYWORD,adserv.com,REJECT
-DOMAIN-KEYWORD,dondlo,REJECT
-
-[Rewrite]
 # Specific autoplay video ads
 ^https?:\/\/carambis\.ru\/static\/new\/programs\/promo\/ - reject
 ^https?:\/\/iframe\.tvzavr\.ru\/action\/window\/.*\?autoplay=1 - reject
@@ -1188,6 +1181,12 @@ DOMAIN-KEYWORD,dondlo,REJECT
 # Чисто рекламные домены для полной блокировки
 
 [Rule]
+
+# Specific domains that should be completely blocked
+DOMAIN-SUFFIX,carambis.ru,REJECT
+DOMAIN-KEYWORD,adserv.com,REJECT
+DOMAIN-KEYWORD,dondlo,REJECT
+
 DOMAIN-SUFFIX,cenoobi.run,REJECT
 DOMAIN-SUFFIX,adtec.ru,REJECT
 DOMAIN-SUFFIX,x-app639-cc.tod99shi.com,REJECT
