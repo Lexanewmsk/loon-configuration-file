@@ -1,8 +1,8 @@
 #!name= RuAdList для Loon
-#!desc= Конвертированные правила из AdGuard RuAdList - Common banner names
-#!author= AdguardTeam (конвертация для Loon)
-#!homepage= https://github.com/AdguardTeam/AdguardFilters
-#!icon= https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/metadata.json
+#!desc= Конвертированные правила RuAdList - Common banner names
+#!author= (конвертация для Loon)
+#!homepage= 
+#!icon= 
 
 [Rule]
 # Пока нет безопасных доменов для блокировки из этого блока
