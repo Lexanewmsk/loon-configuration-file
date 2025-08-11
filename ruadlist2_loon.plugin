@@ -571,5 +571,121 @@ DOMAIN-SUFFIX,refractionius.com,REJECT
 # === Ключевые слова с подстановочными знаками ===
 DOMAIN-KEYWORD,tzbox,REJECT
 
+# === Чисто рекламные домены (безопасно блокировать полностью) ===
+DOMAIN-SUFFIX,sellaction.net,REJECT
+DOMAIN-SUFFIX,uezbshzpdcbb.info,REJECT
+DOMAIN-SUFFIX,oijkse.com,REJECT
+DOMAIN-SUFFIX,pqrtd9hhtu9x.info,REJECT
+DOMAIN-SUFFIX,knkqjmjyxzev.info,REJECT
+DOMAIN-SUFFIX,wwgdwl.com,REJECT
+DOMAIN-SUFFIX,hdacode.com,REJECT
+DOMAIN-SUFFIX,serconius.com,REJECT
+DOMAIN-SUFFIX,rcvlink.com,REJECT
+DOMAIN-SUFFIX,tirsmile.pro,REJECT
+DOMAIN-SUFFIX,redarianman.com,REJECT
+DOMAIN-SUFFIX,go.ukrleads.com,REJECT
+DOMAIN-SUFFIX,adstime.org,REJECT
+DOMAIN-SUFFIX,quantumpers.com,REJECT
+DOMAIN-SUFFIX,hgbn.rocks,REJECT
+DOMAIN-SUFFIX,admulti.com,REJECT
+DOMAIN-SUFFIX,luckyads.tech,REJECT
+DOMAIN-SUFFIX,advgalaxy.com,REJECT
+DOMAIN-SUFFIX,truenat.bid,REJECT
+DOMAIN-SUFFIX,aafdcq.com,REJECT
+DOMAIN-SUFFIX,pkqeg5z3xffs.info,REJECT
+DOMAIN-SUFFIX,edugrampromo.com,REJECT
+DOMAIN-SUFFIX,luuming.com,REJECT
+DOMAIN-SUFFIX,flipflap.pro,REJECT
+DOMAIN-SUFFIX,hqrsuxsjqycv.info,REJECT
+DOMAIN-SUFFIX,ogclick.com,REJECT
+DOMAIN-SUFFIX,sunburgh.com,REJECT
+DOMAIN-SUFFIX,domnovrek.com,REJECT
+DOMAIN-SUFFIX,fe4r7k22y68p.info,REJECT
+DOMAIN-SUFFIX,zrlcr.com,REJECT
+DOMAIN-SUFFIX,brekdok.com,REJECT
+DOMAIN-SUFFIX,bzrpvk.com,REJECT
+DOMAIN-SUFFIX,apprefaculty.pro,REJECT
+DOMAIN-SUFFIX,ensurania.com,REJECT
+DOMAIN-SUFFIX,armi.media,REJECT
+DOMAIN-SUFFIX,pornogoogle.info,REJECT
+DOMAIN-SUFFIX,aj1913.online,REJECT
+DOMAIN-SUFFIX,cdn.debitcrebit669.com,REJECT
+DOMAIN-SUFFIX,comin.co,REJECT
+DOMAIN-SUFFIX,selectroduced.com,REJECT
+DOMAIN-SUFFIX,hunterdelivery.com,REJECT
+DOMAIN-SUFFIX,antiblock.info,REJECT
+DOMAIN-SUFFIX,69v.club,REJECT
+DOMAIN-SUFFIX,fat1domain1.com,REJECT
+DOMAIN-SUFFIX,mpau.biz,REJECT
+DOMAIN-SUFFIX,hottopnow.com,REJECT
+DOMAIN-SUFFIX,fqwgi.com,REJECT
+DOMAIN-SUFFIX,xyz0k4gfs.xyz,REJECT
+DOMAIN-SUFFIX,kipyn.com,REJECT
+DOMAIN-SUFFIX,gold-mir.com,REJECT
+DOMAIN-SUFFIX,5visions.com,REJECT
+DOMAIN-SUFFIX,jkhad.com,REJECT
+DOMAIN-SUFFIX,zyf03k.xyz,REJECT
+DOMAIN-SUFFIX,adbutton.net,REJECT
+DOMAIN-SUFFIX,adonweb.ru,REJECT
+DOMAIN-SUFFIX,allalla.com,REJECT
+DOMAIN-SUFFIX,cpa1.ru,REJECT
+DOMAIN-SUFFIX,ecommtools.com,REJECT
+DOMAIN-SUFFIX,gameleads.ru,REJECT
+DOMAIN-SUFFIX,is.traff-numerical.info,REJECT
+DOMAIN-SUFFIX,piccash.net,REJECT
+DOMAIN-SUFFIX,sexplaycam.com,REJECT
+DOMAIN-SUFFIX,tovarro.com,REJECT
+DOMAIN-SUFFIX,tpm.pw,REJECT
+DOMAIN-SUFFIX,webhop.net,REJECT
+DOMAIN-SUFFIX,oyy.ru,REJECT
+DOMAIN-SUFFIX,pp1.ru,REJECT
+DOMAIN-SUFFIX,epn.bz,REJECT
+DOMAIN-SUFFIX,jhf.ru,REJECT
+DOMAIN-SUFFIX,kma.biz,REJECT
+DOMAIN-SUFFIX,red.by,REJECT
+DOMAIN-SUFFIX,w7.ru,REJECT
+
+# === Поддомены крупных сайтов (точная блокировка) ===
+^https?:\/\/adtech-digital\.ru\/ - reject
+^https?:\/\/mnogodiva\.ru\/ - reject
+^https?:\/\/asing\.ru\/ - reject
+^https?:\/\/mobilebanner\.ru\/ - reject
+^https?:\/\/aliadvert\.ru\/ - reject
+^https?:\/\/ogeri\.ru\/ - reject
+^https?:\/\/v1-c73e\.kxcdn\.com\/ - reject
+^https?:\/\/wmip\.ru\/ - reject
+^https?:\/\/targetseek\.ru\/ - reject
+^https?:\/\/vw\.xxxmshel\.org\/ - reject
+^https?:\/\/metrika\.traff\.space\/ - reject
+^https?:\/\/ad\.1k3\.com\/ - reject
+^https?:\/\/sminewsnet\.ru\/ - reject
+^https?:\/\/rezhiv\.ru\/ - reject
+^https?:\/\/s\.newsportalssl1\.top\/ - reject
+^https?:\/\/itrigra\.ru\/ - reject
+^https?:\/\/plyfoni\.ru\/ - reject
+^https?:\/\/content\.mql5\.com\/ - reject
+^https?:\/\/cdn\.movieads\.ru\/ - reject
+^https?:\/\/devtizer\.ru\/ - reject
+^https?:\/\/vyborexperta\.ru\/ - reject
+^https?:\/\/admediator\.ru\/ - reject
+^https?:\/\/cdn\.hunteryvely\.com\/ - reject
+^https?:\/\/skwstat\.ru\/ - reject
+^https?:\/\/kinoaction\.ru\/ - reject
+^https?:\/\/onemontay\.ru\/ - reject
+^https?:\/\/sm-ini\.ru\/ - reject
+^https?:\/\/xoor\.ru\/ - reject
+
+# === Wildcard домены (ключевые слова) ===
+DOMAIN-KEYWORD,swaxis,REJECT
+
+# === URL паттерны ===
+^https?:\/\/.*\.a-akamaihd\.com\/ - reject
+^https?:\/\/.*\/check\.php\?user_id= - reject
+^https?:\/\/.*\/getThumbs\?uid= - reject
+^https?:\/\/.*\/newcode\/\?kf= - reject
+
+# === Исключения (НЕ блокируем если основной домен разрешен) ===
+# admitad-connect.com блокируем только если это НЕ основной admitad.com
+
 [MITM]
 hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua
