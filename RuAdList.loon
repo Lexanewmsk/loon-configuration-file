@@ -181,3 +181,96 @@
 ^https?:\/\/.*\.ru\/show\/\?.*=.*&.*=.*&.*=.*& - reject
 ^https?:\/\/.*\.ru\/show\/\?.*=.*=.*&.*=.*::.*& - reject
 ^https?:\/\/.*\.ru\/show\/\?block_id= - reject
+
+# === Additional uCoz and hosting platform ads ===
+
+# Site JS with referrer and XYZ get code  
+^https?:\/\/.*\.site\/.*\.js\?referrer= - reject
+^https?:\/\/.*\.xyz\/get_code\?w= - reject
+
+# Pre-roll ads with SID parameters
+^https?:\/\/.*\/mbp\/pre\/.*\?sid= - reject
+^https?:\/\/.*\/cu\/pre\/.*\?sid= - reject
+^https?:\/\/.*\/dbp\/pre\/ - reject
+
+# Fake jQuery with tracking
+^https?:\/\/.*\/jquery-2\.3\.1\.min\.js\?ref=.*&pef= - reject
+
+# uCoz specific ad detection scripts
+^https?:\/\/.*\/\.s\/src\/crit_image\.js - reject
+^https?:\/\/.*\/\.s\/src\/aw3bg1vw57wwpi\.js - reject
+^https?:\/\/.*\/\.s\/src\/5bs387qwpyw73\.js - reject
+^https?:\/\/.*\/\.s\/src\/282bde48fz\.js - reject
+^https?:\/\/.*\/\.s\/src\/a3gj754wp9t73\.js - reject
+^https?:\/\/.*\/\.s\/flash\/bnr\/ - reject
+
+# uCoz utilities and encoded scripts
+^https?:\/\/ucoz\..*\/cgi\/uutils\.fcg\?.*&r= - reject
+^https?:\/\/.*ucoz\..*\/\?.*%21.*%3B - reject
+
+# Plasma 3dn.ru specific scripts (random named JS files)
+^https?:\/\/.*\/\.s\/src\/[a-z0-9]*\.js - reject
+
+# Generic hosting platform malicious scripts (very long random parameters)
+^https?:\/\/.*\.(com|at\.ua|clan\.su|ru|narod\.ru|3dn\.ru|net|my1\.ru|do\.am|moy\.su|info|tv|su)\/\?[A-Za-z0-9%]{80,} - reject
+^https?:\/\/.*\.(com|at\.ua|clan\.su|ru|narod\.ru|3dn\.ru|net|my1\.ru|do\.am|moy\.su|info|tv|su|org\.ua|usite\.pro)\/[A-Za-z0-9_%]{3,12}\?[A-Za-z0-9%]{70,100} - reject
+^https?:\/\/.*\.(com|at\.ua|clan\.su|ru|narod\.ru|3dn\.ru|net|my1\.ru|do\.am|moy\.su|info|tv|su|org\.ua|usite\.pro)\/[A-Za-z0-9_%]{3,12}\/.*\?[A-Za-z0-9%]{70,100} - reject
+
+# uCoz and uSite specific malicious patterns
+^https?:\/\/.*ucoz\.(net|org|ru|com|ua)\/[A-Za-z0-9_%]{3,12}\?[A-Za-z0-9%]{70,100} - reject
+^https?:\/\/.*ucoz\.(net|org|ru|com|ua)\/[A-Za-z0-9_%]{3,12}\/.*\?[A-Za-z0-9%]{70,100} - reject
+^https?:\/\/.*usite\.(pro|org|ru|com|ua)\/[A-Za-z0-9_%]{3,12}\/.*\?[A-Za-z0-9%]{70,100} - reject
+
+# Bpoint video ads
+^https?:\/\/.*\.ru\/bpoint\/src\/vvpl\.js\? - reject
+^https?:\/\/.*\.ru\/bpoint\/bnr\/blocks\/vastvpaid_player\.js - reject
+
+# Encoded malicious URLs
+^https?:\/\/.*\/avXntA\/ik47z\/4I4Irk\?%21 - reject
+^https?:\/\/.*\/clan\.su\/\?[A-Za-z0-9]+%21.*%5E\/ - reject
+^https?:\/\/.*\/porebl\/\?Izo84uQ4=.*% - reject
+^https?:\/\/.*\/tG3a8U7s\/\?x37gWsOk= - reject
+^https?:\/\/.*\/uglobjs\/\?w3j0s9tL= - reject
+
+# uCoz video ad player
+^https?:\/\/ucoz\.net\/bnr\/blocks\/vastvpaid_player\.js - reject
+
+# Code injection goclick ads
+^https?:\/\/.*\/dear_code\/.*\/goclick\?t=.*&ref= - reject
+^https?:\/\/.*\/embed_code\/.*\/goclick\?t=.*&ref= - reject
+
+# PP.ua and CSP malicious scripts
+^https?:\/\/.*\.pp\.ua - reject
+^https?:\/\/csp-.*\.ru\/ - reject
+
+# Resource loading with key parameter
+^https?:\/\/.*\.ru\/resources\?key= - reject
+
+# BBQ admin ajax and SM domain tracking
+^https?:\/\/.*\/admin-ajax\.php\?action=bbq_default_code_url&rnd= - reject
+^https?:\/\/.*\/sm\?saitDomain=.*&referrer= - reject
+
+# Kodik video player VAST ads
+^https?:\/\/.*\/vast-ad\/.*\/manifest\.xml - reject
+^https?:\/\/.*\/vast-adv\/.*\/manifest\.xml - reject
+^https?:\/\/.*\/vast-advert\/.*\/manifest\.xml - reject
+^https?:\/\/.*\/vastad\/.*\/manifest\.xml - reject
+^https?:\/\/.*\/vastadv\/.*\/manifest\.xml - reject
+
+# RealBig rotator scripts
+^https?:\/\/.*\.com\/rotator\.min\.js - reject
+^https?:\/\/.*\.live\/rotator\.min\.js - reject
+^https?:\/\/.*\.pro\/rotator\.min\.js - reject
+^https?:\/\/.*\.ru\/rotator\.min\.js - reject
+^https?:\/\/.*\.today\/rotator\.min\.js - reject
+
+# Ads.red various sticker and static scripts
+^https?:\/\/.*\.ru\/code\/.*\.js - reject
+^https?:\/\/.*\.ru\/static\/module_sticker\.min\.js - reject
+^https?:\/\/.*\.ru\/static\/pc_static\.min\.js - reject
+^https?:\/\/.*\.ru\/static\/pc_sticker\.min\.js - reject
+^https?:\/\/.*\.ru\/static\/static_pc\.min\.js - reject
+^https?:\/\/.*\.ru\/static\/static\.min\.js\? - reject
+^https?:\/\/.*\.ru\/static\/sticker_pc\.min\.js - reject
+^https?:\/\/.*\.ru\/static\/sticker\.min\.js\? - reject
+^https?:\/\/.*\.ru\/static\/sticker\.js\? - reject
