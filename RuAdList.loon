@@ -1073,3 +1073,116 @@
 # TX2
 ^https?:\/\/.*\/tx2\.ru\/ - reject
 
+# === Final ad patterns and specific domains ===
+
+# TX banners and uploads
+^https?:\/\/.*\/tx_macinabanners\/ - reject
+^https?:\/\/.*\/upload\/bx\/ - reject
+^https?:\/\/.*\/uploads\/baner\/ - reject
+^https?:\/\/.*\/uploads\/bnr\/ - reject
+^https?:\/\/.*\/uploads\/clk\.js - reject
+
+# US ad centre and vendor show
+^https?:\/\/.*\/us-adcentre\. - reject
+^https?:\/\/.*\/vendshow\/ - reject
+
+# Vertical banners and view banner
+^https?:\/\/.*\/vertical_banners\/ - reject
+^https?:\/\/.*\/view\/banner\/.*\/zone\?zid= - reject
+
+# View and VK scripts
+^https?:\/\/.*\/viewt\.js - reject
+^https?:\/\/.*\/vkshow1\.php - reject
+
+# Various banner files
+^https?:\/\/.*\/vottbanner - reject
+^https?:\/\/.*\/vr-ad\.png - reject
+^https?:\/\/.*\/vsemayki_ - reject
+^https?:\/\/.*\/warlog\. - reject
+
+# XAP script
+^https?:\/\/.*\/xap\.ru\/ - reject
+
+# Ad size patterns
+^https?:\/\/.*120x600\. - reject
+^https?:\/\/.*120x600b - reject
+^https?:\/\/.*160x600- - reject
+^https?:\/\/.*160x600\. - reject
+^https?:\/\/.*\/2010\/ads\/ - reject
+^https?:\/\/.*468x15\.h - reject
+^https?:\/\/.*468x60\.g - reject
+^https?:\/\/.*468x60\.h - reject
+^https?:\/\/.*468x60\.j - reject
+^https?:\/\/.*468x60\.s - reject
+^https?:\/\/.*468x60a\. - reject
+^https?:\/\/.*468x60ba - reject
+^https?:\/\/.*728banne - reject
+^https?:\/\/.*728x90\.g - reject
+^https?:\/\/.*728x90\.h - reject
+^https?:\/\/.*728x90\.j - reject
+^https?:\/\/.*728x90\.p - reject
+^https?:\/\/.*728x90\.s - reject
+^https?:\/\/.*728x90px - reject
+^https?:\/\/.*768x60\.gif - reject
+^https?:\/\/.*\/8080\/ads\/ - reject
+
+# Init.js patterns
+^https?:\/\/.*\..*\.com\/init\.js\? - reject
+
+# News rekl patterns
+^https?:\/\/news\..*rekl.*\.ru\/show\/.*\.js - reject
+
+# TDS scripts
+^https?:\/\/.*tds\. - reject
+
+# Click under
+^https?:\/\/.*\^clickunder= - reject
+
+# Underscore ad patterns
+^https?:\/\/.*120.*600 - reject
+^https?:\/\/.*_120x600 - reject
+^https?:\/\/.*_160x290 - reject
+^https?:\/\/.*_160x600 - reject
+^https?:\/\/.*_336x280 - reject
+^https?:\/\/.*_580x100 - reject
+^https?:\/\/.*_600x100\.png - reject
+^https?:\/\/.*_610x120\.gif - reject
+^https?:\/\/.*_728\.gif - reject
+^https?:\/\/.*_728by90 - reject
+^https?:\/\/.*_ad\.aspx - reject
+^https?:\/\/.*_ads\/script\. - reject
+^https?:\/\/.*_ads\?pid= - reject
+^https?:\/\/.*_adspaces\/ - reject
+^https?:\/\/.*_adsys\.js - reject
+^https?:\/\/.*_banner\.gif - reject
+
+# Banner patterns with wildcards
+^https?:\/\/.*banner120.*2\.gif - reject
+^https?:\/\/.*banner.*rotator\.php - reject
+^https?:\/\/.*box.*ads\/ - reject
+^https?:\/\/.*sponsored.*links\. - reject
+
+# Ban click
+^https?:\/\/.*ban_click - reject
+
+# uCoz informer
+^https?:\/\/.*ucoz\.ru\/informer\/ - reject
+
+# RTTR scripts (non-third-party exception)
+^https?:\/\/.*\/rttr.*\.min\.js - reject
+
+[Rule]
+# Specific domains that should be completely blocked
+DOMAIN-SUFFIX,carambis.ru,REJECT
+DOMAIN-KEYWORD,adserv.com,REJECT
+DOMAIN-KEYWORD,dondlo,REJECT
+
+[Rewrite]
+# Specific autoplay video ads
+^https?:\/\/carambis\.ru\/static\/new\/programs\/promo\/ - reject
+^https?:\/\/iframe\.tvzavr\.ru\/action\/window\/.*\?autoplay=1 - reject
+^https?:\/\/iframe\.tvzavr\.ru\/iframe\/index\.html\?cid=.*&autoplay=1 - reject
+^https?:\/\/megogo\.net\/e\/.*\?autoplay=1 - reject
+^https?:\/\/.*adserv\.com\/vast\.xml - reject
+^https?:\/\/videosafe\.tv\/video\/embed\/.*\?autoplay=1 - reject
+^https?:\/\/vk\.com\/rtrg - reject
