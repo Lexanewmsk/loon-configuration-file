@@ -658,6 +658,73 @@
 ^https?:\/\/tr\.samoresim\.ru\/ - reject
 ^https?:\/\/trafficmaxx\.de\/thx\.php\? - reject
 
+# === Поддомены крупных сайтов (точная блокировка) ===
+^https?:\/\/tsr\.zlatoff\.ru\/ - reject
+^https?:\/\/tubecontext\.com\/crossdomain\.xml - reject
+^https?:\/\/tubecontext\.com\/ - reject
+^https?:\/\/tvoy-start\.com\/aff\/ - reject
+^https?:\/\/u.*\.takru\.com\/ - reject
+^https?:\/\/ucoz\.net\/img\/cp\/ - reject
+^https?:\/\/ucoz\.net\/img\/ma\/ - reject
+^https?:\/\/ukrbuy\.com\/partner\/ - reject
+^https?:\/\/ulitka\.ru\/logo - reject
+^https?:\/\/userator\.ru\/img\/ban\/ - reject
+^https?:\/\/usr\.trava\.io\/ - reject
+^https?:\/\/v\.dlski\.space\/ - reject
+^https?:\/\/v\.newsportal.*\.ru\/ - reject
+^https?:\/\/vancl\.com\/\?source= - reject
+^https?:\/\/vast\.reyden-x\.com\/ - reject
+^https?:\/\/video\.begun\.ru\/ - reject
+^https?:\/\/video\.market-place\.su\/ - reject
+^https?:\/\/video\.videonow\.ru\/ - reject
+^https?:\/\/videochart\.net\/apv\/index\.php - reject
+^https?:\/\/videostrip\.com\/.*\/admatcherclient\. - reject
+^https?:\/\/videotraff\.ru\/img - reject
+^https?:\/\/vihub\.ru\/video\?plid= - reject
+^https?:\/\/visitweb\.com\/v\/ - reject
+^https?:\/\/vitrine\.sup\.com\/ - reject
+^https?:\/\/vk\.com\/js\/al\/aes_light\.js - reject
+^https?:\/\/vpoiskeraboti\.ru\/\?p - reject
+^https?:\/\/vsego\.ru\/images\/b - reject
+^https?:\/\/vsem\.ru\/img - reject
+^https?:\/\/vsemayki\.ru\/.*\/\?ref= - reject
+^https?:\/\/vsemayki\.ru\/.*&ref= - reject
+^https?:\/\/vsetv\.com\/pic\/paid\/ - reject
+^https?:\/\/vsexshop\.ru\/images\/b\/ - reject
+^https?:\/\/vsexshop\.ru\/images\/banners\/ - reject
+^https?:\/\/vsexshop\.ru\/store\/ - reject
+^https?:\/\/web-moneta\.com\/images\/ban.* - reject
+^https?:\/\/webeffector\.ru\/\?invitation= - reject
+^https?:\/\/webhost1\.ru\/\?r= - reject
+^https?:\/\/weblist\.ru\/images\/weblist - reject
+^https?:\/\/weblog\.com\/.*\/cnt - reject
+^https?:\/\/weboborona\.ru\/pic\/wban - reject
+^https?:\/\/webplus\.info\/getres\.php\? - reject
+^https?:\/\/websurf\.ru\/\? - reject
+^https?:\/\/wemall\.ru\/adv\/ - reject
+^https?:\/\/westtokyo\.ru\/download\/west - reject
+^https?:\/\/widgeo\.net\/compteur\.php\? - reject
+^https?:\/\/widget\.admitad\.com\/ - reject
+^https?:\/\/widget\.market-place\.su\/ - reject
+^https?:\/\/widget\.socialmart\.ru\/ - reject
+^https?:\/\/widget\.utinet\.ru\/ - reject
+^https?:\/\/widgets\.planeta\.ru\/ - reject
+^https?:\/\/wieistmeineip\.de\/ip-address\/ - reject
+^https?:\/\/williamhillcasino\.com\/promoredirect\? - reject
+^https?:\/\/wm-help\.net\/b\.php\? - reject
+^https?:\/\/wmkredit\.ru\/widget\/ - reject
+^https?:\/\/ws\.amazon\..*\/widgets\/q\? - reject
+^https?:\/\/ws\.md\/c\.png\? - reject
+^https?:\/\/wtools\.biz\/sample2\.php\? - reject
+^https?:\/\/xbn\.ru\/cgi-bin\/ - reject
+^https?:\/\/xnet\.am\/widget - reject
+^https?:\/\/xsell\.6waves\.com\/ - reject
+^https?:\/\/xxx-tracker\.com\/pics\/ - reject
+^https?:\/\/yazzle\.ru\/images\/banners\/ - reject
+^https?:\/\/zahodi-ka\.ru\/wbmaster\/index\/schet\.cgi\? - reject
+^https?:\/\/zero\.kz\/c\.php\? - reject
+^https?:\/\/zoomumba\.bigpoint\.com\/\?aid= - reject
+
 [Rule]
 
 # === Wildcard домены (ключевые слова) ===
@@ -693,6 +760,13 @@ DOMAIN-KEYWORD,rotaban,REJECT
 DOMAIN-KEYWORD,rotabanner,REJECT
 DOMAIN-KEYWORD,rotator,REJECT
 DOMAIN-KEYWORD,subnewss,REJECT
+DOMAIN-KEYWORD,under-click,REJECT
+DOMAIN-KEYWORD,underclick,REJECT
+DOMAIN-KEYWORD,newsportal,REJECT
+DOMAIN-KEYWORD,videoclick,REJECT
+DOMAIN-KEYWORD,videoclik,REJECT
+DOMAIN-KEYWORD,web-visor,REJECT
+DOMAIN-KEYWORD,wstatistics,REJECT
 
 # === Полная блокировка доменов ===
 DOMAIN-SUFFIX,cenoobi.run,REJECT
@@ -1848,7 +1922,153 @@ DOMAIN-SUFFIX,traffshop.com,REJECT
 DOMAIN-SUFFIX,trafka.ru,REJECT
 DOMAIN-SUFFIX,trafmag.com,REJECT
 DOMAIN-SUFFIX,trafovod.com,REJECT
-
+DOMAIN-SUFFIX,transfto.com,REJECT
+DOMAIN-SUFFIX,tres8.info,REJECT
+DOMAIN-SUFFIX,trigub.ru,REJECT
+DOMAIN-SUFFIX,trkleads.ru,REJECT
+DOMAIN-SUFFIX,trmit.com,REJECT
+DOMAIN-SUFFIX,trxxh.com,REJECT
+DOMAIN-SUFFIX,ttarget.ru,REJECT
+DOMAIN-SUFFIX,tubealliance.com,REJECT
+DOMAIN-SUFFIX,tubedot.ru,REJECT
+DOMAIN-SUFFIX,twinplan.com,REJECT
+DOMAIN-SUFFIX,twinzo.ru,REJECT
+DOMAIN-SUFFIX,tx2.ru,REJECT
+DOMAIN-SUFFIX,txtrek.net,REJECT
+DOMAIN-SUFFIX,txtrk.com,REJECT
+DOMAIN-SUFFIX,typiol.com,REJECT
+DOMAIN-SUFFIX,uaadi.com,REJECT
+DOMAIN-SUFFIX,uamobile.net,REJECT
+DOMAIN-SUFFIX,ukrbanner.net,REJECT
+DOMAIN-SUFFIX,ulaen.com,REJECT
+DOMAIN-SUFFIX,ulogix.ru,REJECT
+DOMAIN-SUFFIX,ultrapay.net,REJECT
+DOMAIN-SUFFIX,umekana.ru,REJECT
+DOMAIN-SUFFIX,underdone.ru,REJECT
+DOMAIN-SUFFIX,undere.com,REJECT
+DOMAIN-SUFFIX,universalsrc.com,REJECT
+DOMAIN-SUFFIX,untily.com,REJECT
+DOMAIN-SUFFIX,upclick.ru,REJECT
+DOMAIN-SUFFIX,uppro.ru,REJECT
+DOMAIN-SUFFIX,upravel.com,REJECT
+DOMAIN-SUFFIX,upxip.xyz,REJECT
+DOMAIN-SUFFIX,uredy.top,REJECT
+DOMAIN-SUFFIX,urgigan.info,REJECT
+DOMAIN-SUFFIX,us.a1.yimg.com,REJECT
+DOMAIN-SUFFIX,us.i1.yimg.com,REJECT
+DOMAIN-SUFFIX,utraff.com,REJECT
+DOMAIN-SUFFIX,uuaoy.com,REJECT
+DOMAIN-SUFFIX,uvcwj.com,REJECT
+DOMAIN-SUFFIX,vadideo.com,REJECT
+DOMAIN-SUFFIX,vareza.net,REJECT
+DOMAIN-SUFFIX,vatizon.com,REJECT
+DOMAIN-SUFFIX,vclicks.net,REJECT
+DOMAIN-SUFFIX,vcslotoplay.com,REJECT
+DOMAIN-SUFFIX,ventite.com,REJECT
+DOMAIN-SUFFIX,venturead.com,REJECT
+DOMAIN-SUFFIX,veroui.com,REJECT
+DOMAIN-SUFFIX,vertelka.ru,REJECT
+DOMAIN-SUFFIX,vezetmne.ru,REJECT
+DOMAIN-SUFFIX,viboom.com,REJECT
+DOMAIN-SUFFIX,viboom.ru,REJECT
+DOMAIN-SUFFIX,vicepiter.ru,REJECT
+DOMAIN-SUFFIX,vidalak.com,REJECT
+DOMAIN-SUFFIX,video-play.ru,REJECT
+DOMAIN-SUFFIX,videocap.org,REJECT
+DOMAIN-SUFFIX,videofan.ru,REJECT
+DOMAIN-SUFFIX,videoklass.ru,REJECT
+DOMAIN-SUFFIX,videopotok.pro,REJECT
+DOMAIN-SUFFIX,videoroll.net,REJECT
+DOMAIN-SUFFIX,videostrip.com,REJECT
+DOMAIN-SUFFIX,vidigital.ru,REJECT
+DOMAIN-SUFFIX,vidplah.com,REJECT
+DOMAIN-SUFFIX,vidroll.ru,REJECT
+DOMAIN-SUFFIX,vidtok.ru,REJECT
+DOMAIN-SUFFIX,vidustal.com,REJECT
+DOMAIN-SUFFIX,viewclc.com,REJECT
+DOMAIN-SUFFIX,vifog.com,REJECT
+DOMAIN-SUFFIX,vimgs.ru,REJECT
+DOMAIN-SUFFIX,vipadvert.net,REJECT
+DOMAIN-SUFFIX,viperotika.net,REJECT
+DOMAIN-SUFFIX,viral-cdn.ru,REJECT
+DOMAIN-SUFFIX,viraladnetwork.net,REJECT
+DOMAIN-SUFFIX,visummer.com,REJECT
+DOMAIN-SUFFIX,vivapays.com,REJECT
+DOMAIN-SUFFIX,vjcbm.com,REJECT
+DOMAIN-SUFFIX,vklike.com,REJECT
+DOMAIN-SUFFIX,vmet.ro,REJECT
+DOMAIN-SUFFIX,vmkxcsss.ru,REJECT
+DOMAIN-SUFFIX,vogozae.ru,REJECT
+DOMAIN-SUFFIX,vogozara.ru,REJECT
+DOMAIN-SUFFIX,voob.ru,REJECT
+DOMAIN-SUFFIX,voronezh136.ru,REJECT
+DOMAIN-SUFFIX,vpath.net,REJECT
+DOMAIN-SUFFIX,vsdcdn.com,REJECT
+DOMAIN-SUFFIX,vsesumki.com,REJECT
+DOMAIN-SUFFIX,vtdoska.ru,REJECT
+DOMAIN-SUFFIX,vtrtl.de,REJECT
+DOMAIN-SUFFIX,vztfc.com,REJECT
+DOMAIN-SUFFIX,wapstart.ru,REJECT
+DOMAIN-SUFFIX,web-rotation.net,REJECT
+DOMAIN-SUFFIX,webgringo.ru,REJECT
+DOMAIN-SUFFIX,webmedia.co.il,REJECT
+DOMAIN-SUFFIX,websharks.ru,REJECT
+DOMAIN-SUFFIX,webturn.ru,REJECT
+DOMAIN-SUFFIX,webunder.ru,REJECT
+DOMAIN-SUFFIX,wedgeac.com,REJECT
+DOMAIN-SUFFIX,whisla.com,REJECT
+DOMAIN-SUFFIX,wifly.net,REJECT
+DOMAIN-SUFFIX,winvideo.org,REJECT
+DOMAIN-SUFFIX,wizard-traffic.com,REJECT
+DOMAIN-SUFFIX,wlbann.com,REJECT
+DOMAIN-SUFFIX,wm-panel.com,REJECT
+DOMAIN-SUFFIX,wmcasher.ru,REJECT
+DOMAIN-SUFFIX,wmclickz.ru,REJECT
+DOMAIN-SUFFIX,wmirk.ru,REJECT
+DOMAIN-SUFFIX,wmlink.ru,REJECT
+DOMAIN-SUFFIX,wmrok.com,REJECT
+DOMAIN-SUFFIX,wmrok.net,REJECT
+DOMAIN-SUFFIX,wmzona.com,REJECT
+DOMAIN-SUFFIX,wolist.ru,REJECT
+DOMAIN-SUFFIX,womenchop.com,REJECT
+DOMAIN-SUFFIX,womenclick.ru,REJECT
+DOMAIN-SUFFIX,workon.ru,REJECT
+DOMAIN-SUFFIX,world-2012.info,REJECT
+DOMAIN-SUFFIX,wowlink.ru,REJECT
+DOMAIN-SUFFIX,wowmoscow.ru,REJECT
+DOMAIN-SUFFIX,wsp.marketgid.com,REJECT
+DOMAIN-SUFFIX,wtoredir.com,REJECT
+DOMAIN-SUFFIX,wwclickgo.com,REJECT
+DOMAIN-SUFFIX,wwgate.ru,REJECT
+DOMAIN-SUFFIX,wwpon365.ru,REJECT
+DOMAIN-SUFFIX,www.milawka.com,REJECT
+DOMAIN-SUFFIX,www2.bubblesmedia.ru,REJECT
+DOMAIN-SUFFIX,wwwomen.ru,REJECT
+DOMAIN-SUFFIX,wydpt.com,REJECT
+DOMAIN-SUFFIX,wyuxy.com,REJECT
+DOMAIN-SUFFIX,x-busty.org,REJECT
+DOMAIN-SUFFIX,xaogi.com,REJECT
+DOMAIN-SUFFIX,xiepl.com,REJECT
+DOMAIN-SUFFIX,xmemory.ru,REJECT
+DOMAIN-SUFFIX,xoliter.com,REJECT
+DOMAIN-SUFFIX,xxx-babes.org,REJECT
+DOMAIN-SUFFIX,ybpxv.com,REJECT
+DOMAIN-SUFFIX,ylkkp.com,REJECT
+DOMAIN-SUFFIX,ynwia.com,REJECT
+DOMAIN-SUFFIX,yottos.com,REJECT
+DOMAIN-SUFFIX,yourlustmedia.com,REJECT
+DOMAIN-SUFFIX,yournewhosting.com,REJECT
+DOMAIN-SUFFIX,ytimgg.com,REJECT
+DOMAIN-SUFFIX,yugaley.info,REJECT
+DOMAIN-SUFFIX,zamok911.com,REJECT
+DOMAIN-SUFFIX,zapbox.ru,REJECT
+DOMAIN-SUFFIX,zarabotki.ru,REJECT
+DOMAIN-SUFFIX,zboac.com,REJECT
+DOMAIN-SUFFIX,zewkj.com,REJECT
+DOMAIN-SUFFIX,zhkzt.com,REJECT
+DOMAIN-SUFFIX,zoda.ru,REJECT
+DOMAIN-SUFFIX,zorkabiz.ru,REJECT
+DOMAIN-SUFFIX,zqmwf.xyz,REJECT
 
 [MITM]
-hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua
+hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua, *.rambler.ru, *.mail.ru, *.yandex.ru, *.vk.com, *.ok.ru, *.sport-express.ru, *.vz.ru, *.mts.ru, *.adfox.ru, *.adfox.net, *.sape.ru, *.begun.ru, *.marketgid.com, *.mgid.com, *.doubleclick.net, *.googlesyndication.com, *.googleadservices.com, *.facebook.com, *.taobao.com, *.tmall.com, *.jd.com, *.qq.com, *.weibo.com, *.sina.com.cn, *.fotostrana.ru, *.ozon.ru, *.avito.ru, *.banki.ru, *.kinopoisk.ru, *.ivi.ru, *.youtube.com, *.google.com, *.amazon.com, *.booking.com, *.agoda.com, *.biglion.ru, *.kupivip.ru, *.vsemayki.ru, *.labirint.ru, *.ruclicks.com, *.loveplanet.ru, *.maoyan.com, *.aliexpress.com, *.wildberries.ru, *.admitad.com, *.cityads.com, *.cityads.ru, *.tradedoubler.com, *.williamhillcasino.com, *.zoomumba.bigpoint.com, *.badoo.ru, *.fotostrana.ru, *.sokz.ru, *.ad1.ru, *.letitbit.net, *.worldoftanks.com, *.mediaget.com, *.gde-luchshe.ru, *.zzima.com, *.pokerstrategy.com, *.forex4you.org, *.tinydeal.com, *.jlist.com, *.joylandcasino.com, *.partycasino.com, *.partypoker.com, *.autodotaler.ru, *.autonet.ru, *.autodealer.ru, *.intimshop.ru, *.mirorgazma.ru, *.intimznaki.tomsk.ru, *.iphone-caviar.ru, *.kupibonus.ru, *.krutomaiki.ru, *.fermasosedi.biz, *.footbolka.ru, *.sotmarket.ru, *.reg.ru, *.erahost.ru, *.sdelaimebel.ru, *.wmkredit.ru, *.grattis.ru, *.hosting-ninja.ru, *.mchost.ru, *.webhost1.ru, *.webeffector.ru, *.wemall.ru, *.hts.ru, *.igra3k.ru, *.igrun.com, *.mlgame.ru, *.grand-casino.com, *.maxbetslots.com, *.vpoiskeraboti.ru, *.skazkipro.com, *.play.zzima.com, *.spotsniper.ru, *.g-tv.ru, *.infiplay.ru, *.photoshop-master.org, *.biglion.ru, *.binpartner.com, *.partners.agoda.com, *.partners.vsemayki.ru, *.affiliates.a2hosting.com, *.affiliate.astraweb.com, *.referral.game-insight.com, *.printdirect.ru, *.promo.partner.alawar.ru, *.promo.rzonline.ru, *.orbitum.com, *.partner.gde.ru, *.partner.iobit-team.ru, *.partner.mediametrics.ru, *.partnergateway.liga-stavok.com, *.gbs.gamingmedia.ru, *.goldline.pro, *.widget.admitad.com, *.widget.market-place.su, *.widget.socialmart.ru, *.widget.utinet.ru, *.widgets.planeta.ru, *.xnet.am
