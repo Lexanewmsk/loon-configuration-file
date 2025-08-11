@@ -489,6 +489,76 @@
 ^https?:\/\/lbn\.ru\/cgi-bin\/ - reject
 ^https?:\/\/leadgid\.go2cloud\.org\/ - reject
 
+# === Поддомены крупных сайтов (точная блокировка) ===
+^https?:\/\/letitbit\.net\/skymonk - reject
+^https?:\/\/libo\.ru\/rat\/img\/ - reject
+^https?:\/\/link2you\.ru\/usertools\/ - reject
+^https?:\/\/linkhelp\.clients\.google\.com\/tbproxy\/lh\/wm - reject
+^https?:\/\/list\.ru\/img\/buttons\/ - reject
+^https?:\/\/mail\.banklife\.ru\/ - reject
+^https?:\/\/mail\.ru\/r\/adid\/ - reject
+^https?:\/\/maxbetslots\.com\/\?ref= - reject
+^https?:\/\/mayka\.kz\/co\/js\/ - reject
+^https?:\/\/mchost\.ru\/\?referer= - reject
+^https?:\/\/media\.kahoxa\.ru\/ - reject
+^https?:\/\/media\.nakanune\.ru\/images\/banners\/ - reject
+^https?:\/\/mediaget\.com\/torrent\.php\?r= - reject
+^https?:\/\/megaweb\.su\/softblok - reject
+^https?:\/\/metallicheckiy-portal\.ru\/imgrek\/ - reject
+^https?:\/\/mg\.yadro\.ru\/ - reject
+^https?:\/\/mgtz\.ru\/key\/ - reject
+^https?:\/\/mirorgazma\.ru\/\?partner= - reject
+^https?:\/\/mlgame\.ru\/\?ref= - reject
+^https?:\/\/mlgame\.ru\/images\/banners - reject
+^https?:\/\/mokuz\.ru\/vipcounter\/ - reject
+^https?:\/\/money\.loveplanet\.ru\/nb\/ - reject
+^https?:\/\/moovy\.ru\/b.*\.php\? - reject
+^https?:\/\/mostinfo\.net\/img\/top\/ - reject
+^https?:\/\/my\.electricbalance\.com\/ - reject
+^https?:\/\/my-dirty-hobby\.com\/getmdhlink\. - reject
+^https?:\/\/myanimetop\.com\/button\.php\? - reject
+^https?:\/\/mydirtyhobby\.com\/getmdhlink\. - reject
+^https?:\/\/mydirtyhobby\.com\/.*\.php\?.*&goto=join - reject
+^https?:\/\/mypagerank\..*\/.*\? - reject
+^https?:\/\/n\.adonweb\.ru\/ - reject
+^https?:\/\/nanofantiki\.edigest\.ru\/ - reject
+^https?:\/\/new\.traffic\.ru\/ - reject
+^https?:\/\/newsprom\.ru\/img\/ - reject
+^https?:\/\/nfscharts\.nfshome\.com\/track\.php\?id= - reject
+^https?:\/\/nitroflare\.com\/img\/banners\/ - reject
+^https?:\/\/node\.market-place\.su\/ - reject
+^https?:\/\/nolix\.ru\/jads\.php - reject
+^https?:\/\/noteru\.com\/tizer\/ - reject
+^https?:\/\/numen\.ru\/button\/\? - reject
+^https?:\/\/nyx\.su\/informers\/ - reject
+^https?:\/\/obmennik\.ws\/img\/promo\/ - reject
+^https?:\/\/office\.ad1\.ru\/ - reject
+^https?:\/\/one\.ru\/cgi-bin - reject
+^https?:\/\/online\.koko-ko\.com\/ - reject
+^https?:\/\/online\.mik123\.com\/ - reject
+^https?:\/\/open\.by\/bnrs\/ - reject
+^https?:\/\/orbitum\.com\/promo\/ - reject
+^https?:\/\/ozon\.ru\/\?partner= - reject
+^https?:\/\/ozon\.ru\/PartnerTwinerNew\.aspx - reject
+^https?:\/\/partner\.gde\.ru\/ - reject
+^https?:\/\/partner\.iobit-team\.ru\/accounts\/.*\/banners\/ - reject
+^https?:\/\/partner\.mediametrics\.ru\/ - reject
+^https?:\/\/partnergateway\.liga-stavok\.com\/ - reject
+^https?:\/\/partners\.agoda\.com\/ - reject
+^https?:\/\/partners\.vsemayki\.ru\/ - reject
+^https?:\/\/partycasino\.com\/.*\?wm= - reject
+^https?:\/\/partypoker\.com\/.*\?wm= - reject
+^https?:\/\/pc-software\.ru\/ - reject
+^https?:\/\/penza-online\.ru\/cgi-bin\/userstats\.pl\? - reject
+^https?:\/\/photoshop-master\.org\/rotator\/ - reject
+^https?:\/\/pingmedia\.ru\/images\/ - reject
+^https?:\/\/pir\.zspb\.ru\/ - reject
+^https?:\/\/play\.zzima\.com\/.*\?ref= - reject
+^https?:\/\/playreplay\.net\/apv\/index\.php - reject
+^https?:\/\/poisk\.su\/top\.php\? - reject
+^https?:\/\/pokerstrategy\.com\/# - reject
+^https?:\/\/pomogi\.org\/urgent\/1\/ - reject
+
 [Rule]
 
 # === Wildcard домены (ключевые слова) ===
@@ -507,6 +577,17 @@ DOMAIN-KEYWORD,broredir,REJECT
 DOMAIN-KEYWORD,videolink,REJECT
 DOMAIN-KEYWORD,appcodepnik,REJECT
 DOMAIN-KEYWORD,orbit,REJECT
+DOMAIN-KEYWORD,letssex,REJECT
+DOMAIN-KEYWORD,linkexchange,REJECT
+DOMAIN-KEYWORD,mediacontext,REJECT
+DOMAIN-KEYWORD,medialand,REJECT
+DOMAIN-KEYWORD,minitds,REJECT
+DOMAIN-KEYWORD,pop-parad,REJECT
+DOMAIN-KEYWORD,pop-under,REJECT
+DOMAIN-KEYWORD,poptraf,REJECT
+DOMAIN-KEYWORD,popunder,REJECT
+DOMAIN-KEYWORD,popupclick,REJECT
+DOMAIN-KEYWORD,popuptraf,REJECT
 
 # === Полная блокировка доменов ===
 DOMAIN-SUFFIX,cenoobi.run,REJECT
@@ -1292,6 +1373,193 @@ DOMAIN-SUFFIX,lc2ads.ru,REJECT
 DOMAIN-SUFFIX,lcads.ru,REJECT
 DOMAIN-SUFFIX,leads.su,REJECT
 DOMAIN-SUFFIX,leadsleader.ru,REJECT
+DOMAIN-SUFFIX,leadzu.com,REJECT
+DOMAIN-SUFFIX,league-of-legends.ru,REJECT
+DOMAIN-SUFFIX,ledhatbet.com,REJECT
+DOMAIN-SUFFIX,ledinika.ru,REJECT
+DOMAIN-SUFFIX,leforma.com,REJECT
+DOMAIN-SUFFIX,legandruk.com,REJECT
+DOMAIN-SUFFIX,lenty.ru,REJECT
+DOMAIN-SUFFIX,letimsnami.ru,REJECT
+DOMAIN-SUFFIX,letitsoft.com,REJECT
+DOMAIN-SUFFIX,levelpay.ru,REJECT
+DOMAIN-SUFFIX,liex.ru,REJECT
+DOMAIN-SUFFIX,lifemeet.biz,REJECT
+DOMAIN-SUFFIX,likondok.com,REJECT
+DOMAIN-SUFFIX,limonads.net,REJECT
+DOMAIN-SUFFIX,lineoflife.ru,REJECT
+DOMAIN-SUFFIX,lingospot.com,REJECT
+DOMAIN-SUFFIX,link.ru,REJECT
+DOMAIN-SUFFIX,linkfeed.ru,REJECT
+DOMAIN-SUFFIX,linkslot.ru,REJECT
+DOMAIN-SUFFIX,linktraff.ru,REJECT
+DOMAIN-SUFFIX,linkunder.ru,REJECT
+DOMAIN-SUFFIX,linkwithin.com,REJECT
+DOMAIN-SUFFIX,linkwmr.ru,REJECT
+DOMAIN-SUFFIX,livedecnow.com,REJECT
+DOMAIN-SUFFIX,liverail.com,REJECT
+DOMAIN-SUFFIX,livesmi.com,REJECT
+DOMAIN-SUFFIX,livesurf.ru,REJECT
+DOMAIN-SUFFIX,loadmoney.ru,REJECT
+DOMAIN-SUFFIX,login.tracking101.com,REJECT
+DOMAIN-SUFFIX,loneday.com,REJECT
+DOMAIN-SUFFIX,lookszone.ru,REJECT
+DOMAIN-SUFFIX,lordofads.com,REJECT
+DOMAIN-SUFFIX,loveadvert.ru,REJECT
+DOMAIN-SUFFIX,lovn.ru,REJECT
+DOMAIN-SUFFIX,ltcraft.ru,REJECT
+DOMAIN-SUFFIX,luisardo.com,REJECT
+DOMAIN-SUFFIX,luxads.net,REJECT
+DOMAIN-SUFFIX,luxcash.ru,REJECT
+DOMAIN-SUFFIX,luxup.ru,REJECT
+DOMAIN-SUFFIX,luxupadva.com,REJECT
+DOMAIN-SUFFIX,luxupcdna.com,REJECT
+DOMAIN-SUFFIX,luzynka.ru,REJECT
+DOMAIN-SUFFIX,lvkwz.com,REJECT
+DOMAIN-SUFFIX,lycosu.com,REJECT
+DOMAIN-SUFFIX,lydiz.com,REJECT
+DOMAIN-SUFFIX,m81jmqmn.ru,REJECT
+DOMAIN-SUFFIX,ma-static.ru,REJECT
+DOMAIN-SUFFIX,madnet.ru,REJECT
+DOMAIN-SUFFIX,magicintim.ru,REJECT
+DOMAIN-SUFFIX,magna.ru,REJECT
+DOMAIN-SUFFIX,manfys.com,REJECT
+DOMAIN-SUFFIX,marketgid.com,REJECT
+DOMAIN-SUFFIX,marketingsolutions.yahoo.com,REJECT
+DOMAIN-SUFFIX,maschina.xyz,REJECT
+DOMAIN-SUFFIX,mastertarget.ru,REJECT
+DOMAIN-SUFFIX,mateast.com,REJECT
+DOMAIN-SUFFIX,maxtrust.ru,REJECT
+DOMAIN-SUFFIX,mctqu.com,REJECT
+DOMAIN-SUFFIX,mdeih.com,REJECT
+DOMAIN-SUFFIX,mecash.ru,REJECT
+DOMAIN-SUFFIX,media-active.ru,REJECT
+DOMAIN-SUFFIX,medianaft.ru,REJECT
+DOMAIN-SUFFIX,medianetworks.ru,REJECT
+DOMAIN-SUFFIX,mediaplex.com,REJECT
+DOMAIN-SUFFIX,mediaportal.ru,REJECT
+DOMAIN-SUFFIX,mediatoday.ru,REJECT
+DOMAIN-SUFFIX,mediavenus.com,REJECT
+DOMAIN-SUFFIX,mediawayss.com,REJECT
+DOMAIN-SUFFIX,medigaly.com,REJECT
+DOMAIN-SUFFIX,medrol.ru,REJECT
+DOMAIN-SUFFIX,meelba.com,REJECT
+DOMAIN-SUFFIX,meendo.ru,REJECT
+DOMAIN-SUFFIX,meendocash.com,REJECT
+DOMAIN-SUFFIX,megabestnews.net,REJECT
+DOMAIN-SUFFIX,megafingroup.com,REJECT
+DOMAIN-SUFFIX,megaopen.ru,REJECT
+DOMAIN-SUFFIX,mestkom.ru,REJECT
+DOMAIN-SUFFIX,metaffiliation.com,REJECT
+DOMAIN-SUFFIX,metaprofit.net,REJECT
+DOMAIN-SUFFIX,mezima.com,REJECT
+DOMAIN-SUFFIX,mglsk.com,REJECT
+DOMAIN-SUFFIX,micro-win.com,REJECT
+DOMAIN-SUFFIX,minidoc.ru,REJECT
+DOMAIN-SUFFIX,mipagerank.com,REJECT
+DOMAIN-SUFFIX,mixadvert.com,REJECT
+DOMAIN-SUFFIX,mixtraff.com,REJECT
+DOMAIN-SUFFIX,mjavagames.ru,REJECT
+DOMAIN-SUFFIX,mmcispartners.com,REJECT
+DOMAIN-SUFFIX,mobi-bobi.info,REJECT
+DOMAIN-SUFFIX,mobi-mobi.info,REJECT
+DOMAIN-SUFFIX,mobiads.ru,REJECT
+DOMAIN-SUFFIX,mobioffers.ru,REJECT
+DOMAIN-SUFFIX,modastro.ee,REJECT
+DOMAIN-SUFFIX,modelatos.com,REJECT
+DOMAIN-SUFFIX,moe.video,REJECT
+DOMAIN-SUFFIX,moevideo.biz,REJECT
+DOMAIN-SUFFIX,moneymaiker.ru,REJECT
+DOMAIN-SUFFIX,moneysyst.biz,REJECT
+DOMAIN-SUFFIX,moneytrap.ru,REJECT
+DOMAIN-SUFFIX,moogle.ru,REJECT
+DOMAIN-SUFFIX,moviead55.ru,REJECT
+DOMAIN-SUFFIX,mp-b.info,REJECT
+DOMAIN-SUFFIX,mp-https.info,REJECT
+DOMAIN-SUFFIX,mpay1.info,REJECT
+DOMAIN-SUFFIX,mpay69.biz,REJECT
+DOMAIN-SUFFIX,mpay69.com,REJECT
+DOMAIN-SUFFIX,mptri.net,REJECT
+DOMAIN-SUFFIX,mrbasic.com,REJECT
+DOMAIN-SUFFIX,multonly.ru,REJECT
+DOMAIN-SUFFIX,mxcount.com,REJECT
+DOMAIN-SUFFIX,my-adv.ru,REJECT
+DOMAIN-SUFFIX,my-img.ru,REJECT
+DOMAIN-SUFFIX,myads.ru,REJECT
+DOMAIN-SUFFIX,mybasilsoup.com,REJECT
+DOMAIN-SUFFIX,mycdn4.ru,REJECT
+DOMAIN-SUFFIX,mycpm.ru,REJECT
+DOMAIN-SUFFIX,mytizer.com,REJECT
+DOMAIN-SUFFIX,mytraf.info,REJECT
+DOMAIN-SUFFIX,mytraf.ru,REJECT
+DOMAIN-SUFFIX,n1307adserv.xyz,REJECT
+DOMAIN-SUFFIX,n161adserv.com,REJECT
+DOMAIN-SUFFIX,nadavi.net,REJECT
+DOMAIN-SUFFIX,nasimke.ru,REJECT
+DOMAIN-SUFFIX,nativeroll.tv,REJECT
+DOMAIN-SUFFIX,ndyzz.com,REJECT
+DOMAIN-SUFFIX,nenrk.us,REJECT
+DOMAIN-SUFFIX,neosap.ru,REJECT
+DOMAIN-SUFFIX,nepalon.com,REJECT
+DOMAIN-SUFFIX,new4.me,REJECT
+DOMAIN-SUFFIX,ngads.com,REJECT
+DOMAIN-SUFFIX,nhqqv.space,REJECT
+DOMAIN-SUFFIX,nickhel.com,REJECT
+DOMAIN-SUFFIX,ningme.ru,REJECT
+DOMAIN-SUFFIX,nnvkh.com,REJECT
+DOMAIN-SUFFIX,nostalgia.onego.ru,REJECT
+DOMAIN-SUFFIX,novem.pl,REJECT
+DOMAIN-SUFFIX,num-link.ru,REJECT
+DOMAIN-SUFFIX,numbers.md,REJECT
+DOMAIN-SUFFIX,nvjqm.com,REJECT
+DOMAIN-SUFFIX,nwmum.com,REJECT
+DOMAIN-SUFFIX,nyyed.com,REJECT
+DOMAIN-SUFFIX,obigre.ru,REJECT
+DOMAIN-SUFFIX,obislame.ru,REJECT
+DOMAIN-SUFFIX,oconner.biz,REJECT
+DOMAIN-SUFFIX,oconner.link,REJECT
+DOMAIN-SUFFIX,ognyvo.ru,REJECT
+DOMAIN-SUFFIX,oiya.ru,REJECT
+DOMAIN-SUFFIX,ojooo.com,REJECT
+DOMAIN-SUFFIX,okoshechka.net,REJECT
+DOMAIN-SUFFIX,omynews.net,REJECT
+DOMAIN-SUFFIX,onelead.ru,REJECT
+DOMAIN-SUFFIX,oneund.com,REJECT
+DOMAIN-SUFFIX,online-path.com,REJECT
+DOMAIN-SUFFIX,only4men.ru,REJECT
+DOMAIN-SUFFIX,openlinks.ru,REJECT
+DOMAIN-SUFFIX,openunder.net,REJECT
+DOMAIN-SUFFIX,openx.com,REJECT
+DOMAIN-SUFFIX,openx.org,REJECT
+DOMAIN-SUFFIX,oriondigital.ru,REJECT
+DOMAIN-SUFFIX,otclick-adv.ru,REJECT
+DOMAIN-SUFFIX,otm-r.com,REJECT
+DOMAIN-SUFFIX,owebmoney.ru,REJECT
+DOMAIN-SUFFIX,ozjga.top,REJECT
+DOMAIN-SUFFIX,ozwvd.com,REJECT
+DOMAIN-SUFFIX,parabit.ru,REJECT
+DOMAIN-SUFFIX,partner-earning.com,REJECT
+DOMAIN-SUFFIX,partnerearn.net,REJECT
+DOMAIN-SUFFIX,pay-hit.com,REJECT
+DOMAIN-SUFFIX,pbcde.com,REJECT
+DOMAIN-SUFFIX,pbnet.ru,REJECT
+DOMAIN-SUFFIX,pcads.ru,REJECT
+DOMAIN-SUFFIX,pelicanprogram.com,REJECT
+DOMAIN-SUFFIX,pelicansource.com,REJECT
+DOMAIN-SUFFIX,people-group.su,REJECT
+DOMAIN-SUFFIX,perfmelab.com,REJECT
+DOMAIN-SUFFIX,perinstallcash.com,REJECT
+DOMAIN-SUFFIX,phoenix-widget.com,REJECT
+DOMAIN-SUFFIX,phpteaser.ru,REJECT
+DOMAIN-SUFFIX,piar-m.ru,REJECT
+DOMAIN-SUFFIX,placeoff.ru,REJECT
+DOMAIN-SUFFIX,planetapozitiva.ru,REJECT
+DOMAIN-SUFFIX,platinumcode.net,REJECT
+DOMAIN-SUFFIX,pluginsjquery.com,REJECT
+DOMAIN-SUFFIX,pokitom.com,REJECT
+DOMAIN-SUFFIX,pokrutim.ru,REJECT
+DOMAIN-SUFFIX,popinads.com,REJECT
+DOMAIN-SUFFIX,pornorunet.ru,REJECT
 
 [MITM]
 hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua
