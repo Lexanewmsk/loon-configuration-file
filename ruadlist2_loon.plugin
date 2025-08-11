@@ -298,5 +298,278 @@ DOMAIN-KEYWORD,videolink,REJECT
 DOMAIN-KEYWORD,appcodepnik,REJECT
 DOMAIN-KEYWORD,orbit,REJECT
 
+# === Чисто рекламные домены (безопасно блокировать полностью) ===
+DOMAIN-SUFFIX,6c5xnntfvi.com,REJECT
+DOMAIN-SUFFIX,portoteamo.com,REJECT
+DOMAIN-SUFFIX,r9ljguu1k4.ru,REJECT
+DOMAIN-SUFFIX,exaleprn.com,REJECT
+DOMAIN-SUFFIX,o4svlxhjun.xyz,REJECT
+DOMAIN-SUFFIX,1p3opxwwet.ru,REJECT
+DOMAIN-SUFFIX,banganet.com,REJECT
+DOMAIN-SUFFIX,jdmodr.com,REJECT
+DOMAIN-SUFFIX,mibmcbm.com,REJECT
+DOMAIN-SUFFIX,zykumw.com,REJECT
+DOMAIN-SUFFIX,realpush.digital,REJECT
+DOMAIN-SUFFIX,rbthre.work,REJECT
+DOMAIN-SUFFIX,zzfoms.com,REJECT
+DOMAIN-SUFFIX,adghndou0sdh.ru,REJECT
+DOMAIN-SUFFIX,adblocksosal.ru,REJECT
+DOMAIN-SUFFIX,servw.bid,REJECT
+DOMAIN-SUFFIX,retharitus.com,REJECT
+DOMAIN-SUFFIX,2022welcome.com,REJECT
+DOMAIN-SUFFIX,ipqolj.com,REJECT
+DOMAIN-SUFFIX,kertzmann.com,REJECT
+DOMAIN-SUFFIX,6leaofqkh9.ru,REJECT
+DOMAIN-SUFFIX,srv224.com,REJECT
+DOMAIN-SUFFIX,cxtvli.com,REJECT
+DOMAIN-SUFFIX,5moxhf6z8c.ru,REJECT
+DOMAIN-SUFFIX,killtarget.biz,REJECT
+DOMAIN-SUFFIX,killtarget.com,REJECT
+DOMAIN-SUFFIX,killtarget.pro,REJECT
+DOMAIN-SUFFIX,tick-tock.net,REJECT
+DOMAIN-SUFFIX,qdb6gd3nth.ru,REJECT
+DOMAIN-SUFFIX,ofbjgf.com,REJECT
+DOMAIN-SUFFIX,powferads.com,REJECT
+DOMAIN-SUFFIX,zkbkat.com,REJECT
+DOMAIN-SUFFIX,j1oxqq05ry.ru,REJECT
+DOMAIN-SUFFIX,1qi.info,REJECT
+DOMAIN-SUFFIX,elonreptiloid.com,REJECT
+DOMAIN-SUFFIX,q0mn5t187u.ru,REJECT
+DOMAIN-SUFFIX,rotarb.bid,REJECT
+DOMAIN-SUFFIX,bogrex.com,REJECT
+DOMAIN-SUFFIX,cozibaneco.com,REJECT
+DOMAIN-SUFFIX,mybmrtrg.com,REJECT
+DOMAIN-SUFFIX,sitewithg.com,REJECT
+DOMAIN-SUFFIX,fatlossremedies.com,REJECT
+DOMAIN-SUFFIX,brodmn.com,REJECT
+DOMAIN-SUFFIX,rbtwo.bid,REJECT
+DOMAIN-SUFFIX,kwgefe.com,REJECT
+DOMAIN-SUFFIX,contrivenus.com,REJECT
+DOMAIN-SUFFIX,g4news.biz,REJECT
+DOMAIN-SUFFIX,pardompus.ru,REJECT
+DOMAIN-SUFFIX,aeowrb.com,REJECT
+DOMAIN-SUFFIX,octonew.me,REJECT
+DOMAIN-SUFFIX,c153yb4hps.ru,REJECT
+DOMAIN-SUFFIX,ljsiir.com,REJECT
+DOMAIN-SUFFIX,infomix.best,REJECT
+DOMAIN-SUFFIX,qq86tbqodk.ru,REJECT
+DOMAIN-SUFFIX,sandelf.com,REJECT
+DOMAIN-SUFFIX,rzqdqw.com,REJECT
+DOMAIN-SUFFIX,mobflow21.com,REJECT
+DOMAIN-SUFFIX,blaindgatum.com,REJECT
+DOMAIN-SUFFIX,kq6lwk3m9g.ru,REJECT
+DOMAIN-SUFFIX,2ad.wtf,REJECT
+DOMAIN-SUFFIX,nasrispit.com,REJECT
+DOMAIN-SUFFIX,nplxa.com,REJECT
+DOMAIN-SUFFIX,1xroom.com,REJECT
+DOMAIN-SUFFIX,zbyynuew9g.ru,REJECT
+DOMAIN-SUFFIX,main-ti-cod.com,REJECT
+DOMAIN-SUFFIX,big6q4y2oy.ru,REJECT
+DOMAIN-SUFFIX,afp.ai,REJECT
+DOMAIN-SUFFIX,bro1.biz,REJECT
+DOMAIN-SUFFIX,rdrctgoweb.com,REJECT
+DOMAIN-SUFFIX,refpahrwzjlv.top,REJECT
+DOMAIN-SUFFIX,ybej5ohp0x.ru,REJECT
+DOMAIN-SUFFIX,ads-lot.ru,REJECT
+DOMAIN-SUFFIX,handred.ru,REJECT
+DOMAIN-SUFFIX,quqizo.com,REJECT
+DOMAIN-SUFFIX,jqk2me2mzf.ru,REJECT
+DOMAIN-SUFFIX,goryachie-foto.net,REJECT
+DOMAIN-SUFFIX,the4.fun,REJECT
+DOMAIN-SUFFIX,newrrb.bid,REJECT
+DOMAIN-SUFFIX,ece8c2alhz.ru,REJECT
+DOMAIN-SUFFIX,affpros.net,REJECT
+DOMAIN-SUFFIX,ihfxao.com,REJECT
+DOMAIN-SUFFIX,leadgidads.ru,REJECT
+DOMAIN-SUFFIX,vioturallis.com,REJECT
+DOMAIN-SUFFIX,flowpubdom.info,REJECT
+DOMAIN-SUFFIX,bvl5bziz9d.ru,REJECT
+DOMAIN-SUFFIX,ohgskf.com,REJECT
+DOMAIN-SUFFIX,eldos.xyz,REJECT
+DOMAIN-SUFFIX,advertiseru.net,REJECT
+DOMAIN-SUFFIX,hranakel.xyz,REJECT
+DOMAIN-SUFFIX,2xclick.ru,REJECT
+DOMAIN-SUFFIX,randiul.com,REJECT
+DOMAIN-SUFFIX,ogtz5yn2u1.ru,REJECT
+DOMAIN-SUFFIX,kkmacsqsbf.info,REJECT
+DOMAIN-SUFFIX,xxyolk.com,REJECT
+DOMAIN-SUFFIX,multibux.org,REJECT
+DOMAIN-SUFFIX,advmusic.com,REJECT
+DOMAIN-SUFFIX,rnldustal.com,REJECT
+DOMAIN-SUFFIX,dtashjvcjswq.info,REJECT
+DOMAIN-SUFFIX,7nkbwdf1uq.ru,REJECT
+DOMAIN-SUFFIX,biocdn.net,REJECT
+DOMAIN-SUFFIX,boostingads.com,REJECT
+DOMAIN-SUFFIX,betemolgar.com,REJECT
+DOMAIN-SUFFIX,jrs2igoimq.ru,REJECT
+DOMAIN-SUFFIX,u7kgr54jr7.ru,REJECT
+DOMAIN-SUFFIX,hwmonitor-ru.ru,REJECT
+DOMAIN-SUFFIX,adrun.ru,REJECT
+DOMAIN-SUFFIX,pwwghcyzsn.info,REJECT
+DOMAIN-SUFFIX,memtkh.com,REJECT
+DOMAIN-SUFFIX,gswtol.com,REJECT
+DOMAIN-SUFFIX,yxhstwzjbu.info,REJECT
+DOMAIN-SUFFIX,traffer.biz,REJECT
+DOMAIN-SUFFIX,tophitbit.com,REJECT
+DOMAIN-SUFFIX,potopy.ru,REJECT
+DOMAIN-SUFFIX,vipko.ru,REJECT
+DOMAIN-SUFFIX,bs-dante.ru,REJECT
+DOMAIN-SUFFIX,nativerent.ru,REJECT
+DOMAIN-SUFFIX,extrablocks.ru,REJECT
+DOMAIN-SUFFIX,mpsuadv.ru,REJECT
+DOMAIN-SUFFIX,whiteboxdigital.ru,REJECT
+DOMAIN-SUFFIX,ddcfzd.com,REJECT
+DOMAIN-SUFFIX,zkdkvnzsdxge.info,REJECT
+DOMAIN-SUFFIX,tune-up.site,REJECT
+DOMAIN-SUFFIX,yourclk.com,REJECT
+DOMAIN-SUFFIX,cdnkimg.com,REJECT
+DOMAIN-SUFFIX,adshunter.fra1.digitaloceanspaces.com,REJECT
+DOMAIN-SUFFIX,ndroip.com,REJECT
+DOMAIN-SUFFIX,murqyi.com,REJECT
+DOMAIN-SUFFIX,m62rtkpf.de,REJECT
+DOMAIN-SUFFIX,go2of.com,REJECT
+DOMAIN-SUFFIX,epaaab.com,REJECT
+DOMAIN-SUFFIX,vendigamus.com,REJECT
+DOMAIN-SUFFIX,theroswaf.com,REJECT
+DOMAIN-SUFFIX,pdvacde.com,REJECT
+DOMAIN-SUFFIX,rkft2sdl8b.ru,REJECT
+DOMAIN-SUFFIX,lubowitz.biz,REJECT
+DOMAIN-SUFFIX,tarnifotum.com,REJECT
+DOMAIN-SUFFIX,all-cod.com,REJECT
+DOMAIN-SUFFIX,adlook.me,REJECT
+DOMAIN-SUFFIX,mstcs.info,REJECT
+DOMAIN-SUFFIX,xksqb.com,REJECT
+DOMAIN-SUFFIX,jincodiks.com,REJECT
+DOMAIN-SUFFIX,safebrowsdv.com,REJECT
+DOMAIN-SUFFIX,advmedia.by,REJECT
+DOMAIN-SUFFIX,enbpvt.com,REJECT
+DOMAIN-SUFFIX,rnwbrm.com,REJECT
+DOMAIN-SUFFIX,sehtjv.com,REJECT
+DOMAIN-SUFFIX,budaicius.com,REJECT
+DOMAIN-SUFFIX,honeenatrus.com,REJECT
+DOMAIN-SUFFIX,haderilovas.com,REJECT
+DOMAIN-SUFFIX,tamerliqus.com,REJECT
+DOMAIN-SUFFIX,betsonsport.ru,REJECT
+DOMAIN-SUFFIX,inoprosport.su,REJECT
+DOMAIN-SUFFIX,g52bxi1v1w.com,REJECT
+DOMAIN-SUFFIX,newscode.online,REJECT
+DOMAIN-SUFFIX,infocode.tech,REJECT
+DOMAIN-SUFFIX,informer.link,REJECT
+DOMAIN-SUFFIX,netflopin.com,REJECT
+DOMAIN-SUFFIX,yxswtummev.info,REJECT
+DOMAIN-SUFFIX,quaruzon.com,REJECT
+DOMAIN-SUFFIX,kataprius.com,REJECT
+DOMAIN-SUFFIX,sereendipit.com,REJECT
+DOMAIN-SUFFIX,qfhzki.com,REJECT
+DOMAIN-SUFFIX,erandex.com,REJECT
+DOMAIN-SUFFIX,exobafrgdf.com,REJECT
+DOMAIN-SUFFIX,ynyy83za4i.ru,REJECT
+DOMAIN-SUFFIX,2gwzdkjrtb.ru,REJECT
+DOMAIN-SUFFIX,mypagestats.online,REJECT
+DOMAIN-SUFFIX,striglusor.com,REJECT
+DOMAIN-SUFFIX,rifflingo.com,REJECT
+DOMAIN-SUFFIX,eqmx04n5s0.ru,REJECT
+DOMAIN-SUFFIX,qerusgreyt.com,REJECT
+DOMAIN-SUFFIX,fast-hunter.com,REJECT
+DOMAIN-SUFFIX,pt0zhwhc26.ru,REJECT
+DOMAIN-SUFFIX,tend-new.com,REJECT
+DOMAIN-SUFFIX,qakdki.com,REJECT
+DOMAIN-SUFFIX,franeski.net,REJECT
+DOMAIN-SUFFIX,mp3vizor.com,REJECT
+DOMAIN-SUFFIX,mp3bars.com,REJECT
+DOMAIN-SUFFIX,dzrs3yuexz.com,REJECT
+DOMAIN-SUFFIX,kvcd7w375h.ru,REJECT
+DOMAIN-SUFFIX,instreamatic.com,REJECT
+DOMAIN-SUFFIX,ankunding.biz,REJECT
+DOMAIN-SUFFIX,promoggaqjkd.ru,REJECT
+DOMAIN-SUFFIX,uuaauw.com,REJECT
+DOMAIN-SUFFIX,ggtraf.com,REJECT
+DOMAIN-SUFFIX,deeppquiz.ru,REJECT
+DOMAIN-SUFFIX,dynaads.net,REJECT
+DOMAIN-SUFFIX,qlnomb.com,REJECT
+DOMAIN-SUFFIX,dzubavstal.com,REJECT
+DOMAIN-SUFFIX,passtechusa.com,REJECT
+DOMAIN-SUFFIX,vastroll.ru,REJECT
+DOMAIN-SUFFIX,socgate.ru,REJECT
+DOMAIN-SUFFIX,mstngh.com,REJECT
+DOMAIN-SUFFIX,tr6rfgjix6tlr8bp.info,REJECT
+DOMAIN-SUFFIX,rzjirk.com,REJECT
+DOMAIN-SUFFIX,urchinflare.com,REJECT
+DOMAIN-SUFFIX,earzow.com,REJECT
+DOMAIN-SUFFIX,spylees.com,REJECT
+DOMAIN-SUFFIX,reclame.io,REJECT
+DOMAIN-SUFFIX,brevandolius.com,REJECT
+DOMAIN-SUFFIX,virnews.club,REJECT
+DOMAIN-SUFFIX,prfctmney.com,REJECT
+DOMAIN-SUFFIX,ivhnnw.com,REJECT
+DOMAIN-SUFFIX,cycsfe.com,REJECT
+DOMAIN-SUFFIX,ublrfs.com,REJECT
+DOMAIN-SUFFIX,uzmdfi.com,REJECT
+DOMAIN-SUFFIX,jux9ms4vc7.ru,REJECT
+DOMAIN-SUFFIX,ahaclub.ru,REJECT
+DOMAIN-SUFFIX,almasatten.com,REJECT
+DOMAIN-SUFFIX,bcnewltd.club,REJECT
+DOMAIN-SUFFIX,2track.info,REJECT
+DOMAIN-SUFFIX,adfinity.pro,REJECT
+DOMAIN-SUFFIX,portakamus.com,REJECT
+DOMAIN-SUFFIX,jmpmedia.club,REJECT
+DOMAIN-SUFFIX,bestdealfor1.life,REJECT
+DOMAIN-SUFFIX,click.zmctrack.net,REJECT
+DOMAIN-SUFFIX,denlorian.com,REJECT
+DOMAIN-SUFFIX,vir70n.news,REJECT
+DOMAIN-SUFFIX,admitad-connect.com,REJECT
+DOMAIN-SUFFIX,hdbcode.com,REJECT
+DOMAIN-SUFFIX,wwclickserv.club,REJECT
+DOMAIN-SUFFIX,welldanius.com,REJECT
+DOMAIN-SUFFIX,wpnjrm.com,REJECT
+DOMAIN-SUFFIX,trafficdok.com,REJECT
+DOMAIN-SUFFIX,abeets.ru,REJECT
+DOMAIN-SUFFIX,gxxcbj.com,REJECT
+DOMAIN-SUFFIX,ubar-pro4.ru,REJECT
+DOMAIN-SUFFIX,offergate.pro,REJECT
+DOMAIN-SUFFIX,ucurtatus.com,REJECT
+DOMAIN-SUFFIX,actpx.com,REJECT
+DOMAIN-SUFFIX,fegortius.com,REJECT
+DOMAIN-SUFFIX,ec2-44-233-143-239.us-west-2.compute.amazonaws.com,REJECT
+DOMAIN-SUFFIX,ssdbkv4qtq.xyz,REJECT
+DOMAIN-SUFFIX,clickbaza.com,REJECT
+DOMAIN-SUFFIX,debitcrebit669.com,REJECT
+DOMAIN-SUFFIX,cematuran.com,REJECT
+DOMAIN-SUFFIX,bergfi.com,REJECT
+DOMAIN-SUFFIX,umwiba.com,REJECT
+DOMAIN-SUFFIX,digitaltarget.ru,REJECT
+DOMAIN-SUFFIX,tneduf.com,REJECT
+DOMAIN-SUFFIX,bs.commontools.net,REJECT
+DOMAIN-SUFFIX,refractionius.com,REJECT
+
+# === Поддомены (используем Rewrite для точности) ===
+^https?:\/\/kapitalrus\.ru\/ - reject
+^https?:\/\/v\.cdn4\.life\/ - reject
+^https?:\/\/catsnetwork\.ru\/ - reject
+^https?:\/\/xcec\.ru\/ - reject
+^https?:\/\/banner\.aismo\.ru\/ - reject
+^https?:\/\/widjet\.analnoe\.tv\/ - reject
+^https?:\/\/cdn\.yanews24\.com\/ - reject
+^https?:\/\/ads2\.pbxware\.ru\/ - reject
+^https?:\/\/ad\.vidver\.to\/ - reject
+^https?:\/\/static\.aio\.media\/ - reject
+^https?:\/\/go\.zdos\.ru\/ - reject
+^https?:\/\/ad\.letmeads\.com\/ - reject
+^https?:\/\/cszz\.ru\/ - reject
+^https?:\/\/clx\.ru\/ - reject
+^https?:\/\/z\.cdn\.trafficdok\.com\/ - reject
+^https?:\/\/adv\.pilseta24\.lv\/ - reject
+^https?:\/\/z\.cdn\.trafficlide\.com\/ - reject
+^https?:\/\/rtb\.mts\.ru\/ - reject
+^https?:\/\/vast\.videocdn\.tv\/ - reject
+^https?:\/\/prod\.html5-ads\.vk-apps\.com\/ - reject
+^https?:\/\/banners\.adfox\.ru\/ - reject
+^https?:\/\/banners\.adfox\.net\/ - reject
+^https?:\/\/tiz\.jsite\.top\/ - reject
+^https?:\/\/ssp\.bidvol\.com\/ - reject
+
+# === Ключевые слова с подстановочными знаками ===
+DOMAIN-KEYWORD,tzbox,REJECT
+
 [MITM]
 hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua
