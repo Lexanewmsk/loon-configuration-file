@@ -743,6 +743,17 @@
 ^https?:\/\/iblitzmods\.ru\/templates\/iblitzmods\/adbd\/adbd_styles\.css - reject
 ^https?:\/\/vascak\.cz\/data\/img\/a0\.png - reject
 
+^https?:\/\/porno-tour\.vip\/fr_liad\.js - reject
+^https?:\/\/pcnews\.ru\/js\/blockAdblock\.js - reject
+^https?:\/\/stat-analytics\.mediavitrina\.ru\/ - reject
+^https?:\/\/videomore\.ru\/ - reject
+^https?:\/\/studme\.org\/jquery\.cnt\.min\.js - reject
+^https?:\/\/yapx\.ru\/ - reject-dict
+^https?:\/\/wp-r\.github\.io\/aplacer\/ - reject
+^https?:\/\/soskidkami\.ru\/s\/b3cee0\.js - reject
+^https?:\/\/rusfishing\.ru\/forum\/js\/siropu\/am\/core\.min\.js - reject
+^https?:\/\/sea-man\.org\/adb_script\/ - reject
+
 [Rule]
 
 # === Wildcard домены (ключевые слова) ===
@@ -2229,4 +2240,4 @@ IP-CIDR,193.200.65.61/32,REJECT
 IP-CIDR,45.82.68.79/32,REJECT
 
 [MITM]
-hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua, *.adfox.ru, *.adfox.net, *.sape.ru, *.begun.ru, *.marketgid.com, *.mgid.com, *.rambler.ru, *.mail.ru, *.yandex.ru, *.vk.com, *.ok.ru, *.mts.ru, *.sport-express.ru, *.vz.ru, *.doubleclick.net, *.googlesyndication.com, *.googleadservices.com, an.yandex.ru, *.yandex.ru, *.kinogo.by, ivi.ru, ssp.rambler.ru, *.zmctrack.net, *.znctrack.net, *.klcheck.com, texnic.ru, patents.su, studwood.ru, itcrowd.top, shadowcore.ru, iblitzmods.ru, vascak.cz
+hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua, *.adfox.ru, *.adfox.net, *.sape.ru, *.begun.ru, *.marketgid.com, *.mgid.com, *.rambler.ru, *.mail.ru, *.yandex.ru, *.vk.com, *.ok.ru, *.mts.ru, *.sport-express.ru, *.vz.ru, *.doubleclick.net, *.googlesyndication.com, *.googleadservices.com, an.yandex.ru, *.yandex.ru, *.kinogo.by, ivi.ru, ssp.rambler.ru, *.zmctrack.net, *.znctrack.net, *.klcheck.com, texnic.ru, patents.su, studwood.ru, itcrowd.top, shadowcore.ru, iblitzmods.ru, vascak.cz, porno-tour.vip, pcnews.ru, stat-analytics.mediavitrina.ru, videomore.ru, studme.org, yapx.ru, wp-r.github.io, soskidkami.ru, rusfishing.ru, sea-man.org
