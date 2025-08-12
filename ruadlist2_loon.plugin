@@ -802,7 +802,11 @@
 ^https?:\/\/turbopages\.org\/ - reject-dict
 ^https?:\/\/yandex\.ru\/portal\/ntp\/banner - reject
 ^https?:\/\/docviewer\.yandex\..*\/sw\.js - reject
-
+^https?:\/\/comedy-radio\.ru\/ - reject-dict
+^https?:\/\/kufar\.by\/ - reject-dict
+^https?:\/\/drive2\.ru\/.*\/.*\/ - reject-dict
+^https?:\/\/irecommend\.ru\/.*\/.*\/ - reject-dict
+^https?:\/\/ura\.news\/.*\/ - reject-dict
 
 
 [Rule]
@@ -2304,4 +2308,4 @@ IP-CIDR,193.200.65.61/32,REJECT
 IP-CIDR,45.82.68.79/32,REJECT
 
 [MITM]
-hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua, *.adfox.ru, *.adfox.net, *.sape.ru, *.begun.ru, *.marketgid.com, *.mgid.com, *.rambler.ru, *.mail.ru, *.yandex.ru, *.vk.com, *.ok.ru, *.mts.ru, *.sport-express.ru, *.vz.ru, *.doubleclick.net, *.googlesyndication.com, *.googleadservices.com, an.yandex.ru, *.yandex.ru, *.kinogo.by, ivi.ru, ssp.rambler.ru, *.zmctrack.net, *.znctrack.net, *.klcheck.com, texnic.ru, patents.su, studwood.ru, itcrowd.top, shadowcore.ru, iblitzmods.ru, vascak.cz, porno-tour.vip, pcnews.ru, stat-analytics.mediavitrina.ru, videomore.ru, studme.org, yapx.ru, wp-r.github.io, soskidkami.ru, rusfishing.ru, sea-man.org, spec-komp.com, tarkov-wiki.ru, dyrik.ru, windows-phone.su, debaltsevo.com, yagazeta.com, xdkit.ru, wav-library.net, keys-online.ru, cdn-library.su, webcaster.pro, blackdesert-info.ru, dni.ru, amxxmodx.ru, respublika.cz, *.block.com, *.rambler.ru, *.mail.ru, strm.yandex.net, overclockers.ru, mediapure.ru, kinogb.net, smi2.tv, kubik3.ru, mmoru.com, cxem.net, baibako.tv, fenixx-repack.3dn.ru, 99px.ru, ph4.ru, multikonline.ru, polismed.ru, static.1tv.ru, *.adfox.ru, *.yandex.ru, *.yandex.net, strm.yandex.ru, storage.mds.yandex.net, turbopages.org, docviewer.yandex.ru, content.adfox.ru
+hostname = *.ucoz.net, *.ucoz.ru, *.ucoz.com, *.ucoz.ua, *.at.ua, *.clan.su, *.3dn.ru, *.my1.ru, *.do.am, *.moy.su, *.narod.ru, *.usite.pro, *.org.ua, *.adfox.ru, *.adfox.net, *.sape.ru, *.begun.ru, *.marketgid.com, *.mgid.com, *.rambler.ru, *.mail.ru, *.yandex.ru, *.vk.com, *.ok.ru, *.mts.ru, *.sport-express.ru, *.vz.ru, *.doubleclick.net, *.googlesyndication.com, *.googleadservices.com, an.yandex.ru, *.yandex.ru, *.kinogo.by, ivi.ru, ssp.rambler.ru, *.zmctrack.net, *.znctrack.net, *.klcheck.com, texnic.ru, patents.su, studwood.ru, itcrowd.top, shadowcore.ru, iblitzmods.ru, vascak.cz, porno-tour.vip, pcnews.ru, stat-analytics.mediavitrina.ru, videomore.ru, studme.org, yapx.ru, wp-r.github.io, soskidkami.ru, rusfishing.ru, sea-man.org, spec-komp.com, tarkov-wiki.ru, dyrik.ru, windows-phone.su, debaltsevo.com, yagazeta.com, xdkit.ru, wav-library.net, keys-online.ru, cdn-library.su, webcaster.pro, blackdesert-info.ru, dni.ru, amxxmodx.ru, respublika.cz, *.block.com, *.rambler.ru, *.mail.ru, strm.yandex.net, overclockers.ru, mediapure.ru, kinogb.net, smi2.tv, kubik3.ru, mmoru.com, cxem.net, baibako.tv, fenixx-repack.3dn.ru, 99px.ru, ph4.ru, multikonline.ru, polismed.ru, static.1tv.ru, *.adfox.ru, *.yandex.ru, *.yandex.net, strm.yandex.ru, storage.mds.yandex.net, turbopages.org, docviewer.yandex.ru, content.adfox.ru, comedy-radio.ru, kufar.by, drive2.ru, irecommend.ru, ura.news
