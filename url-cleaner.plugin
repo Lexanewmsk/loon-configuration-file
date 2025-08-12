@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clean.png
 
 [MITM]
-hostname = ya.ru, yandex.ru, google.com, facebook.com, vk.com, mail.ru, ok.ru, tiktok.com, instagram.com, linkedin.com, twitter.com, x.com, youtube.com, amazon.com, amazon.ru, avito.ru, rambler.ru
+hostname = ya.ru, yandex.ru, dzen.ru, zen.yandex.ru, google.com, facebook.com, vk.com, mail.ru, ok.ru, tiktok.com, instagram.com, linkedin.com, twitter.com, x.com, youtube.com, amazon.com, amazon.ru, avito.ru, rambler.ru
 
 [URL Rewrite]
 
@@ -155,6 +155,11 @@ hostname = ya.ru, yandex.ru, google.com, facebook.com, vk.com, mail.ru, ok.ru, t
 # ===== ДОПОЛНИТЕЛЬНЫЕ РОССИЙСКИЕ СЕРВИСЫ =====
 # Avito
 ^https?://([^/]+)/([^?]*)\?(.*)avito_src=[^&]*&?(.*)$ https://$1/$2?$3$4 302
+
+# Dzen (Яндекс.Дзен)
+^https?://([^/]+)/?(.*)\?(.*)from_zen=[^&]*&?(.*)$ https://$1/$2?$3$4 302
+^https?://([^/]+)/?(.*)\?(.*)zen_source=[^&]*&?(.*)$ https://$1/$2?$3$4 302
+^https?://([^/]+)/?(.*)\?(.*)clid=[^&]*&?(.*)$ https://$1/$2?$3$4 302
 
 # Rambler
 ^https?://([^/]+)/([^?]*)\?(.*)r_source=[^&]*&?(.*)$ https://$1/$2?$3$4 302
