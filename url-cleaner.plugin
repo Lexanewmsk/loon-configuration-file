@@ -1,55 +1,58 @@
-#!name=URL Cleaner
-#!desc=Remove tracking parameters from URLs
-#!author=Lexanewmsk
+#!name=URL Cleaner (RU + Global)
+#!desc=Remove tracking parameters from URLs (Russian + International sites)
+#!author=Based on proven solutions
 #!homepage=https://github.com/Lexanewmsk/loon-configuration-file
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clean.png
 
 [URL Rewrite]
-# Google Analytics & UTM parameters
-^(https?://[^?]+)\?([^#]*&)?utm_source=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?utm_medium=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?utm_campaign=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?utm_term=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?utm_content=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
+# ===== GLOBAL TRACKING PARAMETERS =====
+
+# Google UTM & Analytics (most common)
+^https?://([^/]+)/([^?]*).*[?&]utm_source=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]utm_medium=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]utm_campaign=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]utm_term=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]utm_content=[^&]*(.*)$ https://$1/$2$3 302
 
 # Google Ads
-^(https?://[^?]+)\?([^#]*&)?gclid=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?gclsrc=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?dclid=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?_ga=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
+^https?://([^/]+)/([^?]*).*[?&]gclid=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]gclsrc=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]dclid=[^&]*(.*)$ https://$1/$2$3 302
 
-# Facebook
-^(https?://[^?]+)\?([^#]*&)?fbclid=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?fb_ref=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?fb_source=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
+# Facebook & Meta
+^https?://([^/]+)/([^?]*).*[?&]fbclid=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]fb_ref=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]fb_source=[^&]*(.*)$ https://$1/$2$3 302
 
-# Yandex
-^(https?://[^?]+)\?([^#]*&)?yclid=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?_openstat=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
+# Twitter
+^https?://([^/]+)/([^?]*).*[?&]twsrc=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]ref_src=[^&]*(.*)$ https://$1/$2$3 302
 
-# Email marketing
-^(https?://[^?]+)\?([^#]*&)?mc_cid=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?mc_eid=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?campaign_id=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
+# ===== RUSSIAN TRACKING PARAMETERS =====
 
-# Social media
-^(https?://[^?]+)\?([^#]*&)?ref=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?referrer=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?source=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?medium=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
+# Yandex (Russian equivalent of Google)
+^https?://([^/]+)/([^?]*).*[?&]yclid=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]_openstat=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]from=[^&]*(.*)$ https://$1/$2$3 302
 
-# HubSpot
-^(https?://[^?]+)\?([^#]*&)?_hsenc=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?_hsmi=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
+# Mail.ru
+^https?://([^/]+)/([^?]*).*[?&]mailru=[^&]*(.*)$ https://$1/$2$3 302
 
-# Affiliate tracking
-^(https?://[^?]+)\?([^#]*&)?affiliate=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?partner=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
+# VK.com (VKontakte)
+^https?://([^/]+)/([^?]*).*[?&]vk_ref=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]z=[^&]*(.*)$ https://$1/$2$3 302
 
-# A/B Testing
-^(https?://[^?]+)\?([^#]*&)?variant=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
-^(https?://[^?]+)\?([^#]*&)?ab_test=[^&#]*(&[^#]*)?(\#.*)?$ $1?$2$3$4 302
+# ===== EMAIL MARKETING =====
+^https?://([^/]+)/([^?]*).*[?&]mc_cid=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]mc_eid=[^&]*(.*)$ https://$1/$2$3 302
 
-# Clean empty query strings
-^(https?://[^?]+)\?(&+)?(\#.*)?$ $1$3 302
-^(https?://[^?]+)\?$  $1 302
+# ===== GENERAL TRACKING =====
+^https?://([^/]+)/([^?]*).*[?&]ref=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]source=[^&]*(.*)$ https://$1/$2$3 302
+^https?://([^/]+)/([^?]*).*[?&]campaign=[^&]*(.*)$ https://$1/$2$3 302
+
+# ===== CLEANUP EMPTY PARAMETERS =====
+# Remove dangling ? or & 
+^https?://([^/]+)/([^?]*)\?&+(.*)$ https://$1/$2?$3 302
+^https?://([^/]+)/([^?]*)\?$  https://$1/$2 302
+^https?://([^/]+)/([^?]*)&+(.*)$ https://$1/$2$3 302
