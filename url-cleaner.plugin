@@ -3,10 +3,9 @@
 #!author=Enhanced version based on proven solutions
 #!homepage=https://github.com/Lexanewmsk/loon-configuration-file
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clean.png
-#!date=13.08.2025
 
 [MITM]
-hostname = ya.ru, yandex.ru, dzen.ru, zen.yandex.ru, google.com, facebook.com, vk.com, mail.ru, ok.ru, tiktok.com, instagram.com, linkedin.com, twitter.com, x.com, youtube.com, amazon.com, amazon.ru, avito.ru, rambler.ru, ozon.ru, wildberries.ru, lamoda.ru, rbc.ru, kommersant.ru, rt.com, beeline.ru, mts.ru, megafon.ru
+hostname = ya.ru, yandex.ru, dzen.ru, zen.yandex.ru, google.com, facebook.com, vk.com, mail.ru, ok.ru, tiktok.com, instagram.com, linkedin.com, twitter.com, x.com, youtube.com, amazon.com, amazon.ru, avito.ru, rambler.ru
 
 [URL Rewrite]
 
@@ -91,41 +90,6 @@ hostname = ya.ru, yandex.ru, dzen.ru, zen.yandex.ru, google.com, facebook.com, v
 # Одноклассники
 ^https?://([^/]+)/([^?]*)\?(.*)ok_ref=[^&]*&?(.*)$ https://$1/$2?$3$4 302
 ^https?://([^/]+)/([^?]*)\?(.*)_okref=[^&]*&?(.*)$ https://$1/$2?$3$4 302
-
-# ===== РОССИЙСКИЕ МАРКЕТПЛЕЙСЫ =====
-
-# Ozon
-^https?://([^/]+)/([^?]*)\?(.*)perehod=[^&]*&?(.*)$ https://$1/$2?$3$4 302
-^https?://([^/]+)/([^?]*)\?(.*)from_sku=[^&]*&?(.*)$ https://$1/$2?$3$4 302
-
-# Wildberries
-^https?://([^/]+)/([^?]*)\?(.*)targetUrl=[^&]*&?(.*)$ https://$1/$2?$3$4 302
-^https?://([^/]+)/([^?]*)\?(.*)cardId=[^&]*&?(.*)$ https://$1/$2?$3$4 302
-
-# Lamoda
-^https?://([^/]+)/([^?]*)\?(.*)l_retailer=[^&]*&?(.*)$ https://$1/$2?$3$4 302
-
-# ===== РОССИЙСКИЕ МЕДИА =====
-
-# RBC
-^https?://([^/]+)/([^?]*)\?(.*)rbc_source=[^&]*&?(.*)$ https://$1/$2?$3$4 302
-
-# Коммерсант
-^https?://([^/]+)/([^?]*)\?(.*)from_kommersant=[^&]*&?(.*)$ https://$1/$2?$3$4 302
-
-# RT (Russia Today)
-^https?://([^/]+)/([^?]*)\?(.*)rt_source=[^&]*&?(.*)$ https://$1/$2?$3$4 302
-
-# ===== РОССИЙСКИЕ ТЕЛЕКОМ ОПЕРАТОРЫ =====
-
-# Билайн
-^https?://([^/]+)/([^?]*)\?(.*)beeline_ref=[^&]*&?(.*)$ https://$1/$2?$3$4 302
-
-# МТС
-^https?://([^/]+)/([^?]*)\?(.*)mts_source=[^&]*&?(.*)$ https://$1/$2?$3$4 302
-
-# Мегафон
-^https?://([^/]+)/([^?]*)\?(.*)megafon_utm=[^&]*&?(.*)$ https://$1/$2?$3$4 302
 
 # ===== EMAIL МАРКЕТИНГ =====
 
