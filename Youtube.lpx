@@ -1,0 +1,25 @@
+#!name=YouTube Блокировщик Рекламы
+#!desc=Убирает рекламу из YouTube видео, ленты, поиска и Shorts. Убирает кнопки Shorts и загрузки из нижней панели. Добавляет картинку в картинке и перевод субтитров. Убирает кнопки загрузки, выбора сегментов и обновления из YouTube Music. Добавляет перевод текстов песен. Поддерживает фоновое воспроизведение для обоих приложений. Этот плагин требует включения MitM over HTTP/2 и защиты отката QUIC. Поддерживает Premium пользователей, не поддерживает tvOS устройства.
+#!author=Maasea
+#!homepage=https://github.com/Maasea/sgmodule
+#!icon=https://kelee.one/Tool/Loon/Icon/YouTube_remove_ads.png
+#!date=2025-03-30 17:50:34
+#!loon_version=3.2.4(787)
+#!tag=Блокировка рекламы
+#!system=ios
+
+[Rule]
+# Блокировка рекламных доменов YouTube
+AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,QUIC)),REJECT
+AND,((DOMAIN-SUFFIX,youtubei.googleapis.com),(PROTOCOL,QUIC)),REJECT
+
+[URL Rewrite]
+# Блокировка рекламных запросов YouTube
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-200
+
+[Script]
+# Основной скрипт удаления рекламы YouTube
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) script-path=https://kelee.one/Resource/JavaScript/YouTube/YouTube_remove_ads/YouTube_remove_ads_response.js, requires-body=true, binary-body-mode=true, timeout=20, tag=YouTube去广告
+
+[MITM]
+hostname = *.googlevideo.com, youtubei.googleapis.com
