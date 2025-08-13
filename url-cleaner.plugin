@@ -1,11 +1,11 @@
 #!name=URL Cleaner Extended (RU + Global + Modern Platforms)
-#!desc=VComprehensive tracking parameters removal for Russian and international sites including modern platforms
+#!desc=Comprehensive tracking parameters removal for Russian and international sites including modern platforms
 #!author=Enhanced version based on proven solutions
 #!homepage=https://github.com/Lexanewmsk/loon-configuration-file
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clean.png
 
 [MITM]
-hostname = ya.ru, yandex.ru, dzen.ru, zen.yandex.ru, google.com, facebook.com, vk.com, mail.ru, ok.ru, tiktok.com, instagram.com, linkedin.com, twitter.com, x.com, youtube.com, amazon.com, amazon.ru, avito.ru, rambler.ru
+hostname = *.ya.ru, *.yandex.ru, *.dzen.ru, *.zen.yandex.ru, *.google.com, *.facebook.com, *.vk.com, *.mail.ru, *.ok.ru, *.tiktok.com, *.instagram.com, *.linkedin.com, *.twitter.com, *.x.com, *.youtube.com, *.amazon.com, *.amazon.ru, *.avito.ru, *.rambler.ru
 
 [URL Rewrite]
 
