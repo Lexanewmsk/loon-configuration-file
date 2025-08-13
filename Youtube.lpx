@@ -1,12 +1,18 @@
 #!name=YouTube Блокировщик Рекламы
 #!desc=Убирает рекламу из YouTube видео, ленты, поиска и Shorts. Убирает кнопки Shorts и загрузки из нижней панели. Добавляет картинку в картинке и перевод субтитров. Убирает кнопки загрузки, выбора сегментов и обновления из YouTube Music. Добавляет перевод текстов песен. Поддерживает фоновое воспроизведение для обоих приложений. Этот плагин требует включения MitM over HTTP/2 и защиты отката QUIC. Поддерживает Premium пользователей, не поддерживает tvOS устройства.
-#!author=Maasea
-#!homepage=https://github.com/Maasea/sgmodule
+#!author=@Maasea @VirgilClyne @Choler @DivineEngine @app2smile
+#!homepage=https://hub.kelee.one
 #!icon=https://kelee.one/Tool/Loon/Icon/YouTube_remove_ads.png
 #!date=2025-03-30 17:50:34
 #!loon_version=3.2.4(787)
 #!tag=Блокировка рекламы
 #!system=ios
+#!select=隐藏上传按钮, 启用, 禁用
+#!select=隐藏Shorts按钮, 启用, 禁用
+#!select=隐藏选段按钮, 启用, 禁用
+#!select=字幕翻译语言, off, zh-Hans, zh-Hant, ja, ko, en, de, fr, tr, th, vi, id, hi, pt, es, ru, ar
+#!select=歌词翻译语言, off, zh-Hans, zh-Hant, ja, ko, en, de, fr, tr, th, vi, id, hi, pt, es, ru, ar
+#!select=启用调试模式, 启用, 禁用
 
 [Rule]
 # Блокировка рекламных доменов YouTube
