@@ -2,6 +2,7 @@
 # AUTHOR: Yuvelirtut
 # REPO: https://github.com/Lexanewmsk/shadowrocket-configuration-file
 # UPDATED: 2025-10-23 18:00:00
+DOMAIN,buysellvouchers.com
 # Claude Anthropic
 DOMAIN,servd-anthropic-website.b-cdn.net
 DOMAIN-SUFFIX,anthropic.com
